@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101512">
+  <meta name="description" content="Твой штаб в Last Asylum: Plague. Герои, калькуляторы прокачки, исследования, составы и календарь сервера на русском.">
+  <title>[LEX]PIIVO — штаб клана Last Asylum</title>
+  <link rel="icon" href="./assets/emblem.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script><script src="./data-progression.js" defer></script><script src="./data-buildings.js" defer></script><script src="./data-research.js" defer></script><script src="./core.js" defer></script><script src="./app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Перейти к содержимому</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home"><img src="./assets/emblem.svg" alt="" width="40" height="40"><span><span class="lex-tag">[LEX]</span>PIIVO<span class="brand-sub">Ш Т А Б · К Л А Н А</span></span></a>
+    <div class="side-label">ПОЛЕВОЙ СПРАВОЧНИК</div>
+    <nav id="navigation" aria-label="Основные разделы"></nav>
+    <div class="side-bottom"><div class="side-server"><span class="live-dot"></span><span id="sideServer">Сервер 347</span><span class="side-day" id="sideDay">—</span></div><button id="profileButton" class="profile-button"><span class="avatar">Д</span><span>Мой прогресс<small>Сохраняется на устройстве</small></span><span>↗</span></button></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><button class="icon-button menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button><span class="breadcrumb">[LEX]PIIVO <span>/</span> <b id="crumb">Обзор</b></span><div class="top-actions"><div class="search-box"><span id="searchIcon"></span><input id="globalSearch" type="search" placeholder="Найти героя…" aria-label="Найти героя"><kbd>/</kbd></div><button class="icon-button" id="settingsButton" aria-label="Настройки сервера"></button></div></header>
+    <main id="main" tabindex="-1"><div class="loading">Открываем полевой журнал…</div></main>
+    <footer><span>[LEX]PIIVO <b>·</b> Сервер 347 · Last Asylum: Plague</span><span>Данные: 14.10.2026 <b>·</b> <a href="#about">Источники и обновления ↗</a></span></footer>
+  </div>
+  <dialog id="drawer"><div id="drawerContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p>Для работы калькуляторов включи JavaScript в браузере.</p></noscript>
+</body>
+</html>

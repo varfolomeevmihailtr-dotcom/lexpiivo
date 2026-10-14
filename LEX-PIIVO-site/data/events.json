@@ -1,0 +1,1314 @@
+{
+  "checked": "2026-10-14",
+  "sources": [
+    {
+      "id": "gg-ad",
+      "url": "https://lastasylum.gg/en/events/alliance-duel",
+      "type": "fan-database",
+      "use": "Base scoring and in-game rules: Monday–Saturday, 00:00 server-time reset",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "gg-sb",
+      "url": "https://lastasylum.gg/en/events/survival-battle",
+      "type": "fan-database",
+      "use": "In-game rules:6rounds daily, 4hours each, 00:00 server-time settlement; phase base scoring",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "wiki-ad",
+      "url": "https://wiki-last-asylum.com/ru/wiki/event-points",
+      "type": "fan-wiki",
+      "use": "Six-day base scoring; source verification2026-08-31, last edit2026-09-10",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "wiki-sb",
+      "url": "https://wiki-last-asylum.com/ru/wiki/arms-race",
+      "type": "fan-wiki",
+      "use": "Five themes and base point tables; source verification2026-08-31",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "zarael-sb",
+      "url": "https://www.zaraelsguide.com/events/survival-battle",
+      "type": "community-guide",
+      "use": "Seven-day phase order; explicitly says schedule being verified each season; poster hour timezone unspecified",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "guides-sb",
+      "url": "https://lastasylumguides.com/2026/07/11/survival-battle-event/",
+      "type": "community-guide",
+      "use": "Independently matching seven-day schedule; source updated2026-08-23; medals2/8/18",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "ajack-ad",
+      "url": "https://lastasylumplague.ajackof.com/events/alliance-duel-guide/",
+      "type": "community-guide",
+      "use": "Day6 Full Development on young servers vs Raid afterKvK; resource planning",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "bay-ad",
+      "url": "https://last-asylum-guide-bay.vercel.app/en/guides/alliance-duel",
+      "type": "community-guide",
+      "use": "Raven chest scores, training tier values, Raid endpoints; claims reset00:00UTC",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "kma-time",
+      "url": "https://kma-alliance.github.io/",
+      "type": "alliance-guide",
+      "use": "Claims server timeUTC-2, daily00:00server time; contradicts UTC0guides",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "reddit-calendar",
+      "url": "https://www.reddit.com/r/LastAsylumPlague/comments/1tgfewa/alliance_duel_and_survival_battle_scheduel/",
+      "type": "community-observation",
+      "use": "Screenshots use author localGMT+9:30; comments confirmDay6changed; in-game calendarpath",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "buff-ad",
+      "url": "https://buffhub.com/blog/last-asylum-plague/last-asylum-plague-alliance-duel-guide.html",
+      "type": "community-guide",
+      "use": "CurrentDay6variant, points multipliers and conflict over when troop points register; updated2026-09-05",
+      "checked": "2026-10-14"
+    }
+  ],
+  "allianceDays": [
+    {
+      "weekday": 0,
+      "title": "Подготовка к новой Дуэли",
+      "spend": [],
+      "save": [
+        "Фрагменты героев и пробуждения",
+        "Билеты найма героев",
+        "Значки навыков и противоядие",
+        "Плоды и эссенция ворона",
+        "Сундуки экипировки ворона",
+        "Ускорения строительства, исследований и обучения",
+        "Билеты найма выживших"
+      ],
+      "tasks": [
+        "Подготовь соколиные задания к понедельнику, следя за обновлением заданий",
+        "Отправь сбор так, чтобы отряды вернулись после начала понедельника",
+        "Планируй обычную стройку и исследования; не останавливай развитие ради календаря",
+        "Забирай доступные дневные награды Битвы на выживание"
+      ],
+      "overlapPhases": [],
+      "scoring": [],
+      "note": "Воскресенье — выходной Дуэли. Битва на выживание продолжает работать."
+    },
+    {
+      "weekday": 1,
+      "title": "Усиление ворона",
+      "spend": [
+        "Эссенция и плоды ворона",
+        "Энергия на PvE",
+        "Сундуки эпиграфов",
+        "Подготовленные задания сокола"
+      ],
+      "save": [
+        "Сундуки экипировки ворона до среды",
+        "Ускорения стройки до вторника",
+        "Фрагменты героев, билеты и навыки до четверга"
+      ],
+      "tasks": [
+        "Получи подготовленные соколиные задания",
+        "Верни отряды со сбора",
+        "Плоды ворона и энергию расходуй во время фазы «Ворон» Битвы на выживание",
+        "Улучши ворона только до запланированной награды"
+      ],
+      "overlapPhases": [
+        "raven"
+      ],
+      "scoring": [
+        {
+          "id": "stamina",
+          "action": "Расход энергии",
+          "pointsBase": 150,
+          "quantity": 1,
+          "unit": "энергия",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "falconQuest",
+          "action": "Задание сокола",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "ravenFruit",
+          "action": "Расход плода ворона",
+          "pointsBase": 3,
+          "quantity": 1,
+          "unit": "плод",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "ravenEssence",
+          "action": "Расход эссенции ворона",
+          "pointsBase": 2500,
+          "quantity": 1,
+          "unit": "эссенция",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "epigraphUR",
+          "action": "UR фрагмент эпиграфа из открытого сундука",
+          "pointsBase": 1125,
+          "quantity": 1,
+          "unit": "фрагмент",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "gatherGrain",
+          "action": "Сбор зерна",
+          "pointsBase": 5,
+          "quantity": 100,
+          "unit": "зерно",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "gatherTimber",
+          "action": "Сбор древесины",
+          "pointsBase": 5,
+          "quantity": 100,
+          "unit": "древесина",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "gatherHerb",
+          "action": "Сбор травы",
+          "pointsBase": 5,
+          "quantity": 60,
+          "unit": "трава",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "antitoxin",
+          "action": "Расход противоядия",
+          "pointsBase": 1,
+          "quantity": 660,
+          "unit": "противоядие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "Воронья эссенция даёт очки Дуэли; сама по себе она не указана в таблице очков Битвы на выживание. Противоядие здесь тоже учитывается, но основной день героев — четверг."
+    },
+    {
+      "weekday": 2,
+      "title": "Развитие владений",
+      "spend": [
+        "Ускорения строительства",
+        "Подготовленные завершения полезных зданий",
+        "Билеты найма выживших",
+        "Отправки UR караванов и UR операций"
+      ],
+      "save": [
+        "Задания сокола до среды",
+        "Ускорения исследований и свитки до среды",
+        "Героические материалы до четверга"
+      ],
+      "tasks": [
+        "Завершай полезные здания в фазу «Строительство» Битвы на выживание",
+        "Сначала проверь UR караваны и операции: они дают много очков без новой стройки",
+        "По возможности запусти длинное исследование для среды"
+      ],
+      "overlapPhases": [
+        "build"
+      ],
+      "scoring": [
+        {
+          "id": "constructionSpeedups",
+          "action": "Ускорения строительства",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "buildingMight",
+          "action": "Прирост мощи здания",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "urCaravan",
+          "action": "Отправка UR каравана",
+          "pointsBase": 100000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "urOperation",
+          "action": "Тайная операция UR",
+          "pointsBase": 75000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "survivorRecruit",
+          "action": "Наём выжившего",
+          "pointsBase": 1500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "С Битвой на выживание совпадают ускорения и мощь зданий. Выжившие, UR караваны и операции дают очки только Дуэли по подтверждённой таблице."
+    },
+    {
+      "weekday": 3,
+      "title": "Технологические исследования",
+      "spend": [
+        "Ускорения исследований",
+        "Свитки обучения",
+        "Сундуки экипировки ворона",
+        "Завершения полезных исследований",
+        "Подготовленные задания сокола"
+      ],
+      "save": [
+        "Фрагменты героев, найм, навыки и противоядие до четверга",
+        "Ускорения обучения до пятницы",
+        "Материалы ворона до понедельника"
+      ],
+      "tasks": [
+        "Дождись фазы «Исследования» Битвы на выживание для крупной траты ускорений",
+        "Заверши полезные исследования и улучши ветку Дуэли альянсов",
+        "Получи задания сокола",
+        "Открой накопленные сундуки экипировки ворона, если они указаны среди заданий Дуэли"
+      ],
+      "overlapPhases": [
+        "research"
+      ],
+      "scoring": [
+        {
+          "id": "researchSpeedups",
+          "action": "Ускорения исследований",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "researchMight",
+          "action": "Прирост технологической мощи",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "studyScroll",
+          "action": "Использование свитка обучения",
+          "pointsBase": 300,
+          "quantity": 1,
+          "unit": "свиток",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "falconQuest",
+          "action": "Задание сокола",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "ravenGearChest1",
+          "action": "Сундук экипировки ворона уровня 1",
+          "pointsBase": 1100,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest2",
+          "action": "Сундук экипировки ворона уровня 2",
+          "pointsBase": 3300,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest3",
+          "action": "Сундук экипировки ворона уровня 3",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest4",
+          "action": "Сундук экипировки ворона уровня 4",
+          "pointsBase": 30000,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest5",
+          "action": "Сундук экипировки ворона уровня 5",
+          "pointsBase": 90000,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest6",
+          "action": "Сундук экипировки ворона уровня 6",
+          "pointsBase": 270000,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "ravenGearChest7",
+          "action": "Сундук экипировки ворона уровня 7",
+          "pointsBase": 810000,
+          "quantity": 1,
+          "unit": "сундук",
+          "sourceId": "bay-ad",
+          "note": "Убедись, что этот пункт есть в заданиях твоей текущей Дуэли."
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "Ускорения и технологическая мощь учитываются в обоих событиях. Свитки, сокол и сундуки ворона не указаны отдельными источниками очков Битвы на выживание."
+    },
+    {
+      "weekday": 4,
+      "title": "Усиление героев",
+      "spend": [
+        "Билеты найма героев",
+        "Противоядие для уровней",
+        "Фрагменты героев и пробуждения",
+        "Значки навыков"
+      ],
+      "save": [
+        "Задания сокола и ускорения обучения до пятницы",
+        "Эссенция ворона до понедельника",
+        "Сундуки экипировки ворона до среды"
+      ],
+      "tasks": [
+        "Наём и уровни героев совмести с фазой «Герои» Битвы на выживание",
+        "Трать фрагменты и значки на героев своего основного плана",
+        "Подготовь тренировку или повышение войск к пятнице"
+      ],
+      "overlapPhases": [
+        "heroes"
+      ],
+      "scoring": [
+        {
+          "id": "heroRecruit",
+          "action": "Наём героев",
+          "pointsBase": 1500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardUR",
+          "action": "Использование UR осколка героя",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardSSR",
+          "action": "Использование SSR осколка героя",
+          "pointsBase": 3500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardSR",
+          "action": "Использование SR осколка героя",
+          "pointsBase": 1000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "skillBadge",
+          "action": "Использование значка навыка",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "antitoxin",
+          "action": "Расход противоядия",
+          "pointsBase": 1,
+          "quantity": 660,
+          "unit": "противоядие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroAwakenShard",
+          "action": "Фрагмент пробуждения героя или общий фрагмент пробуждения",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "В Битве на выживание подтверждены найм и противоядие. Фрагменты и значки дают очки Дуэли; не обещаем за них второй зачёт без проверки игрового списка."
+    },
+    {
+      "weekday": 5,
+      "title": "Подготовка к войне",
+      "spend": [
+        "Ускорения обучения и повышение войск",
+        "Подготовленные задания сокола",
+        "Ускорения и завершения стройки/исследований по плану"
+      ],
+      "save": [
+        "Щиты и телепорты для субботы",
+        "Резерв лечения для рейда",
+        "Материалы ворона до понедельника"
+      ],
+      "tasks": [
+        "Обучение и повышение войск проводи в фазу «Обучение» Битвы на выживание",
+        "Используй ускорения стройки в её фазу, а исследования — в свою",
+        "Проверь прирост счётчика на малой партии войск перед большой тратой",
+        "Получи задания сокола"
+      ],
+      "overlapPhases": [
+        "train",
+        "build",
+        "research"
+      ],
+      "scoring": [
+        {
+          "id": "falconQuest",
+          "action": "Задание сокола",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "constructionSpeedups",
+          "action": "Ускорения строительства",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "buildingMight",
+          "action": "Прирост мощи здания",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "researchSpeedups",
+          "action": "Ускорения исследований",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "researchMight",
+          "action": "Прирост технологической мощи",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "trainingSpeedups",
+          "action": "Ускорения обучения",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "trainT1",
+          "action": "Обучение бойца T1",
+          "pointsBase": 20,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT2",
+          "action": "Обучение бойца T2",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT3",
+          "action": "Обучение бойца T3",
+          "pointsBase": 40,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT4",
+          "action": "Обучение бойца T4",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT5",
+          "action": "Обучение бойца T5",
+          "pointsBase": 60,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT6",
+          "action": "Обучение бойца T6",
+          "pointsBase": 70,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT7",
+          "action": "Обучение бойца T7",
+          "pointsBase": 80,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT8",
+          "action": "Обучение бойца T8",
+          "pointsBase": 90,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT9",
+          "action": "Обучение бойца T9",
+          "pointsBase": 100,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "trainT10",
+          "action": "Обучение бойца T10",
+          "pointsBase": 110,
+          "quantity": 1,
+          "unit": "боец",
+          "sourceId": "bay-ad",
+          "note": "Момент начисления при старте/завершении обучения спорный; проверить малой партией в игре."
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "Скорость и очки повышения войск проверяй в игре. Источники спорят, начисляются ли очки обучения при запуске или сборе готовой партии."
+    },
+    {
+      "weekday": 6,
+      "title": "Рейд / общее развитие",
+      "spend": [
+        "Разрешённые текущей фазой ускорения",
+        "UR караваны и операции",
+        "Лечение по необходимости",
+        "Запланированные остатки ресурсов, если они есть в заданиях фазы"
+      ],
+      "save": [
+        "Резерв на восстановление",
+        "Щиты и телепорты",
+        "Сокол, плоды и эссенция для понедельника"
+      ],
+      "tasks": [
+        "Посмотри название шестой фазы в игре: рейд или полное развитие",
+        "В рейде согласуй цели с офицерами [LEX]PIIVO и проверь правила клана",
+        "При выходе из игры поставь подходящий щит, если участвуешь в PvP-событии",
+        "Крупные ускорения стройки, исследований и обучения совмещай со своей фазой Битвы на выживание"
+      ],
+      "overlapPhases": [
+        "build",
+        "research",
+        "train",
+        "raven",
+        "heroes"
+      ],
+      "scoring": [
+        {
+          "id": "urCaravan",
+          "action": "Отправка UR каравана",
+          "pointsBase": 100000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "urOperation",
+          "action": "Тайная операция UR",
+          "pointsBase": 75000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "constructionSpeedups",
+          "action": "Ускорения строительства",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "buildingMight",
+          "action": "Прирост мощи здания",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "researchSpeedups",
+          "action": "Ускорения исследований",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "researchMight",
+          "action": "Прирост технологической мощи",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "единица мощи",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "trainingSpeedups",
+          "action": "Ускорения обучения",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "healingSpeedups",
+          "action": "Ускорения лечения",
+          "pointsBase": 50,
+          "quantity": 1,
+          "unit": "минута",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroRecruit",
+          "action": "Наём героев",
+          "pointsBase": 1500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardUR",
+          "action": "Использование UR осколка героя",
+          "pointsBase": 10000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardSSR",
+          "action": "Использование SSR осколка героя",
+          "pointsBase": 3500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "heroShardSR",
+          "action": "Использование SR осколка героя",
+          "pointsBase": 1000,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "skillBadge",
+          "action": "Использование значка навыка",
+          "pointsBase": 10,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "antitoxin",
+          "action": "Расход противоядия",
+          "pointsBase": 1,
+          "quantity": 660,
+          "unit": "противоядие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "ravenFruit",
+          "action": "Расход плода ворона",
+          "pointsBase": 3,
+          "quantity": 1,
+          "unit": "плод",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "ravenEssence",
+          "action": "Расход эссенции ворона",
+          "pointsBase": 2500,
+          "quantity": 1,
+          "unit": "эссенция",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "survivorRecruit",
+          "action": "Наём выжившего",
+          "pointsBase": 1500,
+          "quantity": 1,
+          "unit": "действие",
+          "sourceId": "gg-ad"
+        },
+        {
+          "id": "purchaseDiamonds",
+          "action": "Покупка набора с алмазами",
+          "pointsBase": 30,
+          "quantity": 1,
+          "unit": "купленный алмаз",
+          "sourceId": "gg-ad",
+          "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+        }
+      ],
+      "note": "У молодых серверов шестой день — Full Development II; после открытия KvK встречается рейд. Вариант сервера 347 не подтверждён. Базовая таблица развития дополняется боевыми заданиями, их проверь в клиенте. Для второго зачёта выбирай конкретное совпадающее действие:например, плоды и энергию в фазу ворона, найм и противоядие в фазу героев. Боевые действия не указаны в пяти фазах Битвы на выживание.",
+      "requiresVariantCheck": true,
+      "variants": [
+        {
+          "id": "full-development",
+          "title": "Полное развитие II",
+          "overlapPhases": [
+            "build",
+            "research",
+            "train",
+            "raven",
+            "heroes"
+          ],
+          "sourceIds": [
+            "gg-ad",
+            "ajack-ad"
+          ]
+        },
+        {
+          "id": "raid",
+          "title": "Рейд",
+          "overlapPhases": [
+            "build",
+            "research",
+            "train",
+            "raven",
+            "heroes"
+          ],
+          "sourceIds": [
+            "bay-ad",
+            "buff-ad"
+          ],
+          "combatScoring": [
+            {
+              "action": "Победить бойца конкретного соперника Дуэли",
+              "pointsAtTier": {
+                "1": 10,
+                "10": 55
+              },
+              "note": "Промежуточные уровни не интерполированы; сверь очки своего уровня в игре."
+            },
+            {
+              "action": "Победить бойца чужого сервера вне назначенного соперника",
+              "pointsAtTier": {
+                "1": 2,
+                "10": 11
+              }
+            },
+            {
+              "action": "Потеря собственного бойца",
+              "pointsAtTier": {
+                "1": 2,
+                "10": 11
+              },
+              "note": "Указанные очки не делают намеренные потери выгодными."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "allianceMeta": {
+    "durationDays": 6,
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "offWeekday": 0,
+    "resetServerHour": 0,
+    "resetUtcHour": null,
+    "scoringType": "base-before-personal-Alliance-Duel-research-bonuses",
+    "note": "Очки на твоём аккаунте могут отличаться из-за ветки исследований. Календарь не читает живые события сервера 347."
+  },
+  "survival": {
+    "phaseOrder": [
+      {
+        "id": "build",
+        "title": "Развитие владений",
+        "spend": [
+          "Ускорения строительства",
+          "Завершения зданий"
+        ],
+        "tasks": [
+          "Получай мощь от полезных улучшений зданий",
+          "Расходуй строительные ускорения во время этой фазы"
+        ],
+        "scoring": [
+          {
+            "id": "constructionSpeedups",
+            "action": "Ускорения строительства",
+            "pointsBase": 10,
+            "quantity": 1,
+            "unit": "минута",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "buildingMight",
+            "action": "Прирост мощи здания",
+            "pointsBase": 1,
+            "quantity": 1,
+            "unit": "единица мощи",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "purchaseDiamonds",
+            "action": "Покупка набора с алмазами",
+            "pointsBase": 30,
+            "quantity": 1,
+            "unit": "купленный алмаз",
+            "sourceId": "gg-sb",
+            "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+          }
+        ]
+      },
+      {
+        "id": "train",
+        "title": "Обучение войск",
+        "spend": [
+          "Ускорения обучения",
+          "Партии обучения или повышения войск"
+        ],
+        "tasks": [
+          "Обучай и повышай нужных бойцов",
+          "Используй ускорения обучения"
+        ],
+        "scoring": [
+          {
+            "id": "trainingSpeedups",
+            "action": "Ускорения обучения",
+            "pointsBase": 10,
+            "quantity": 1,
+            "unit": "минута",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "purchaseDiamonds",
+            "action": "Покупка набора с алмазами",
+            "pointsBase": 30,
+            "quantity": 1,
+            "unit": "купленный алмаз",
+            "sourceId": "gg-sb",
+            "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+          }
+        ],
+        "note": "Один гайд указывает 28 очков заT9, но это отсутствует в таблицахgg/wiki; не используем значение как универсальную формулу."
+      },
+      {
+        "id": "research",
+        "title": "Технологии",
+        "spend": [
+          "Ускорения исследований",
+          "Завершения исследований"
+        ],
+        "tasks": [
+          "Завершай полезные технологии",
+          "Используй ускорения исследований"
+        ],
+        "scoring": [
+          {
+            "id": "researchSpeedups",
+            "action": "Ускорения исследований",
+            "pointsBase": 10,
+            "quantity": 1,
+            "unit": "минута",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "researchMight",
+            "action": "Прирост технологической мощи",
+            "pointsBase": 1,
+            "quantity": 1,
+            "unit": "единица мощи",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "purchaseDiamonds",
+            "action": "Покупка набора с алмазами",
+            "pointsBase": 30,
+            "quantity": 1,
+            "unit": "купленный алмаз",
+            "sourceId": "gg-sb",
+            "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+          }
+        ]
+      },
+      {
+        "id": "raven",
+        "title": "Усиление ворона",
+        "spend": [
+          "Плоды ворона",
+          "Энергия на PvE"
+        ],
+        "tasks": [
+          "Повысь уровень ворона плодами",
+          "Потрать энергию на полезные рейды и PvE"
+        ],
+        "scoring": [
+          {
+            "id": "ravenFruit",
+            "action": "Расход плодов ворона",
+            "pointsBase": 1,
+            "quantity": 10,
+            "unit": "плод",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "stamina",
+            "action": "Расход энергии",
+            "pointsBase": 100,
+            "quantity": 1,
+            "unit": "энергия",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "purchaseDiamonds",
+            "action": "Покупка набора с алмазами",
+            "pointsBase": 30,
+            "quantity": 1,
+            "unit": "купленный алмаз",
+            "sourceId": "gg-sb",
+            "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+          }
+        ]
+      },
+      {
+        "id": "heroes",
+        "title": "Усиление героев",
+        "spend": [
+          "Билеты найма героев",
+          "Противоядие для уровней"
+        ],
+        "tasks": [
+          "Нанимай героев",
+          "Повысь уровни запланированных героев"
+        ],
+        "scoring": [
+          {
+            "id": "heroRecruit",
+            "action": "Наём героев",
+            "pointsBase": 400,
+            "quantity": 1,
+            "unit": "найм",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "antitoxin",
+            "action": "Расход противоядия",
+            "pointsBase": 1,
+            "quantity": 1950,
+            "unit": "противоядие",
+            "sourceId": "gg-sb"
+          },
+          {
+            "id": "purchaseDiamonds",
+            "action": "Покупка набора с алмазами",
+            "pointsBase": 30,
+            "quantity": 1,
+            "unit": "купленный алмаз",
+            "sourceId": "gg-sb",
+            "note": "Это начисление за покупку, а не за расход алмазов. Покупать набор ради очков не требуется."
+          }
+        ]
+      }
+    ],
+    "durationHours": 4,
+    "roundsPerDay": 6,
+    "cycleMode": "daily-reset-weekly-template-with-manual-server-anchor",
+    "resetUtcHour": null,
+    "resetServerHour": 0,
+    "canRollContinuouslyAcrossDailyReset": false,
+    "confidence": "duration-and-rules-high; weekday-template-medium; server347-live-anchor-unconfirmed",
+    "dailyPhaseSequences": [
+      {
+        "weekday": 0,
+        "phaseIds": [
+          "heroes",
+          "build",
+          "train",
+          "research",
+          "raven",
+          "heroes"
+        ],
+        "calendarDay": 7
+      },
+      {
+        "weekday": 1,
+        "phaseIds": [
+          "build",
+          "train",
+          "research",
+          "raven",
+          "heroes",
+          "build"
+        ],
+        "calendarDay": 1
+      },
+      {
+        "weekday": 2,
+        "phaseIds": [
+          "heroes",
+          "build",
+          "train",
+          "research",
+          "raven",
+          "heroes"
+        ],
+        "calendarDay": 2
+      },
+      {
+        "weekday": 3,
+        "phaseIds": [
+          "build",
+          "train",
+          "research",
+          "raven",
+          "heroes",
+          "build"
+        ],
+        "calendarDay": 3
+      },
+      {
+        "weekday": 4,
+        "phaseIds": [
+          "train",
+          "research",
+          "raven",
+          "heroes",
+          "build",
+          "train"
+        ],
+        "calendarDay": 4
+      },
+      {
+        "weekday": 5,
+        "phaseIds": [
+          "research",
+          "raven",
+          "heroes",
+          "build",
+          "train",
+          "research"
+        ],
+        "calendarDay": 5
+      },
+      {
+        "weekday": 6,
+        "phaseIds": [
+          "raven",
+          "heroes",
+          "build",
+          "train",
+          "research",
+          "raven"
+        ],
+        "calendarDay": 6
+      }
+    ],
+    "dailyRoundServerHours": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "scheduleSourceIds": [
+      "zarael-sb",
+      "guides-sb"
+    ],
+    "requiresManualSync": true,
+    "manualSyncInputs": [
+      "activePhaseId",
+      "phaseRemainingSeconds",
+      "observedAtUtc",
+      "serverResetUtcHourOrServerClockOffset"
+    ],
+    "dailyMedalTargets": [
+      2,
+      8,
+      18
+    ],
+    "notes": [
+      "В течение дня темы идут по кругу: стройка→обучение→исследования→ворон→герои. За день 6 раундов, одна тема повторяется.",
+      "Стартовая тема меняется по дню недели. После ежедневного сброса нельзя просто продолжать бесконечный пятифазный круг.",
+      "Шаблон недельного календаря совпадает у двух гайдов, но не подтверждён игровым скриншотом 347. Текущую фазу и остаток таймера вводят вручную.",
+      "Источники подтверждают 00:00server time, но спорят о переводе вUTC:00:00UTC или 02:00UTC. Значение resetUtcHour оставлено null.",
+      "Время 21:00/01:00 из постера не переносится в приложение: таймзона автора не подтверждена.",
+      "По достижении цели забирай медали вручную: они не восстанавливаются почтой при дневном сбросе.",
+      "Пересечение событий означает совпадение конкретного действия, а не всего списка ресурсов категории. Например, осколки и значки навыков не указаны в таблицеSB«Герои».",
+      "Сопоставление «день 1» недельного шаблона с понедельником является предположением; для 347 сначала сверь экран «Календарь» в игре. Текущий ручной таймер надёжнее такого предположения."
+    ],
+    "weekdayMappingAssumption": "День 1 календаря источников сопоставлен понедельнику. Это разумная привязка недельного шаблона, но календарь сервера 347 её пока не подтвердил.",
+    "confidenceDetails": {
+      "roundDuration": "high, in-game rules",
+      "fiveThemeOrder": "high, two matching community calendars",
+      "rawCalendarDaySequences": "medium, two matching community calendars",
+      "calendarDay1IsMondayForServer347": "unconfirmed",
+      "resetUtcHourForServer347": "unconfirmed",
+      "liveCurrentPhaseForServer347": "manual-only"
+    }
+  },
+  "contradictions": [
+    {
+      "id": "reset-utc",
+      "summary": "Server time00:00 подтверждено; UTC0vsUTC-2 различается в гайдах",
+      "sourceIds": [
+        "gg-ad",
+        "gg-sb",
+        "bay-ad",
+        "kma-time"
+      ],
+      "resolution": "No hardcoded UTC reset for server347; manual sync required."
+    },
+    {
+      "id": "day6-variant",
+      "summary": "Wiki/GG показывают общее развитиеII, гайды и игроки также показываютPvPрейд после KvK",
+      "sourceIds": [
+        "gg-ad",
+        "wiki-ad",
+        "ajack-ad",
+        "reddit-calendar",
+        "buff-ad"
+      ],
+      "resolution": "Keep day6variant explicit and require checking current game phase."
+    },
+    {
+      "id": "training-credit",
+      "summary": "Различаются советы о начислении очков при начале обучения или сборе готовых войск",
+      "sourceIds": [
+        "buff-ad",
+        "ajack-ad"
+      ],
+      "resolution": "Do not recommend mass pretraining-and-hold as verified; check small batch."
+    },
+    {
+      "id": "sb-training-tier",
+      "summary": "Гайд указывает 28 очковT9, GG/wiki не включают очки за сами войска",
+      "sourceIds": [
+        "guides-sb",
+        "gg-sb",
+        "wiki-sb"
+      ],
+      "resolution": "No troop-tier point formula in Survival scoring."
+    }
+  ],
+  "unavailableRequestedUrls": [
+    "https://wiki-last-asylum.com/ru/wiki/survival-battle",
+    "https://wiki-last-asylum.com/ru/wiki/alliance-duel"
+  ]
+}
