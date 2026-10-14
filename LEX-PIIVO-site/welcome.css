@@ -1,0 +1,10 @@
+/* LEX onboarding card */
+.lex-welcome{margin:20px 0 26px;padding:24px 26px;background:linear-gradient(125deg,#1a2920,#131b16);border:1px solid #354e38}
+.lex-welcome-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+.lex-welcome-top h2{margin:4px 0 7px;font-size:27px}
+.lex-welcome-top p{max-width:580px;font-size:12px}
+.lex-welcome-mark{color:#bed699;opacity:.4;font:700 52px/1 Georgia,serif}
+.lex-welcome-actions{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}
+.lex-welcome-actions .btn{font-size:11px}
+.lex-welcome-note{color:#a7b6a5;font-size:11px;line-height:1.6}
+@media(max-width:700px){.lex-welcome{padding:17px}.lex-welcome-top h2{font-size:24px}.lex-welcome-mark{font-size:34px}.lex-welcome-actions .btn{width:100%;justify-content:center;text-align:center}}
