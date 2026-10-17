@@ -11,13 +11,13 @@ api.queueSave=queueSave;api.flush=async()=>{clearTimeout(timer);await flush();re
 async function load(){const g=++generation;api.ready=false;api.userId=null;dirty=false;clearTimeout(timer);
  const {data:{user},error}=await sb.auth.getUser();if(g!==generation)return;
  if(error){report('Не удалось проверить вход: '+error.message);return}
- if(!user){api.ready=true;report('Гостевой режим · локальное сохранение');api.onLoad?.({kind:'guest'});return}
+ if(!user){api.ready=true;report('Гостевой режим · локальное сохранение');api.lastLoad={kind:'guest'};api.onLoad?.(api.lastLoad);return}
  api.userId=user.id;
  report('Загружаем облачный профиль…');
  const {data,error:fetchError}=await sb.from('player_profiles').select('game_state').eq('user_id',user.id).maybeSingle();
  if(g!==generation)return;
- if(fetchError){report('Сеть недоступна: локальное сохранение');api.onLoad?.({kind:'offline',userId:user.id});return}
- api.ready=true;api.onLoad?.({kind:data?.game_state&&Object.keys(data.game_state).length?'cloud':'new',state:data?.game_state,userId:user.id});report(data?'Прогресс загружен из облака':'Новый облачный профиль');
+ if(fetchError){report('Сеть недоступна: локальное сохранение');api.lastLoad={kind:'offline',userId:user.id};api.onLoad?.(api.lastLoad);return}
+ api.ready=true;api.lastLoad={kind:data?.game_state&&Object.keys(data.game_state).length?'cloud':'new',state:data?.game_state,userId:user.id};api.onLoad?.(api.lastLoad);report(data?'Прогресс загружен из облака':'Новый облачный профиль');
 }
 api.reload=load;window.LEX_CLOUD=api;
 sb.auth.onAuthStateChange((event)=>{if(['SIGNED_IN','SIGNED_OUT','USER_UPDATED'].includes(event))setTimeout(load,0)});
