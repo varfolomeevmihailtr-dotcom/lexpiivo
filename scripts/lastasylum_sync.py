@@ -226,6 +226,33 @@ def parse_alliance(html, url):
             'note': 'Displayed member power sum; not necessarily official alliance Might.'}
 
 
+
+def member_diff(old, new):
+    """Detect actual differences only between two successful roster snapshots."""
+    if not old or not old.get('members'):
+        return []
+    def keyed(players):
+        return {('id:' + str(p['game_player_id']) if p.get('game_player_id')
+                 else 'nick:' + unicodedata.normalize('NFKC', p['nickname']).casefold()):p for p in players}
+    before = keyed(old.get('members', []))
+    after = keyed(new.get('members', []))
+    at = new['checked_at']
+    out = []
+    for key, player in after.items():
+        previous = before.get(key)
+        if previous is None:
+            out.append({'type': 'joined', 'at': at, 'key': key, 'nickname': player['nickname'], 'power': player.get('power')})
+        elif previous.get('power') != player.get('power'):
+            out.append({'type': 'power', 'at': at, 'key': key, 'nickname': player['nickname'],
+                        'old_power': previous.get('power'), 'new_power': player.get('power'),
+                        'delta': player.get('power', 0) - previous.get('power', 0)})
+        elif previous.get('nickname') != player.get('nickname'):
+            out.append({'type': 'renamed', 'at': at, 'key': key, 'nickname': player['nickname'], 'previous_name': previous['nickname']})
+    for key, player in before.items():
+        if key not in after:
+            out.append({'type': 'left', 'at': at, 'key': key, 'nickname': player['nickname'], 'power': player.get('power')})
+    return out
+
 def main():
     previous = {}
     if PATH.exists():
@@ -234,7 +261,7 @@ def main():
         except (ValueError, OSError):
             previous = {}
     result = {key: value for key, value in previous.items()
-              if key in ('codes', 'alliance', 'history')}
+              if key in ('codes', 'alliance', 'history', 'member_events', 'last_changes')}
     result['attempted_at'] = now_utc()
     result['sources'] = {'codes': CODES, 'server': SERVER}
     errors = {}
@@ -261,6 +288,10 @@ def main():
         board = parse_server_alliances(html)
         time.sleep(1)
         result['alliance'] = parse_alliance(fetch(url), url)
+        changes = member_diff(previous.get('alliance'), result['alliance'])
+        result['last_changes'] = changes
+        result['member_events'] = (list(previous.get('member_events') or []) + changes)[-2000:]
+        print('Roster changes:', len(changes))
         result['alliance']['top_server_alliances'] = board[:10]
         for row in board:
             if row['url'] == url:
