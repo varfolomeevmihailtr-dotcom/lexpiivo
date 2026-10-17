@@ -1,0 +1,17 @@
+
+.lex-duel-task{border-top:1px solid #3a503c;padding:16px 0;margin-top:12px;min-width:0}
+.lex-duel-task>div:first-child strong{font-size:16px;color:#e6f0e0}
+.lex-duel-task small{color:#b8c6b6;line-height:1.5}
+.lex-duel-task .lex-row-actions{margin-top:12px}
+.lex-duel-task .lex-row-actions input{max-width:180px}
+.lex-duel-add{border-top:1px solid #3c503f;padding-top:18px;margin-top:20px}
+.lex-claim-row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #354939;padding:12px 0}
+.lex-claim-row>div:first-child{min-width:0;overflow-wrap:anywhere}
+.lex-claim-row .lex-row-actions{justify-content:flex-end}
+.lex-identity-results{display:grid;gap:5px;max-height:340px;overflow-y:auto;margin:9px 0;padding:4px;border:1px solid #354b39;border-radius:10px}
+.lex-identity-result{width:100%;text-align:left;padding:9px 13px;border-radius:7px;border:1px solid transparent;background:#213328;color:#e6eee1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;cursor:pointer}
+.lex-identity-result:hover{background:#35553d;border-color:#648166}
+.lex-identity-result small{font-size:11px;color:#bad0b0}
+#lexIdentityStatus{color:#edcb86}
+#lexIdentityChosen{margin:12px 0;overflow-wrap:anywhere}
+@media(max-width:650px){.lex-claim-row .lex-row-actions{width:100%;justify-content:stretch}.lex-claim-row .btn{flex:1}}
