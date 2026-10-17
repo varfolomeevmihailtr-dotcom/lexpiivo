@@ -200,11 +200,18 @@ def main():
     result['attempted_at'] = now_utc()
     result['sources'] = {'codes': CODES, 'server': SERVER}
     errors = {}
+    diagnostics = {}
     try:
-        result['codes'] = parse_codes(fetch(CODES))
+        codes_html = fetch(CODES)
+        result['codes'] = parse_codes(codes_html)
         print('Codes:', len(result['codes']['active']), 'working')
     except Exception as exc:
         errors['codes'] = str(exc)
+        if 'codes_html' in locals():
+            doc = BeautifulSoup(codes_html, 'html.parser')
+            diagnostics['codes_title'] = clean(doc.title.get_text())[:120] if doc.title else ''
+            diagnostics['codes_headings'] = [clean(h.get_text())[:80] for h in doc.select('h1,h2,h3')][:30]
+            diagnostics['codes_excerpt'] = [clean(x)[:60] for x in list((doc.select_one('main') or doc).stripped_strings)[:30]]
         print('Code update failed:', exc, file=sys.stderr)
     try:
         html = fetch(SERVER)
@@ -218,8 +225,18 @@ def main():
         print('Alliance:', url, '| members:', result['alliance']['member_count'])
     except Exception as exc:
         errors['alliance'] = str(exc)
+        if 'html' in locals():
+            doc = BeautifulSoup(html, 'html.parser')
+            diagnostics['server_title'] = clean(doc.title.get_text())[:120] if doc.title else ''
+            diagnostics['server_headings'] = [clean(h.get_text())[:80] for h in doc.select('h1,h2,h3')][:20]
+            urls = [x.get('href','') for x in doc.select('a[href*="/leaderboard/alliance/"]')]
+            diagnostics['alliance_link_count'] = len(urls)
+            diagnostics['alliance_link_examples'] = urls[:5]
+            diagnostics['mentions_piivo'] = 'piivo' in html.lower()
+            diagnostics['server_excerpt'] = [clean(x)[:60] for x in list((doc.select_one('main') or doc).stripped_strings)[:30]]
         print('Alliance update failed:', exc, file=sys.stderr)
     result['errors'] = errors
+    result['diagnostics'] = diagnostics
     PATH.parent.mkdir(parents=True, exist_ok=True)
     PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Snapshot saved; previous good sections retained on errors.')
