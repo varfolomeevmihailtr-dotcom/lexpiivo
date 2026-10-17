@@ -35,3 +35,8 @@
 .lex-top-alliances a{color:#c2dbac}
 .lex-top-alliances tr.lex-is-us{background:#28412e;font-weight:700}
 .lex-top-alliances tr.lex-is-us td{color:#d9ebba}
+
+.lex-live-code .lex-code-note{font-size:10px;color:#b3cda9;max-width:125px;line-height:1.35}
+.lex-live-code.lex-code-failed{border-color:#786344;background:#352a20}
+.lex-live-code.lex-code-failed .lex-code-note{color:#edca86}
+@media(max-width:600px){.lex-live-code{flex-wrap:wrap}.lex-live-code .lex-code-note{max-width:160px}}
