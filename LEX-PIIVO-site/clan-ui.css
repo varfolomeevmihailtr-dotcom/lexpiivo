@@ -1,0 +1,23 @@
+
+/* Integrated member directory and account workspace */
+.lex-row-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;min-width:200px}
+.lex-row-actions input,.lex-row-actions select{background:var(--surface,#15221a);border:1px solid #445b47;border-radius:8px;color:#e6efe1;padding:10px 11px;max-width:150px;min-width:100px;font:inherit}
+.lex-row-actions input[data-manual-power],.lex-row-actions input[data-power]{width:144px}
+.lex-row-actions select{max-width:185px}
+.lex-row-actions .btn{white-space:nowrap;padding:10px 12px;font-size:12px}
+#lexMembers table th,#lexMembers table td{vertical-align:middle}
+#lexMembers table td:first-child{overflow-wrap:anywhere;min-width:120px}
+#lexMembers .table-wrap{overflow:auto;max-width:100%}
+#lexMembers .table-wrap+.drawer-section{margin-top:26px}
+#lexCabinet .form-grid{margin-top:22px}
+#lexCabinet [data-result],#lexMembers [data-result]{color:#c6dca3;min-height:22px}
+#lex-account{position:relative;z-index:1}
+#lex-account strong{font-size:14px}
+#lex-account a{margin-left:auto}
+@media(max-width:730px){
+#lex-account{gap:8px!important;padding:12px 14px!important}
+#lex-account a{margin-left:0;flex-basis:100%}
+.lex-row-actions{min-width:215px}
+#lexCabinet .button-row{display:flex;flex-wrap:wrap;gap:8px}
+#lexCabinet .button-row .btn{flex:1 1 190px}
+}
