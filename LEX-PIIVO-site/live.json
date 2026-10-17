@@ -1,6 +1,6 @@
 {
   "codes": {
-    "checked_at": "2026-10-17T08:59:54Z",
+    "checked_at": "2026-10-17T09:09:11Z",
     "source": "https://lastasylum.gg/en/codes",
     "active": [
       "LA1OW9F7X",
@@ -42,7 +42,7 @@
     ]
   },
   "alliance": {
-    "checked_at": "2026-10-17T08:59:56Z",
+    "checked_at": "2026-10-17T09:09:13Z",
     "source": "https://lastasylum.gg/en/leaderboard/alliance/67132942",
     "server": 347,
     "name": "[ LEX ] PIIVO",
@@ -724,15 +724,22 @@
       "roster_power_sum": "2149226049",
       "members": 99,
       "server_rank": 7
+    },
+    {
+      "at": "2026-10-17T09:09:13Z",
+      "official_power": "2019196728",
+      "roster_power_sum": "2149226049",
+      "members": 99,
+      "server_rank": 7
     }
   ],
-  "attempted_at": "2026-10-17T08:59:54Z",
+  "last_changes": [],
+  "member_events": [],
+  "attempted_at": "2026-10-17T09:09:11Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
     "server": "https://lastasylum.gg/en/leaderboard/servers/347/alliance-power"
   },
-  "last_changes": [],
-  "member_events": [],
   "errors": {},
   "diagnostics": {}
 }
