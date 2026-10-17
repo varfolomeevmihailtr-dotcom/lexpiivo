@@ -25,3 +25,13 @@
 #lexLiveFull{min-width:0}
 @media(max-width:900px){.lex-live-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.lex-live-cols{grid-template-columns:1fr}}
 @media(max-width:600px){.lex-live-top{flex-wrap:wrap}.lex-live-top .btn{width:100%;justify-content:center}.lex-live-metrics{gap:8px}.lex-live-metrics>div{padding:12px}.lex-live-metrics b{font-size:18px}}
+
+.lex-top-alliances{margin:16px 0}
+.lex-top-alliances .table-wrap{overflow-x:auto;max-width:100%}
+.lex-top-alliances table{width:100%;border-collapse:collapse;min-width:480px}
+.lex-top-alliances th,.lex-top-alliances td{padding:11px 12px;border-bottom:1px solid #334737;text-align:left}
+.lex-top-alliances td:last-child,.lex-top-alliances th:last-child{text-align:right;white-space:nowrap}
+.lex-top-alliances td:nth-child(2){overflow-wrap:anywhere}
+.lex-top-alliances a{color:#c2dbac}
+.lex-top-alliances tr.lex-is-us{background:#28412e;font-weight:700}
+.lex-top-alliances tr.lex-is-us td{color:#d9ebba}
