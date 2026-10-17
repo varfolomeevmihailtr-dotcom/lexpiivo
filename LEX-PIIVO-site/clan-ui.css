@@ -43,3 +43,11 @@
   #lexMembers .drawer-section{margin-top:22px}
   #lexMembers .field input{max-width:100%}
 }
+
+#lexAdmin{min-width:0}
+#lexAdmin .lex-adm-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid #3a4f3d}
+#lexAdmin .lex-adm-row strong{margin-right:auto;overflow-wrap:anywhere}
+#lexAdmin .lex-adm-row select{min-width:125px;max-width:190px;padding:10px;color:#e6f0e4;background:#17261b;border:1px solid #4d644d;border-radius:8px}
+#lexAdmin .lex-adm-row .btn{margin:0}
+#lexAdmin .lex-ops-card{padding:20px}
+@media(max-width:630px){#lexAdmin .lex-adm-row{display:grid;grid-template-columns:1fr auto}#lexAdmin .lex-adm-row strong{grid-column:1/-1}#lexAdmin .lex-adm-row select{min-width:0;width:100%}#lexAdmin .lex-adm-row button{width:100%}}
