@@ -234,7 +234,7 @@ def main():
         except (ValueError, OSError):
             previous = {}
     result = {key: value for key, value in previous.items()
-              if key in ('codes', 'alliance')}
+              if key in ('codes', 'alliance', 'history')}
     result['attempted_at'] = now_utc()
     result['sources'] = {'codes': CODES, 'server': SERVER}
     errors = {}
@@ -267,6 +267,16 @@ def main():
                 result['alliance']['server_rank'] = row['rank']
                 result['alliance']['official_power'] = row['power']
                 break
+        history = list(previous.get('history') or [])[-119:]
+        alliance = result['alliance']
+        history.append({
+            'at': alliance['checked_at'],
+            'official_power': alliance.get('official_power'),
+            'roster_power_sum': alliance.get('roster_power_sum'),
+            'members': alliance['member_count'],
+            'server_rank': alliance.get('server_rank'),
+        })
+        result['history'] = history[-120:]
         print('Alliance:', url, '| members:', result['alliance']['member_count'])
     except Exception as exc:
         errors['alliance'] = str(exc)
