@@ -15,3 +15,12 @@
 #lexIdentityStatus{color:#edcb86}
 #lexIdentityChosen{margin:12px 0;overflow-wrap:anywhere}
 @media(max-width:650px){.lex-claim-row .lex-row-actions{width:100%;justify-content:stretch}.lex-claim-row .btn{flex:1}}
+
+.lex-change-card{background:#18261d;border:1px solid #38523e;padding:20px 22px;margin:16px 0;border-radius:12px}
+.lex-change-card h3{font-size:19px;margin:0 0 12px}
+.lex-change-card .table-wrap{max-width:100%;overflow:auto}
+.lex-change-card table{width:100%;border-collapse:collapse;min-width:380px}
+.lex-change-card th,.lex-change-card td{padding:10px;text-align:left;border-bottom:1px solid #35493a}
+.lex-change-card td:last-child,.lex-change-card th:last-child{color:#b8cbb5;text-align:right}
+.lex-change-card td:first-child{overflow-wrap:anywhere;max-width:250px}
+@media(max-width:640px){.lex-change-card{padding:15px}}
