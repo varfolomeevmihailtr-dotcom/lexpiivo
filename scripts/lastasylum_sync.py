@@ -17,7 +17,7 @@ import requests
 from bs4 import BeautifulSoup
 
 HOME = 'https://lastasylum.gg'
-SERVER = HOME + '/en/leaderboard/servers/347'
+SERVER = HOME + '/en/leaderboard/servers/347/alliance-power'
 CODES = HOME + '/en/codes'
 USER_AGENT = 'LEXPIIVO-clan-dashboard/1.0 (+https://github.com/varfolomeevmihailtr-dotcom/lexpiivo)'
 PATH = Path(__file__).resolve().parents[1] / 'LEX-PIIVO-site' / 'live.json'
@@ -86,7 +86,7 @@ def parse_codes(html):
         for part in parts:
             for candidate in re.split(r'[\s,;]+', part):
                 candidate = candidate.strip('.,():[]' + chr(96) + chr(34) + chr(39))
-                if re.fullmatch(r'(?i)(?:LA[A-Z0-9_-]{3,22}|twlap\d{3,5})', candidate):
+                if re.fullmatch(r'(?i)(?:LA[A-Z0-9_-]{3,22}|twlap\d{3,5})', candidate) or re.fullmatch(r'[A-Z0-9]{6,22}', candidate):
                     if candidate not in result:
                         result.append(candidate)
         return result
@@ -103,6 +103,10 @@ def parse_codes(html):
             raise ValueError('Cannot distinguish working from expired codes; no reliable count')
         active = all_after_start[:expected]
         expired = all_after_start[expected:]
+    summary = ' '.join(texts[:start])
+    expected_match = re.search(r'(\d+)\s+working\s+Last\s+Asylum\s+gift\s+codes', summary, re.I)
+    if expected_match and len(active) != int(expected_match.group(1)):
+        raise ValueError('Incomplete active codes: expected '+expected_match.group(1)+', found '+str(len(active)))
     active_lower = {s.lower() for s in active}
     expired = [s for s in expired if s.lower() not in active_lower]
     if not 1 <= len(active) <= 100:
@@ -141,6 +145,30 @@ def find_alliance_url(server_html):
         raise ValueError('Cannot uniquely locate [LEX]PIIVO on #347: ' + str(len(matches)) + ' match(es)')
     return matches[0]
 
+
+
+def parse_server_alliances(html):
+    doc = BeautifulSoup(html, 'html.parser')
+    result = []
+    for table in doc.select('table'):
+        header = [clean(h.get_text(' ', strip=True)).lower() for h in table.select('thead th')]
+        power_idx = next((i for i, h in enumerate(header) if h.startswith('power') or h.startswith('мощ')), None)
+        rows = []
+        for tr in table.select('tr'):
+            a = tr.select_one('a[href*="/leaderboard/alliance/"]')
+            if not a:
+                continue
+            href = canonical_url(a.get('href', ''))
+            cells = tr.select('td')
+            if not href or not cells:
+                continue
+            name = clean((a.find_parent('td') or a).get_text(' ', strip=True))
+            place = number(cells[0].get_text(' ', strip=True))
+            power = number(cells[power_idx].get_text(' ', strip=True)) if power_idx is not None and len(cells)>power_idx else None
+            rows.append({'rank': place, 'name': name, 'power': str(power) if power is not None else None, 'url': href})
+        if len(rows) > len(result):
+            result = rows
+    return result
 
 def parse_members(doc):
     for table in doc.select('table'):
@@ -230,8 +258,15 @@ def main():
         url = canonical_url(direct) if direct else None
         if not url:
             url = find_alliance_url(html)
+        board = parse_server_alliances(html)
         time.sleep(1)
         result['alliance'] = parse_alliance(fetch(url), url)
+        result['alliance']['top_server_alliances'] = board[:10]
+        for row in board:
+            if row['url'] == url:
+                result['alliance']['server_rank'] = row['rank']
+                result['alliance']['official_power'] = row['power']
+                break
         print('Alliance:', url, '| members:', result['alliance']['member_count'])
     except Exception as exc:
         errors['alliance'] = str(exc)
