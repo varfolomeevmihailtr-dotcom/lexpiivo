@@ -1,10 +1,13 @@
 {
-  "attempted_at": null,
+  "codes": null,
+  "alliance": null,
+  "attempted_at": "2026-10-17T08:35:18Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
     "server": "https://lastasylum.gg/en/leaderboard/servers/347"
   },
-  "errors": {},
-  "codes": null,
-  "alliance": null
+  "errors": {
+    "codes": "Working / expired code headings not found",
+    "alliance": "Cannot uniquely locate [LEX]PIIVO on #347: 0 match(es)"
+  }
 }
