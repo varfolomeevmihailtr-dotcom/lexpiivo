@@ -1,6 +1,6 @@
 {
   "codes": {
-    "checked_at": "2026-10-17T09:09:11Z",
+    "checked_at": "2026-10-17T18:48:40Z",
     "source": "https://lastasylum.gg/en/codes",
     "active": [
       "LA1OW9F7X",
@@ -42,42 +42,42 @@
     ]
   },
   "alliance": {
-    "checked_at": "2026-10-17T09:09:13Z",
+    "checked_at": "2026-10-17T18:48:42Z",
     "source": "https://lastasylum.gg/en/leaderboard/alliance/67132942",
     "server": 347,
     "name": "[ LEX ] PIIVO",
     "member_count": 99,
-    "roster_power_sum": "2149226049",
+    "roster_power_sum": "2146267260",
     "members": [
       {
         "nickname": "Buhayagryaz",
-        "power": 50535282,
+        "power": 43043788,
         "rank": "R3",
         "game_player_id": "371436527963"
       },
       {
         "nickname": "Valenciaga",
-        "power": 40303218,
+        "power": 40380804,
         "rank": "R4",
         "game_player_id": "372027261275"
       },
       {
-        "nickname": "DevilPokerFace",
-        "power": 36094272,
-        "rank": "R3",
-        "game_player_id": "371514286427"
-      },
-      {
         "nickname": "yu’lsv",
-        "power": 35488959,
+        "power": 37379242,
         "rank": "R3",
         "game_player_id": "373984723291"
       },
       {
-        "nickname": "BezumeC",
-        "power": 34952786,
+        "nickname": "DevilPokerFace",
+        "power": 37014526,
         "rank": "R3",
-        "game_player_id": "371980222811"
+        "game_player_id": "371514286427"
+      },
+      {
+        "nickname": "Добряк89",
+        "power": 36004122,
+        "rank": "R3",
+        "game_player_id": "366784512347"
       },
       {
         "nickname": "6ixx",
@@ -86,10 +86,10 @@
         "game_player_id": "372134789467"
       },
       {
-        "nickname": "Добряк89",
-        "power": 34162133,
+        "nickname": "BezumeC",
+        "power": 34755379,
         "rank": "R3",
-        "game_player_id": "366784512347"
+        "game_player_id": "371980222811"
       },
       {
         "nickname": "Rzhev",
@@ -649,66 +649,66 @@
       {
         "rank": 1,
         "name": "[ SOW ] ShadowMasters",
-        "power": "3011552131",
+        "power": "2524688171",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130089"
       },
       {
         "rank": 2,
         "name": "[ STAR ] °*은하수*°",
-        "power": "2959961999",
+        "power": "2522407453",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130018"
       },
       {
         "rank": 3,
         "name": "[ LOS ] Древние",
-        "power": "2754004109",
+        "power": "2428589638",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130033"
       },
       {
         "rank": 4,
         "name": "[ LAW ] TheLaw",
-        "power": "2254431636",
+        "power": "2165381347",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130078"
       },
       {
         "rank": 5,
-        "name": "[ GOAT ] GOATDE",
-        "power": "2228217436",
-        "url": "https://lastasylum.gg/en/leaderboard/alliance/67131492"
+        "name": "[ BSYV ] ДобрыеЛюди",
+        "power": "1898177506",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67132832"
       },
       {
         "rank": 6,
-        "name": "[ BSYV ] ДобрыеЛюди",
-        "power": "2044768965",
-        "url": "https://lastasylum.gg/en/leaderboard/alliance/67132832"
+        "name": "[ GOAT ] GOATDE",
+        "power": "1875104752",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67131492"
       },
       {
         "rank": 7,
         "name": "[ LEX ] PIIVO",
-        "power": "2019196728",
+        "power": "1748646297",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67132942"
       },
       {
         "rank": 8,
         "name": "[ URAL ] РЕГИОНЫ",
-        "power": "1987663645",
+        "power": "1735672798",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130122"
       },
       {
         "rank": 9,
         "name": "[ KgB ] Алкаши",
-        "power": "1847288098",
+        "power": "1592082668",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130743"
       },
       {
         "rank": 10,
         "name": "[ UKR ] ВОЛЯ / VOLYA",
-        "power": "1456027949",
+        "power": "1294002604",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67131706"
       }
     ],
     "server_rank": 7,
-    "official_power": "2019196728"
+    "official_power": "1748646297"
   },
   "history": [
     {
@@ -731,11 +731,128 @@
       "roster_power_sum": "2149226049",
       "members": 99,
       "server_rank": 7
+    },
+    {
+      "at": "2026-10-17T18:48:42Z",
+      "official_power": "1748646297",
+      "roster_power_sum": "2146267260",
+      "members": 99,
+      "server_rank": 7
     }
   ],
-  "last_changes": [],
-  "member_events": [],
-  "attempted_at": "2026-10-17T09:09:11Z",
+  "last_changes": [
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371436527963",
+      "nickname": "Buhayagryaz",
+      "old_power": 50535282,
+      "new_power": 43043788,
+      "delta": -7491494
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:372027261275",
+      "nickname": "Valenciaga",
+      "old_power": 40303218,
+      "new_power": 40380804,
+      "delta": 77586
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:373984723291",
+      "nickname": "yu’lsv",
+      "old_power": 35488959,
+      "new_power": 37379242,
+      "delta": 1890283
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371514286427",
+      "nickname": "DevilPokerFace",
+      "old_power": 36094272,
+      "new_power": 37014526,
+      "delta": 920254
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:366784512347",
+      "nickname": "Добряк89",
+      "old_power": 34162133,
+      "new_power": 36004122,
+      "delta": 1841989
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371980222811",
+      "nickname": "BezumeC",
+      "old_power": 34952786,
+      "new_power": 34755379,
+      "delta": -197407
+    }
+  ],
+  "member_events": [
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371436527963",
+      "nickname": "Buhayagryaz",
+      "old_power": 50535282,
+      "new_power": 43043788,
+      "delta": -7491494
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:372027261275",
+      "nickname": "Valenciaga",
+      "old_power": 40303218,
+      "new_power": 40380804,
+      "delta": 77586
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:373984723291",
+      "nickname": "yu’lsv",
+      "old_power": 35488959,
+      "new_power": 37379242,
+      "delta": 1890283
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371514286427",
+      "nickname": "DevilPokerFace",
+      "old_power": 36094272,
+      "new_power": 37014526,
+      "delta": 920254
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:366784512347",
+      "nickname": "Добряк89",
+      "old_power": 34162133,
+      "new_power": 36004122,
+      "delta": 1841989
+    },
+    {
+      "type": "power",
+      "at": "2026-10-17T18:48:42Z",
+      "key": "id:371980222811",
+      "nickname": "BezumeC",
+      "old_power": 34952786,
+      "new_power": 34755379,
+      "delta": -197407
+    }
+  ],
+  "attempted_at": "2026-10-17T18:48:39Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
     "server": "https://lastasylum.gg/en/leaderboard/servers/347/alliance-power"
