@@ -79,3 +79,5 @@
 .lex-quick-links a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#cbe2aa;background:#1a2b21;padding:9px 11px;border:1px solid #475d46;border-radius:7px;font-size:12px}
 .lex-quick-links a:hover{background:#2b432e}
 @media(max-width:500px){.lex-quick-links a{flex:1 1 150px}}
+
+.lex-incident-status.rude-reply{background:#352744;border-color:#9160b8;color:#dcaff4;font-weight:700}
