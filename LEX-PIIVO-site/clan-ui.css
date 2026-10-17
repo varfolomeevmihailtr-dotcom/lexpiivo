@@ -21,3 +21,25 @@
 #lexCabinet .button-row{display:flex;flex-wrap:wrap;gap:8px}
 #lexCabinet .button-row .btn{flex:1 1 190px}
 }
+
+/* Phone layout: each clan member becomes a compact card rather than a 4-column wide table */
+@media(max-width:800px){
+  #lexMembers{min-width:0}
+  #lexMembers .table-wrap{overflow:visible;border:0;max-width:100%}
+  #lexMembers table,#lexMembers tbody,#lexMembers tr,#lexMembers td{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+  #lexMembers table{border-collapse:separate;font-size:13px}
+  #lexMembers thead{display:none}
+  #lexMembers tbody tr{padding:11px 13px;margin-bottom:12px;border:1px solid #3d5542;border-radius:11px;background:#1b2920;overflow:hidden}
+  #lexMembers tbody tr[hidden]{display:none!important}
+  #lexMembers tbody tr td{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:7px 0;border:0;white-space:normal;line-height:1.45;overflow-wrap:anywhere;text-align:right}
+  #lexMembers tbody tr td:first-child{font-weight:700;color:#ecf3e6;justify-content:flex-start;text-align:left;font-size:14px;flex-wrap:wrap;gap:5px}
+  #lexMembers tbody tr td:nth-child(2):before{content:'Роль';margin-right:auto;color:#a7b9a7;font-weight:500}
+  #lexMembers tbody tr td:nth-child(3):before{content:'Мощность';margin-right:auto;color:#a7b9a7;font-weight:500}
+  #lexMembers tbody tr td:nth-child(4){margin-top:8px;padding:13px 0 2px;border-top:1px solid #3b503f;text-align:left}
+  #lexMembers .lex-row-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;width:100%;max-width:100%;min-width:0}
+  #lexMembers .lex-row-actions input,#lexMembers .lex-row-actions select,#lexMembers .lex-row-actions button{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+  #lexMembers .lex-row-actions input[data-edit-nick]{grid-column:1 / -1}
+  #lexMembers .lex-row-actions button{white-space:normal}
+  #lexMembers .drawer-section{margin-top:22px}
+  #lexMembers .field input{max-width:100%}
+}
