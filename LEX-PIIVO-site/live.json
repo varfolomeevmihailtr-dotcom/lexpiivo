@@ -1,7 +1,7 @@
 {
   "codes": null,
   "alliance": null,
-  "attempted_at": "2026-10-17T08:35:18Z",
+  "attempted_at": "2026-10-17T08:38:18Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
     "server": "https://lastasylum.gg/en/leaderboard/servers/347"
@@ -9,5 +9,87 @@
   "errors": {
     "codes": "Working / expired code headings not found",
     "alliance": "Cannot uniquely locate [LEX]PIIVO on #347: 0 match(es)"
+  },
+  "diagnostics": {
+    "codes_title": "Last Asylum gift codes (October 2026) · Last Asylum Wiki",
+    "codes_headings": [
+      "Last Asylum gift codes",
+      "How to redeem a code",
+      "Working codes",
+      "October 2026",
+      "October 2026"
+    ],
+    "codes_excerpt": [
+      "Last Asylum gift codes",
+      "Share",
+      "20 working Last Asylum gift codes for October 2026. Every co",
+      "Checked: October 17, 2026",
+      "Codes are released by the developer and can expire without w",
+      "How to redeem a code",
+      "Tap your avatar in the top left corner.",
+      "Open Settings.",
+      "Tap Gift Code.",
+      "Paste the code and confirm. The rewards go straight to your ",
+      "Working codes",
+      "October 2026",
+      "LA1OW9F7X",
+      "200 Diamonds",
+      "×",
+      "1",
+      "5m Speedup",
+      "×",
+      "40",
+      "10K Grain",
+      "×",
+      "2",
+      "10K Timber",
+      "×",
+      "2",
+      "Copy",
+      "LADCEX1223",
+      "100 Diamonds",
+      "×",
+      "1"
+    ],
+    "server_title": "Server #347: Top Players & Alliances · Last Asylum Wiki",
+    "server_headings": [
+      "Server #347",
+      "Players by power"
+    ],
+    "alliance_link_count": 0,
+    "alliance_link_examples": [],
+    "mentions_piivo": false,
+    "server_excerpt": [
+      "Players",
+      "Alliances",
+      "Servers",
+      "Compare",
+      "Kings",
+      "Supporters",
+      "🔍",
+      "Search",
+      "Servers",
+      "← #",
+      "346",
+      "#",
+      "348",
+      "→",
+      "Server #347",
+      "Share",
+      "⚖",
+      "Compare with other servers",
+      "Players by power",
+      "Players by kills",
+      "Players by gathering",
+      "Strongest Hero Rank",
+      "Hero Might Rank",
+      "Alliances by power",
+      "Alliances by kills",
+      "Former Kings",
+      "Players by power",
+      "#",
+      "Player",
+      "Tag"
+    ]
   }
 }
