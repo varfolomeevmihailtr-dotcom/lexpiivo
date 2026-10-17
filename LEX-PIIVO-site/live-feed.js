@@ -14,7 +14,7 @@ async function load(force=false){
  .finally(()=>ongoing=null);
  return ongoing;
 }
-function codeRows(list){return (list||[]).map(code=>'<span class="lex-live-code"><code>'+esc(code)+'</code><button class="btn ghost" data-copy-live="'+esc(code)+'">Копировать</button></span>').join('')}
+function codeRows(list){return (list||[]).map(code=>{const status=window.LEX_CODE_STATUS?.[code];const note=status==='failed'?'Раньше не сработал у тебя':status==='used'?'Уже использовал':status==='worked'?'Раньше сработал у тебя':'';return '<span class="lex-live-code '+(status==='failed'?'lex-code-failed':'')+'"><code>'+esc(code)+'</code>'+(note?'<small class="lex-code-note">'+esc(note)+'</small>':'')+'<button class="btn ghost" data-copy-live="'+esc(code)+'">Копировать</button></span>'}).join('')}
 function addCopy(node){node.querySelectorAll('[data-copy-live]').forEach(btn=>btn.onclick=async()=>{try{await navigator.clipboard.writeText(btn.dataset.copyLive);const original=btn.textContent;btn.textContent='Скопировано ✓';setTimeout(()=>{if(btn.isConnected)btn.textContent=original},1500)}catch{btn.textContent='Выдели код вручную'}})}
 function ageHint(t){return stale(t)?'<span class="lex-live-alert">Данные устарели или ещё не загружены</span>':'<span class="lex-live-fresh">Получено: '+esc(when(t))+'</span>'}
 function aboutError(d,type){const err=d?.errors?.[type];return err?'<p class="small muted">Последняя попытка: '+esc(when(d.attempted_at))+' · источник временно недоступен. Предыдущие данные сохранены.</p>':''}
@@ -29,7 +29,7 @@ function renderHome(node,d){
 }
 function renderCodes(node,d){
  const data=d?.codes;
- node.innerHTML='<h2>Коды из LastAsylum.gg</h2><p class="small muted">Дважды в сутки проверяем опубликованный список. Реальную работоспособность для конкретного аккаунта может подтвердить только ввод в игре.</p>'+
+ node.innerHTML='<h2>Коды из LastAsylum.gg</h2><p class="small muted">Дважды в сутки проверяем опубликованный список. Реальную работоспособность для конкретного аккаунта может подтвердить только ввод в игре. Коды, которые раньше не сработали у тебя, отмечены отдельно.</p>'+
  (data?ageHint(data.checked_at)+'<div class="lex-live-codes">'+codeRows(data.active)+'</div><p class="small muted">'+fmt(data.expired?.length)+' кодов отмечены источником как истёкшие</p>':'<p>Первое обновление ещё не состоялось. Пока пользуйся кодами из своего журнала ниже.</p>')+
  aboutError(d,'codes')+'<a href="https://lastasylum.gg/en/codes" target="_blank" rel="noopener noreferrer" class="text-link">Источник: LastAsylum.gg ↗</a>';
  addCopy(node);
