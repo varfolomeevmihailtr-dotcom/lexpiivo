@@ -6,7 +6,7 @@ const api={userId:null,status:'Подключение…',ready:false,onLoad:nul
 let generation=0,dirty=false,busy=false,timer=null,snapshot=null;
 const report=s=>{api.status=s;api.onStatus?.(s)};
 function queueSave(state){if(!api.ready||!api.userId)return;snapshot=JSON.parse(JSON.stringify(state));dirty=true;clearTimeout(timer);timer=setTimeout(flush,900)}
-async function flush(){if(busy||!dirty||!api.ready||!api.userId)return;busy=true;const uid=api.userId,version=generation;try{do{dirty=false;const copy=snapshot;report('Сохраняем прогресс…');const {error}=await sb.from('player_profiles').upsert({user_id:uid,game_state:copy,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error;if(version!==generation)break}while(dirty);if(version===generation)report('Прогресс синхронизирован')}catch(e){if(version===generation){dirty=true;report('Ошибка синхронизации: '+e.message)}}finally{busy=false}}
+async function flush(){if(busy||!dirty||!api.ready||!api.userId)return;busy=true;const uid=api.userId,version=generation;try{do{dirty=false;const copy=snapshot;report('Сохраняем прогресс…');const {error}=await sb.from('player_profiles').upsert({user_id:uid,game_state:copy,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error;if(version!==generation)break}while(dirty);if(version===generation)report('Прогресс синхронизирован')}catch(e){if(version===generation){dirty=true;report('Ошибка синхронизации: '+e.message);clearTimeout(timer);timer=setTimeout(flush,8000)}}finally{busy=false;if(dirty&&api.ready&&api.userId&&version!==generation){clearTimeout(timer);timer=setTimeout(flush,500)}}}
 api.queueSave=queueSave;api.flush=async()=>{clearTimeout(timer);await flush();return api.status};
 async function load(){const g=++generation;api.ready=false;api.userId=null;dirty=false;clearTimeout(timer);
  const {data:{user},error}=await sb.auth.getUser();if(g!==generation)return;
@@ -20,6 +20,8 @@ async function load(){const g=++generation;api.ready=false;api.userId=null;dirty
  api.ready=true;api.lastLoad={kind:data?.game_state&&Object.keys(data.game_state).length?'cloud':'new',state:data?.game_state,userId:user.id};api.onLoad?.(api.lastLoad);report(data?'Прогресс загружен из облака':'Новый облачный профиль');
 }
 api.reload=load;window.LEX_CLOUD=api;
-sb.auth.onAuthStateChange((event)=>{if(['SIGNED_IN','SIGNED_OUT','USER_UPDATED'].includes(event))setTimeout(load,0)});
+sb.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&api.ready&&api.userId===session?.user?.id)return;if(['SIGNED_IN','SIGNED_OUT','USER_UPDATED'].includes(event))setTimeout(load,0)});
+window.addEventListener('online',()=>{if(!api.ready)load();else if(dirty)flush()});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&dirty)flush()});
 load();
 })();
