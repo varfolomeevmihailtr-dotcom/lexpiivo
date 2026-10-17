@@ -74,3 +74,8 @@
 .lex-status-controls label{width:100%;box-sizing:border-box}
 .lex-metrics b{font-size:21px}
 }
+
+.lex-quick-links{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 0}
+.lex-quick-links a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#cbe2aa;background:#1a2b21;padding:9px 11px;border:1px solid #475d46;border-radius:7px;font-size:12px}
+.lex-quick-links a:hover{background:#2b432e}
+@media(max-width:500px){.lex-quick-links a{flex:1 1 150px}}
