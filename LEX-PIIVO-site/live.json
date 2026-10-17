@@ -1,6 +1,6 @@
 {
   "codes": {
-    "checked_at": "2026-10-17T08:42:12Z",
+    "checked_at": "2026-10-17T08:45:01Z",
     "source": "https://lastasylum.gg/en/codes",
     "active": [
       "LA1OW9F7X",
@@ -9,9 +9,11 @@
       "LAKR15K9A",
       "LA25W8CM",
       "LAAS777",
+      "WLTLAP",
       "LAPKOR777",
       "LAPJAP777",
       "LA15WPN4D",
+      "61HW4LA",
       "LA20WBZ9",
       "LAKR10K6L",
       "twlap666",
@@ -39,83 +41,680 @@
       "LA26ALLY"
     ]
   },
-  "alliance": null,
-  "attempted_at": "2026-10-17T08:42:11Z",
+  "alliance": {
+    "checked_at": "2026-10-17T08:45:04Z",
+    "source": "https://lastasylum.gg/en/leaderboard/alliance/67132942",
+    "server": 347,
+    "name": "[ LEX ] PIIVO",
+    "member_count": 99,
+    "roster_power_sum": "2149226049",
+    "members": [
+      {
+        "nickname": "Buhayagryaz",
+        "power": 50535282,
+        "rank": "R3",
+        "game_player_id": "371436527963"
+      },
+      {
+        "nickname": "Valenciaga",
+        "power": 40303218,
+        "rank": "R4",
+        "game_player_id": "372027261275"
+      },
+      {
+        "nickname": "DevilPokerFace",
+        "power": 36094272,
+        "rank": "R3",
+        "game_player_id": "371514286427"
+      },
+      {
+        "nickname": "yu’lsv",
+        "power": 35488959,
+        "rank": "R3",
+        "game_player_id": "373984723291"
+      },
+      {
+        "nickname": "BezumeC",
+        "power": 34952786,
+        "rank": "R3",
+        "game_player_id": "371980222811"
+      },
+      {
+        "nickname": "6ixx",
+        "power": 34833845,
+        "rank": "R4",
+        "game_player_id": "372134789467"
+      },
+      {
+        "nickname": "Добряк89",
+        "power": 34162133,
+        "rank": "R3",
+        "game_player_id": "366784512347"
+      },
+      {
+        "nickname": "Rzhev",
+        "power": 33170475,
+        "rank": "R3",
+        "game_player_id": "369809727835"
+      },
+      {
+        "nickname": "누나~",
+        "power": 32448721,
+        "rank": "R3",
+        "game_player_id": "365995680091"
+      },
+      {
+        "nickname": "Владленович",
+        "power": 32439340,
+        "rank": "R3",
+        "game_player_id": "366664802651"
+      },
+      {
+        "nickname": "Настятя",
+        "power": 31989034,
+        "rank": "R4",
+        "game_player_id": "370951553371"
+      },
+      {
+        "nickname": "Stex988",
+        "power": 31537497,
+        "rank": "R3",
+        "game_player_id": "372189962587"
+      },
+      {
+        "nickname": "Kitiketik",
+        "power": 31390780,
+        "rank": "R3",
+        "game_player_id": "369483039067"
+      },
+      {
+        "nickname": "Вероника7776",
+        "power": 31079594,
+        "rank": "R3",
+        "game_player_id": "375332872539"
+      },
+      {
+        "nickname": "CORONZON",
+        "power": 30442367,
+        "rank": "R4",
+        "game_player_id": "379919016283"
+      },
+      {
+        "nickname": "DJU",
+        "power": 30007987,
+        "rank": "R4",
+        "game_player_id": "371337838939"
+      },
+      {
+        "nickname": "Lalilap””",
+        "power": 29920212,
+        "rank": "R3",
+        "game_player_id": "372026589531"
+      },
+      {
+        "nickname": "DocNAM",
+        "power": 29849823,
+        "rank": "R3",
+        "game_player_id": "367796035931"
+      },
+      {
+        "nickname": "Eclaira",
+        "power": 29609145,
+        "rank": "R3",
+        "game_player_id": "369742397787"
+      },
+      {
+        "nickname": "золотаялилия",
+        "power": 29394256,
+        "rank": "R3",
+        "game_player_id": "373901828443"
+      },
+      {
+        "nickname": "꧁Artemida꧂",
+        "power": 29235352,
+        "rank": "R4",
+        "game_player_id": "371916087643"
+      },
+      {
+        "nickname": "Mimivirus",
+        "power": 29233572,
+        "rank": "R3",
+        "game_player_id": "371553206619"
+      },
+      {
+        "nickname": "darriko",
+        "power": 29062987,
+        "rank": "R4",
+        "game_player_id": "391635812699"
+      },
+      {
+        "nickname": "molochnie",
+        "power": 29050097,
+        "rank": "R3",
+        "game_player_id": "373422260571"
+      },
+      {
+        "nickname": "Gesha0",
+        "power": 28671921,
+        "rank": "R3",
+        "game_player_id": "368218423643"
+      },
+      {
+        "nickname": "Karamel020492",
+        "power": 28585559,
+        "rank": "R4",
+        "game_player_id": "366198841691"
+      },
+      {
+        "nickname": "Александра1605",
+        "power": 28125182,
+        "rank": "R3",
+        "game_player_id": "371014426971"
+      },
+      {
+        "nickname": "7bob7",
+        "power": 28055511,
+        "rank": "R3",
+        "game_player_id": "374589186395"
+      },
+      {
+        "nickname": "Ruri686",
+        "power": 27874321,
+        "rank": "R3",
+        "game_player_id": "373148393819"
+      },
+      {
+        "nickname": "₽Афродита₽",
+        "power": 27548104,
+        "rank": "R3",
+        "game_player_id": "373711216987"
+      },
+      {
+        "nickname": "Sergius76",
+        "power": 27483612,
+        "rank": "R3",
+        "game_player_id": "367699099995"
+      },
+      {
+        "nickname": "태희",
+        "power": 27319413,
+        "rank": "R5",
+        "game_player_id": "371013476699"
+      },
+      {
+        "nickname": "Пayctovckий",
+        "power": 27112748,
+        "rank": "R3",
+        "game_player_id": "371735503195"
+      },
+      {
+        "nickname": "OLeoSantos",
+        "power": 25942062,
+        "rank": "R3",
+        "game_player_id": "374231195995"
+      },
+      {
+        "nickname": "Yarrikk",
+        "power": 25441273,
+        "rank": "R3",
+        "game_player_id": "369111458139"
+      },
+      {
+        "nickname": "Нюшес",
+        "power": 25153187,
+        "rank": "R3",
+        "game_player_id": "372079714651"
+      },
+      {
+        "nickname": "Devilskill",
+        "power": 24869516,
+        "rank": "R3",
+        "game_player_id": "370400092507"
+      },
+      {
+        "nickname": "OVERLORD76",
+        "power": 24058278,
+        "rank": "R1",
+        "game_player_id": "378191446363"
+      },
+      {
+        "nickname": "Insektecyd",
+        "power": 23922154,
+        "rank": "R3",
+        "game_player_id": "370177270107"
+      },
+      {
+        "nickname": "алимпум",
+        "power": 23402972,
+        "rank": "R3",
+        "game_player_id": "373526487387"
+      },
+      {
+        "nickname": "Zlobniy69",
+        "power": 23165346,
+        "rank": "R3",
+        "game_player_id": "369116389723"
+      },
+      {
+        "nickname": "Dashiks",
+        "power": 23122551,
+        "rank": "R3",
+        "game_player_id": "374813024603"
+      },
+      {
+        "nickname": "TyrbinaWR",
+        "power": 23053731,
+        "rank": "R3",
+        "game_player_id": "373567758683"
+      },
+      {
+        "nickname": "AlEx111",
+        "power": 23027800,
+        "rank": "R3",
+        "game_player_id": "370216075611"
+      },
+      {
+        "nickname": "Chuvaaaak",
+        "power": 22809992,
+        "rank": "R3",
+        "game_player_id": "368415220059"
+      },
+      {
+        "nickname": "Aleht",
+        "power": 22761716,
+        "rank": "R3",
+        "game_player_id": "373640028507"
+      },
+      {
+        "nickname": "fokir",
+        "power": 22727047,
+        "rank": "R3",
+        "game_player_id": "370412314971"
+      },
+      {
+        "nickname": "Pinky20",
+        "power": 22568698,
+        "rank": "R3",
+        "game_player_id": "366318141787"
+      },
+      {
+        "nickname": "Dr110411",
+        "power": 22247753,
+        "rank": "R3",
+        "game_player_id": "374319341915"
+      },
+      {
+        "nickname": "Парампіту",
+        "power": 21893293,
+        "rank": "R3",
+        "game_player_id": "374460383579"
+      },
+      {
+        "nickname": "Ташунька",
+        "power": 21104341,
+        "rank": "R3",
+        "game_player_id": "372902527323"
+      },
+      {
+        "nickname": "PANCНI",
+        "power": 21069567,
+        "rank": "R1",
+        "game_player_id": "375996907867"
+      },
+      {
+        "nickname": "Алла2026",
+        "power": 21018075,
+        "rank": "R3",
+        "game_player_id": "369889124699"
+      },
+      {
+        "nickname": "Наcтя67rus",
+        "power": 20971137,
+        "rank": "R3",
+        "game_player_id": "373202370907"
+      },
+      {
+        "nickname": "VOLk",
+        "power": 20722492,
+        "rank": "R3",
+        "game_player_id": "374855352667"
+      },
+      {
+        "nickname": "Тишь35",
+        "power": 19982672,
+        "rank": "R3",
+        "game_player_id": "371544236379"
+      },
+      {
+        "nickname": "Kawat0",
+        "power": 19935961,
+        "rank": "R1",
+        "game_player_id": "371242393947"
+      },
+      {
+        "nickname": "фунога",
+        "power": 19546433,
+        "rank": "R3",
+        "game_player_id": "367160680795"
+      },
+      {
+        "nickname": "Danya722",
+        "power": 18760925,
+        "rank": "R3",
+        "game_player_id": "372113465691"
+      },
+      {
+        "nickname": "Ася007",
+        "power": 18744449,
+        "rank": "R3",
+        "game_player_id": "371382395227"
+      },
+      {
+        "nickname": "ТОД777",
+        "power": 18424763,
+        "rank": "R3",
+        "game_player_id": "368208953691"
+      },
+      {
+        "nickname": "Новунохудонсор",
+        "power": 18419279,
+        "rank": "R3",
+        "game_player_id": "366083957083"
+      },
+      {
+        "nickname": "Invaders",
+        "power": 17804023,
+        "rank": "R3",
+        "game_player_id": "375274004827"
+      },
+      {
+        "nickname": "беZликий",
+        "power": 17756249,
+        "rank": "R1",
+        "game_player_id": "375584604507"
+      },
+      {
+        "nickname": "Pynka",
+        "power": 17593203,
+        "rank": "R3",
+        "game_player_id": "370168521051"
+      },
+      {
+        "nickname": "миррарябова",
+        "power": 17253990,
+        "rank": "R3",
+        "game_player_id": "366139867483"
+      },
+      {
+        "nickname": "вотвам",
+        "power": 17227256,
+        "rank": "R3",
+        "game_player_id": "367943090523"
+      },
+      {
+        "nickname": "Marik1205",
+        "power": 17082235,
+        "rank": "R1",
+        "game_player_id": "372050575707"
+      },
+      {
+        "nickname": "Dariiaai",
+        "power": 17033938,
+        "rank": "R3",
+        "game_player_id": "368334135643"
+      },
+      {
+        "nickname": "Оляляляля",
+        "power": 17020476,
+        "rank": "R3",
+        "game_player_id": "367106113883"
+      },
+      {
+        "nickname": "DokNadin",
+        "power": 16910715,
+        "rank": "R3",
+        "game_player_id": "375704043867"
+      },
+      {
+        "nickname": "kisexd1",
+        "power": 16529197,
+        "rank": "R1",
+        "game_player_id": "373526241627"
+      },
+      {
+        "nickname": "ze4r",
+        "power": 15825391,
+        "rank": "R1",
+        "game_player_id": "373151973723"
+      },
+      {
+        "nickname": "UniT",
+        "power": 15470742,
+        "rank": "R3",
+        "game_player_id": "372037902683"
+      },
+      {
+        "nickname": "Andrei86",
+        "power": 15451813,
+        "rank": "R3",
+        "game_player_id": "374761357659"
+      },
+      {
+        "nickname": "МаленькийДемон",
+        "power": 15400025,
+        "rank": "R1",
+        "game_player_id": "373102461275"
+      },
+      {
+        "nickname": "VeDmOchka",
+        "power": 14509321,
+        "rank": "R3",
+        "game_player_id": "370263703899"
+      },
+      {
+        "nickname": "Тоха125",
+        "power": 14343133,
+        "rank": "R3",
+        "game_player_id": "370989646171"
+      },
+      {
+        "nickname": "НикSon",
+        "power": 14163363,
+        "rank": "R1",
+        "game_player_id": "372440818011"
+      },
+      {
+        "nickname": "valeridoc7020",
+        "power": 13533796,
+        "rank": "R2",
+        "game_player_id": "366745903451"
+      },
+      {
+        "nickname": "Fratel",
+        "power": 13476275,
+        "rank": "R3",
+        "game_player_id": "372983595355"
+      },
+      {
+        "nickname": "LeBanano",
+        "power": 13361785,
+        "rank": "R1",
+        "game_player_id": "367947948379"
+      },
+      {
+        "nickname": "Moh85",
+        "power": 13014396,
+        "rank": "R1",
+        "game_player_id": "371968057691"
+      },
+      {
+        "nickname": "NeBesiMenя",
+        "power": 12729525,
+        "rank": "R1",
+        "game_player_id": "375408533851"
+      },
+      {
+        "nickname": "Olegio82",
+        "power": 12481837,
+        "rank": "R3",
+        "game_player_id": "375061807451"
+      },
+      {
+        "nickname": "VItal",
+        "power": 12307571,
+        "rank": "R1",
+        "game_player_id": "372151050587"
+      },
+      {
+        "nickname": "WickedBanshee",
+        "power": 11714471,
+        "rank": "R3",
+        "game_player_id": "374849708379"
+      },
+      {
+        "nickname": "--ВОРОН--",
+        "power": 11198928,
+        "rank": "R1",
+        "game_player_id": "404588773723"
+      },
+      {
+        "nickname": "Sorcerrer",
+        "power": 9176175,
+        "rank": "R1",
+        "game_player_id": "374009782619"
+      },
+      {
+        "nickname": "Евгений2609",
+        "power": 8909191,
+        "rank": "R1",
+        "game_player_id": "368194421083"
+      },
+      {
+        "nickname": "FlyPig",
+        "power": 8536768,
+        "rank": "R1",
+        "game_player_id": "370691457371"
+      },
+      {
+        "nickname": "klim48klim",
+        "power": 8523831,
+        "rank": "R1",
+        "game_player_id": "372282704219"
+      },
+      {
+        "nickname": "OdysseuS",
+        "power": 8118354,
+        "rank": "R1",
+        "game_player_id": "373139947867"
+      },
+      {
+        "nickname": "PoliakovA",
+        "power": 7734388,
+        "rank": "R1",
+        "game_player_id": "368682762587"
+      },
+      {
+        "nickname": "bojchura",
+        "power": 7576261,
+        "rank": "R1",
+        "game_player_id": "373766791515"
+      },
+      {
+        "nickname": "Karneichik",
+        "power": 7482482,
+        "rank": "R1",
+        "game_player_id": "375447142747"
+      },
+      {
+        "nickname": "people1122",
+        "power": 6771109,
+        "rank": "R1",
+        "game_player_id": "372348002651"
+      },
+      {
+        "nickname": "cruxzol",
+        "power": 6101636,
+        "rank": "R1",
+        "game_player_id": "371311411547"
+      },
+      {
+        "nickname": "malik1004",
+        "power": 3226632,
+        "rank": "R1",
+        "game_player_id": "366772527451"
+      }
+    ],
+    "note": "Displayed member power sum; not necessarily official alliance Might.",
+    "top_server_alliances": [
+      {
+        "rank": 1,
+        "name": "[ SOW ] ShadowMasters",
+        "power": "3011552131",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130089"
+      },
+      {
+        "rank": 2,
+        "name": "[ STAR ] °*은하수*°",
+        "power": "2959961999",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130018"
+      },
+      {
+        "rank": 3,
+        "name": "[ LOS ] Древние",
+        "power": "2754004109",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130033"
+      },
+      {
+        "rank": 4,
+        "name": "[ LAW ] TheLaw",
+        "power": "2254431636",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130078"
+      },
+      {
+        "rank": 5,
+        "name": "[ GOAT ] GOATDE",
+        "power": "2228217436",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67131492"
+      },
+      {
+        "rank": 6,
+        "name": "[ BSYV ] ДобрыеЛюди",
+        "power": "2044768965",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67132832"
+      },
+      {
+        "rank": 7,
+        "name": "[ LEX ] PIIVO",
+        "power": "2019196728",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67132942"
+      },
+      {
+        "rank": 8,
+        "name": "[ URAL ] РЕГИОНЫ",
+        "power": "1987663645",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130122"
+      },
+      {
+        "rank": 9,
+        "name": "[ KgB ] Алкаши",
+        "power": "1847288098",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130743"
+      },
+      {
+        "rank": 10,
+        "name": "[ UKR ] ВОЛЯ / VOLYA",
+        "power": "1456027949",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67131706"
+      }
+    ],
+    "server_rank": 7,
+    "official_power": "2019196728"
+  },
+  "attempted_at": "2026-10-17T08:45:00Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
-    "server": "https://lastasylum.gg/en/leaderboard/servers/347"
+    "server": "https://lastasylum.gg/en/leaderboard/servers/347/alliance-power"
   },
-  "errors": {
-    "alliance": "Cannot uniquely locate [LEX]PIIVO on #347: 0 match(es)"
-  },
-  "diagnostics": {
-    "server_title": "Server #347: Top Players & Alliances · Last Asylum Wiki",
-    "server_headings": [
-      "Server #347",
-      "Players by power"
-    ],
-    "alliance_link_count": 0,
-    "alliance_link_examples": [],
-    "mentions_piivo": false,
-    "alliance_tab_html": "<a href=\"/en/leaderboard/servers/347/alliance-power\">Alliances by power</a>",
-    "server_links_first": [
-      "/en/leaderboard/players/power",
-      "/en/leaderboard/alliances/power",
-      "/en/leaderboard/servers",
-      "/en/leaderboard/compare",
-      "/en/leaderboard/kings",
-      "/en/supporters",
-      "/en/leaderboard/search",
-      "/en/leaderboard/servers",
-      "/en/leaderboard/servers/346",
-      "/en/leaderboard/servers/348",
-      "/en/leaderboard/compare/servers?s=347",
-      "/en/leaderboard/servers/347",
-      "/en/leaderboard/servers/347/kills",
-      "/en/leaderboard/servers/347/damage",
-      "/en/leaderboard/servers/347/hero",
-      "/en/leaderboard/servers/347/heroes",
-      "/en/leaderboard/servers/347/alliance-power",
-      "/en/leaderboard/servers/347/alliance-kills",
-      "/en/leaderboard/servers/347/kings",
-      "/en/leaderboard/player/367538495835",
-      "/en/leaderboard/player/367398117723",
-      "/en/leaderboard/player/366152352091",
-      "/en/leaderboard/player/373408096603",
-      "/en/leaderboard/player/369799831899",
-      "/en/leaderboard/player/366663164251"
-    ],
-    "server_excerpt": [
-      "Players",
-      "Alliances",
-      "Servers",
-      "Compare",
-      "Kings",
-      "Supporters",
-      "🔍",
-      "Search",
-      "Servers",
-      "← #",
-      "346",
-      "#",
-      "348",
-      "→",
-      "Server #347",
-      "Share",
-      "⚖",
-      "Compare with other servers",
-      "Players by power",
-      "Players by kills",
-      "Players by gathering",
-      "Strongest Hero Rank",
-      "Hero Might Rank",
-      "Alliances by power",
-      "Alliances by kills",
-      "Former Kings",
-      "Players by power",
-      "#",
-      "Player",
-      "Tag"
-    ]
-  }
+  "errors": {},
+  "diagnostics": {}
 }
