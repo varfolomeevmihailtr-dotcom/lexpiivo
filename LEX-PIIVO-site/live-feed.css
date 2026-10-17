@@ -1,0 +1,27 @@
+
+/* Public LastAsylum.gg summary and gift-code feed */
+.lex-live-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:16px}
+.lex-live-top h2{font-size:24px;margin:0 0 6px}
+.lex-live-top p{max-width:700px;margin:0;line-height:1.5}
+.lex-live-top .btn{flex:0 0 auto;margin-top:2px}
+.lex-live-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+.lex-live-metrics>div{background:#1c2d21;border:1px solid #3a503b;border-radius:9px;padding:15px;min-width:0}
+.lex-live-metrics span{display:block;font-size:11px;color:#a2b5a1;line-height:1.4}
+.lex-live-metrics b{display:block;margin-top:6px;color:#d0e5ab;font-size:clamp(17px,2vw,27px);overflow-wrap:anywhere;line-height:1.3}
+.lex-live-dates{display:flex;gap:15px;flex-wrap:wrap;font-size:11px;color:#a6b8a7;margin-top:12px}
+.lex-live-cols{display:grid;grid-template-columns:1fr 1fr;gap:17px;align-items:start;margin:20px 0}
+.lex-live-box{min-width:0;background:#18231b;border:1px solid #3a503b;border-radius:10px;padding:19px}
+.lex-live-box h3{margin:0 0 12px;font-size:20px}
+.lex-live-box p{line-height:1.5;overflow-wrap:anywhere}
+.lex-live-box details{margin:15px 0;cursor:pointer}
+.lex-live-fresh{display:inline-flex;color:#b5d89a;margin:8px 0;font-size:12px}
+.lex-live-alert{display:inline-flex;color:#ecc88b;margin:8px 0;font-size:12px}
+.lex-live-codes{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0}
+.lex-live-code{display:flex;align-items:center;gap:8px;padding:5px 6px;border:1px solid #3c533e;background:#223126;border-radius:7px;max-width:100%}
+.lex-live-code code{font-size:12px;font-weight:700;color:#dbe9d2;overflow-wrap:anywhere;min-width:0;padding:2px 3px}
+.lex-live-code .btn{font-size:10px;padding:7px 9px;margin:0;min-height:30px;flex:0 0 auto}
+#lexLiveCodes{margin-bottom:22px}
+#lexLiveHome{margin-bottom:20px}
+#lexLiveFull{min-width:0}
+@media(max-width:900px){.lex-live-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.lex-live-cols{grid-template-columns:1fr}}
+@media(max-width:600px){.lex-live-top{flex-wrap:wrap}.lex-live-top .btn{width:100%;justify-content:center}.lex-live-metrics{gap:8px}.lex-live-metrics>div{padding:12px}.lex-live-metrics b{font-size:18px}}
