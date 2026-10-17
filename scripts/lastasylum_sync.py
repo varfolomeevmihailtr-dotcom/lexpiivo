@@ -74,10 +74,8 @@ def parse_codes(html):
     doc = BeautifulSoup(html, 'html.parser')
     main = doc.select_one('main') or doc
     texts = [clean(v) for v in main.stripped_strings]
-    start = next((i for i, s in enumerate(texts) if s.lower() in
-                  ('working codes', 'active codes', 'действующие коды', 'рабочие коды')), None)
-    end = next((i for i, s in enumerate(texts) if s.lower() in
-                ('expired codes', 'истекшие коды', 'просроченные коды')), None)
+    start = next((i for i, s in enumerate(texts) if s.lower().startswith(('working codes', 'active codes', 'действующие коды', 'рабочие коды'))), None)
+    end = next((i for i, s in enumerate(texts) if s.lower().startswith(('expired codes', 'истекшие коды', 'просроченные коды'))), None)
     if start is None or end is None or end <= start:
         raise ValueError('Working / expired code headings not found')
 
@@ -233,6 +231,9 @@ def main():
             diagnostics['alliance_link_count'] = len(urls)
             diagnostics['alliance_link_examples'] = urls[:5]
             diagnostics['mentions_piivo'] = 'piivo' in html.lower()
+            tab = doc.find(string=re.compile(r'Alliances by power', re.I))
+            diagnostics['alliance_tab_html'] = str(tab.parent)[:700] if tab and tab.parent else 'not found'
+            diagnostics['server_links_first'] = [a.get('href','') for a in doc.select('main a[href]')][:25]
             diagnostics['server_excerpt'] = [clean(x)[:60] for x in list((doc.select_one('main') or doc).stripped_strings)[:30]]
         print('Alliance update failed:', exc, file=sys.stderr)
     result['errors'] = errors
