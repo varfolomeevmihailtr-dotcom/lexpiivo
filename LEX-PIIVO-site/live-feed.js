@@ -36,6 +36,10 @@ function renderCodes(node,d){
 }
 function topTable(d){const a=d?.alliance,top=a?.top_server_alliances;if(!top?.length)return '';
 return '<section class="lex-live-box lex-top-alliances"><h3>Топ-10 альянсов сервера 347 по БМ</h3><div class="table-wrap"><table><thead><tr><th>#</th><th>Альянс</th><th>Мощность</th></tr></thead><tbody>'+top.map(row=>'<tr'+(row.rank===a.server_rank?' class="lex-is-us"':'')+'><td>'+fmt(row.rank)+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+esc(row.url)+'">'+esc(row.name)+'</a></td><td>'+fmt(row.power)+'</td></tr>').join('')+'</tbody></table></div><p class="small muted">Данные LastAsylum.gg на '+esc(when(a.checked_at))+'.</p></section>'}
+function topPlayers(d){const members=d?.alliance?.members;if(!members?.length)return '';
+ const top=[...members].sort((x,y)=>Number(y.power)-Number(x.power)).slice(0,10);
+ return '<section class="lex-live-box lex-top-alliances"><h3>Топ-10 участников [LEX] по мощности</h3><div class="table-wrap"><table><thead><tr><th>#</th><th>Игрок</th><th>Ранг</th><th>Мощность</th></tr></thead><tbody>'+top.map((p,i)=>'<tr><td>'+(i+1)+'</td><td>'+esc(p.nickname)+'</td><td>'+esc(p.rank||'—')+'</td><td>'+fmt(p.power)+'</td></tr>').join('')+'</tbody></table></div><p><a class="text-link" href="#sync">Сравнить весь состав с регистрациями →</a></p></section>';
+}
 function trend(d){const h=(d?.history||[]).filter(x=>x.official_power);if(h.length<2)return '';const first=h[0],last=h[h.length-1],delta=BigInt(last.official_power)-BigInt(first.official_power);return '<p class="small muted">Изменение БМ за последние '+h.length+' снимков: <strong class="'+(delta>=0n?'lex-good':'lex-warn')+'">'+(delta>=0n?'+':'')+fmt(delta.toString())+'</strong></p>'}
 function renderFull(node,d){
  const a=d?.alliance,c=d?.codes;
@@ -46,7 +50,7 @@ function renderFull(node,d){
  '<a href="https://lastasylum.gg/en/leaderboard/servers/347" target="_blank" rel="noopener noreferrer" class="text-link">Рейтинг сервера #347 ↗</a></section>'+
  '<section class="lex-live-box"><h3>Рабочие промокоды</h3>'+ageHint(c?.checked_at)+
  (c?'<div class="lex-live-codes">'+codeRows(c.active)+'</div><details><summary>Истёкшие по источнику ('+fmt(c.expired?.length)+')</summary><p class="small muted">'+(c.expired||[]).map(esc).join(' · ')+'</p></details>':'<p>Ожидаем первое обновление кодов.</p>')+
- aboutError(d,'codes')+'<a href="https://lastasylum.gg/en/codes" class="text-link" target="_blank" rel="noopener noreferrer">Страница кодов ↗</a></section></div>'+trend(d)+topTable(d)+
+ aboutError(d,'codes')+'<a href="https://lastasylum.gg/en/codes" class="text-link" target="_blank" rel="noopener noreferrer">Страница кодов ↗</a></section></div>'+trend(d)+topTable(d)+topPlayers(d)+
  '<p class="small muted">LastAsylum.gg — независимый фанатский источник, не API разработчика игры. Если сайт поменяет структуру, автоматический импорт приостановится, а старые значения останутся с прежней датой.</p>';
  addCopy(node);
 }
