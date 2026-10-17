@@ -76,8 +76,10 @@ def parse_codes(html):
     texts = [clean(v) for v in main.stripped_strings]
     start = next((i for i, s in enumerate(texts) if s.lower().startswith(('working codes', 'active codes', 'действующие коды', 'рабочие коды'))), None)
     end = next((i for i, s in enumerate(texts) if s.lower().startswith(('expired codes', 'истекшие коды', 'просроченные коды'))), None)
-    if start is None or end is None or end <= start:
-        raise ValueError('Working / expired code headings not found')
+    if start is None:
+        raise ValueError('Working codes heading not found')
+    if end is not None and end <= start:
+        end = None
 
     def collect(parts):
         result = []
@@ -89,8 +91,18 @@ def parse_codes(html):
                         result.append(candidate)
         return result
 
-    active = collect(texts[start + 1:end])
-    expired = collect(texts[end + 1:])
+    all_after_start = collect(texts[start + 1:])
+    if end is not None:
+        active = collect(texts[start + 1:end])
+        expired = collect(texts[end + 1:])
+    else:
+        summary = ' '.join(texts[:start])
+        count_match = re.search(r'(\d+)\s+working\s+Last\s+Asylum\s+gift\s+codes', summary, re.I)
+        expected = int(count_match.group(1)) if count_match else None
+        if expected is None or expected < 1 or expected > 100 or len(all_after_start) < expected:
+            raise ValueError('Cannot distinguish working from expired codes; no reliable count')
+        active = all_after_start[:expected]
+        expired = all_after_start[expected:]
     active_lower = {s.lower() for s in active}
     expired = [s for s in expired if s.lower() not in active_lower]
     if not 1 <= len(active) <= 100:
