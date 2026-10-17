@@ -1,0 +1,76 @@
+
+/* Clan events, discipline log and game-roster import */
+.lex-ops-card{background:#18231b;border:1px solid #38503a;border-radius:12px;padding:22px 24px;margin-bottom:16px;min-width:0}
+.lex-ops-card h2,.lex-ops-card h3{margin:0 0 12px;color:#edf3e6;line-height:1.2}
+.lex-ops-card h2{font-size:26px}.lex-ops-card h3{font-size:21px}
+.lex-ops-card p{line-height:1.55;overflow-wrap:anywhere}
+.lex-ops-card summary{cursor:pointer;color:#c1db9c;font-weight:700;list-style-position:inside;padding:4px 0}
+.lex-ops-card details[open]>summary{margin-bottom:18px}
+.lex-ops-card input,.lex-ops-card select,.lex-ops-card textarea{display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid #415b45;background:#101913;color:#eaf0e3;outline:none;font:inherit}
+.lex-ops-card input:focus,.lex-ops-card select:focus,.lex-ops-card textarea:focus{border-color:#b9d397}
+.lex-ops-card label{display:block;color:#ced7ca;font-size:13px;min-width:0}
+.lex-ops-card label input,.lex-ops-card label select,.lex-ops-card label textarea{margin-top:6px}
+.lex-ops-card .btn{margin-top:9px;min-width:0}
+.lex-ops-card .lex-inline{display:flex;align-items:center;gap:10px;font-size:13px;margin:14px 0}
+.lex-ops-card input[type=checkbox]{display:inline-block;flex:0 0 18px;appearance:auto;width:18px;height:18px;margin:0;accent-color:#b9d397}
+.lex-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:15px}
+.lex-intro{margin-bottom:18px}.lex-intro h2{font-size:24px;margin:0 0 6px}.lex-intro p{color:#aebdaf;line-height:1.5}
+.lex-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.lex-card-heading>div:first-child{min-width:0}
+.lex-card-heading h3{overflow-wrap:anywhere}
+.lex-card-heading p{margin:8px 0;color:#c3cfc0}
+.lex-count{min-width:100px;text-align:right;display:flex;flex-direction:column;gap:3px}.lex-count b{font-size:34px;color:#c6dca4}.lex-count span{font-size:11px;color:#9db39a}
+.lex-event-time{font-weight:700;color:#bdd89b!important}
+.lex-status-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0}
+.lex-status-row>span{display:inline-flex;align-items:center;border:1px solid #334637;border-radius:30px;padding:7px 11px;font-size:12px}
+.lex-signup-list,.lex-chip-list{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.lex-signup-list .lex-person,.lex-chip-list .lex-person{display:inline-flex;max-width:100%;overflow-wrap:anywhere;background:#26382b;border:1px solid #425944;padding:6px 10px;border-radius:7px;font-size:12px}
+.lex-signup-list .lex-person.maybe{background:#3c3623;border-color:#66582f}
+.lex-signup-list .lex-person.cant{background:#352429;border-color:#5f3639}
+.lex-event-signup{margin-top:18px;padding-top:16px;border-top:1px solid #344537;display:flex;gap:10px;align-items:end;flex-wrap:wrap}
+.lex-event-signup label{flex:1 1 190px;max-width:400px}.lex-event-signup .btn{flex:0 0 auto}
+.lex-event-edit{border-top:1px solid #334737;padding-top:16px;margin-top:20px}
+.lex-incident-status{font-weight:650;opacity:.9}
+.lex-incident-status.inactive{opacity:.47;color:#95a195;background:#202820}
+.lex-incident-status.warned{background:#453b1c;border-color:#9d8031;color:#f7d96e}
+.lex-incident-status.burned{background:#4b252a;border-color:#aa4348;color:#ff9096}
+.lex-incident-status.apologized{background:#234b33;border-color:#4da267;color:#9ae6a5}
+.lex-status-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:15px}
+.lex-status-controls label{display:flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid #3e5443;border-radius:7px;cursor:pointer}
+.lex-status-controls .btn{margin:0}
+.lex-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:20px 0}
+.lex-metrics>div{padding:12px;background:#253428;border:1px solid #405743;border-radius:8px;min-width:0}
+.lex-metrics b{display:block;font-size:24px;color:#cae0ad}.lex-metrics span{display:block;font-size:11px;color:#a9baaa}
+.lex-total{margin:12px 0 16px;font-size:16px;overflow-wrap:anywhere}
+.lex-total strong{color:#d8ebb9}
+.lex-good{color:#bce4a8}.lex-warn{color:#f0ce87}
+#lexRoster .table-wrap{overflow-x:auto;max-width:100%}
+#lexRoster .table-wrap table{width:100%;min-width:650px}
+#lexRoster .table-wrap td{max-width:280px;overflow-wrap:anywhere;vertical-align:middle}
+#lexRoster .lex-row-actions{min-width:250px}
+#lexRoster .lex-row-actions select{min-width:140px}
+#lexRosterJson{margin:12px 0}
+#lexImportPreview{min-height:35px;margin:10px 0;color:#b8d8ad;overflow-wrap:anywhere}
+#lexImportStatus{min-height:25px;color:#e6cf90}
+.sidebar [data-lex-login]{display:block;line-height:1.45;overflow-wrap:anywhere;font-size:12px!important;letter-spacing:0!important}
+.sidebar [data-lex-login]:hover{text-decoration:underline}
+.sidebar p:has(> [data-lex-login]){padding:0 10px!important;margin:0 0 12px!important;max-width:100%}
+.sidebar .profile-button{min-width:0}
+.sidebar .profile-button>span:nth-child(2){min-width:0;overflow:hidden;overflow-wrap:anywhere}
+.sidebar .profile-button>span:last-child{flex:0 0 auto}
+#lex-account{min-height:30px}
+@media(max-width:900px){
+.lex-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lex-fields{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.lex-ops-card{padding:16px}
+.lex-card-heading{flex-direction:column;gap:6px}
+.lex-count{text-align:left;align-items:baseline;flex-direction:row;gap:8px}
+.lex-count b{font-size:26px}
+.lex-ops-card .lex-event-signup{display:block}
+.lex-event-signup .btn{width:100%}
+.lex-status-controls{flex-direction:column;align-items:stretch}
+.lex-status-controls label{width:100%;box-sizing:border-box}
+.lex-metrics b{font-size:21px}
+}
