@@ -1,0 +1,38 @@
+name: Refresh LEX game rankings and gift codes
+on:
+  schedule:
+    - cron: '17 6,18 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/lex-data-sync.yml'
+      - 'scripts/lastasylum_sync.py'
+permissions:
+  contents: write
+concurrency:
+  group: lex-game-data-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTML parser
+        run: python -m pip install --disable-pip-version-check requests==2.32.5 beautifulsoup4==4.14.2
+      - name: Refresh public snapshots (respect robots.txt)
+        run: python scripts/lastasylum_sync.py
+      - name: Commit changed public facts only
+        run: |
+          git add LEX-PIIVO-site/live.json
+          if git diff --cached --quiet; then
+            echo 'No changes'
+            exit 0
+          fi
+          git config user.name 'LEX data updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: update public LastAsylum snapshot'
+          git push
