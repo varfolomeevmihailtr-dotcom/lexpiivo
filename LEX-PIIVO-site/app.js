@@ -136,7 +136,7 @@
   if(info.kind==='guest'){activeUserId=null;try{state=sanitizeState(JSON.parse(localStorage.getItem(key)||'null'))}catch{state=sanitizeState({})}render();return}
   activeUserId=info.userId;let draft=null;
   try{draft=JSON.parse(localStorage.getItem(key+'-user-'+activeUserId)||'null')}catch{}
-  if(info.kind==='cloud')state=sanitizeState(info.state);
+  if(info.kind==='cloud'){let pending=false;try{pending=localStorage.getItem('lex-cloud-pending-'+activeUserId)==='1'}catch{};if(pending&&draft){state=sanitizeState(draft);window.LEX_CLOUD?.queueSave(state)}else state=sanitizeState(info.state)}
   else if(draft)state=sanitizeState(draft);
   else if(info.kind==='new'){
    let legacy=null;try{if(!localStorage.getItem('lex-legacy-imported-v1'))legacy=JSON.parse(localStorage.getItem(key)||'null')}catch{}
