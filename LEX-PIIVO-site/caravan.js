@@ -10,7 +10,7 @@ async function load(node){
  if(loading)return;loading=true;
  try{
   const sb=window.LEX_SB;if(!sb)throw Error('Не удалось подключиться к базе.');
-  const {data:{user},error:authError}=await sb.auth.getUser();
+  const {data:{user},error:authError}=await Promise.race([sb.auth.getUser(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Не удалось получить сессию. Обнови страницу и повтори.')),9000))]);
   if(authError)throw authError;
   if(!user){node.innerHTML='<div class="lex-ops-card"><h2>Вход в штаб</h2><p>Для записи на караван войди в аккаунт LEX.</p><a href="./login.html" class="btn">Войти / Регистрация</a></div>';return}
   const timed=(promise,ms,description)=>Promise.race([
