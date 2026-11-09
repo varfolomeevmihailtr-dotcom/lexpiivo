@@ -1,0 +1,73 @@
+(()=>{'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const officer=r=>['r4','r5','admin'].includes(r);
+const label={vip:'VIP',coachman:'Кучер'};
+const fmt=s=>new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(s));
+let loading=false;
+async function load(node){
+ if(loading)return;loading=true;
+ try{
+  const sb=window.LEX_SB;if(!sb)throw Error('Не удалось подключиться к базе.');
+  const {data:{user},error:authError}=await sb.auth.getUser();
+  if(authError)throw authError;
+  if(!user){node.innerHTML='<div class="lex-ops-card"><h2>Вход в штаб</h2><p>Для записи на караван войди в аккаунт LEX.</p><a href="./login.html" class="btn">Войти / Регистрация</a></div>';return}
+  const [account,queue,people]=await Promise.all([
+   sb.from('clan_accounts').select('user_id,nickname,role').eq('user_id',user.id).single(),
+   sb.from('clan_caravan_queue').select('*').order('created_at',{ascending:true}),
+   sb.from('clan_accounts').select('user_id,nickname')
+  ]);
+  for(const r of [account,queue,people])if(r.error)throw r.error;
+  const me=account.data,rows=queue.data||[],my=rows.find(r=>r.user_id===me.user_id);
+  const names=new Map((people.data||[]).map(r=>[r.user_id,r.nickname]));
+  const tabs=['coachman','vip'];
+  node.innerHTML='<section class="lex-caravan-hero"><span class="lex-caravan-eyebrow">АЛЬЯНС LEX · СЕРВЕР 347</span><h2>Караван ждёт своих героев</h2><p>Запишись в очередь на VIP-место или роль кучера. R4/R5 назначают участников в игре и отмечают выбранных здесь.</p><button type="button" class="btn lex-gold-btn" id="lexOpenCaravan">'+(my?'Изменить мою запись':'Записаться на караван')+'</button><span class="lex-caravan-note">Запись на сайте не назначает роль автоматически в игре.</span></section>'+
+  '<div class="lex-caravan-grid">'+tabs.map(type=>{
+    const rr=rows.filter(r=>r.request_type===type),pending=rr.filter(r=>r.status==='pending');
+    return '<section class="lex-caravan-panel"><div class="lex-caravan-header"><div><span class="lex-caravan-eyebrow">'+(type==='vip'?'ОСОБЫЙ ПАССАЖИР':'ГЛАВНАЯ ПОВОЗКА')+'</span><h3>'+(type==='vip'?'✦ VIP':'♞ Кучер')+'</h3></div><strong>'+pending.length+' в очереди</strong></div>'+
+    (rr.length?'<div class="lex-caravan-list">'+rr.map((r)=>{
+      const rank=pending.findIndex(t=>t.user_id===r.user_id)+1;
+      const chosen=r.status==='selected';
+      return '<div class="lex-caravan-person '+(chosen?'is-selected':'')+'"><span class="lex-caravan-rank">'+(chosen?'✓':'#'+rank)+'</span><div class="lex-caravan-person-name"><strong>'+esc(names.get(r.user_id)||'Игрок')+'</strong><small>'+(chosen?'Выбран · '+fmt(r.selected_at):'В очереди с '+fmt(r.created_at))+'</small></div><span class="lex-caravan-status '+(chosen?'chosen':'')+'">'+(chosen?'Взяли':'Ожидает')+'</span>'+(officer(me.role)?'<button type="button" class="lex-caravan-mark" data-caravan-mark="'+esc(r.user_id)+'" data-next="'+(chosen?'pending':'selected')+'">'+(chosen?'Вернуть':'Взяли ✓')+'</button>':'')+'</div>'
+    }).join('')+'</div>':'<p class="lex-caravan-empty">Пока нет заявок. Можно стать первым!</p>')+'</section>'
+  }).join('')+'</div>'+
+  (my?'<p class="lex-caravan-own">Твоя запись: <strong>'+label[my.request_type]+'</strong> · '+(my.status==='selected'?'выбран офицером':'ожидаешь в очереди')+'.</p>':'')+
+  '<p id="lexCaravanMessage" role="status" aria-live="polite"></p>';
+  $('#lexOpenCaravan',node).onclick=()=>popup(node,me,my);
+  $$('[data-caravan-mark]',node).forEach(b=>b.onclick=async()=>{
+    b.disabled=true;
+    const selected=b.dataset.next==='selected',now=new Date().toISOString();
+    const result=await sb.from('clan_caravan_queue').update({status:b.dataset.next,selected_by:selected?me.user_id:null,selected_at:selected?now:null}).eq('user_id',b.dataset.caravanMark);
+    if(result.error){$('#lexCaravanMessage',node).textContent=result.error.message;b.disabled=false}
+    else {loading=false;await load(node)}
+  });
+ }catch(e){node.innerHTML='<section class="lex-ops-card"><h2>Не удалось открыть очередь</h2><p>'+esc(e.message)+'</p><button class="btn" id="lexCaravanRetry">Повторить</button></section>';$('#lexCaravanRetry',node).onclick=()=>load(node)}
+ finally{loading=false}
+}
+function popup(node,me,my){
+ const overlay=document.createElement('div');overlay.className='lex-caravan-backdrop';
+ overlay.innerHTML='<div class="lex-caravan-dialog" role="dialog" aria-modal="true" aria-labelledby="lexCaravanTitle"><button type="button" class="lex-caravan-close" aria-label="Закрыть">×</button><span class="lex-caravan-eyebrow">ЗАПИСЬ НА КАРАВАН</span><h2 id="lexCaravanTitle">Твоё место в истории LEX</h2><p>Выбери одну очередь. Ник берём из твоего профиля, чтобы R4 знал, кого назначать.</p><form id="lexCaravanForm"><label>Игровой ник<input disabled value="'+esc(me.nickname)+'"></label><div class="lex-caravan-choice"><label><input type="radio" name="kind" value="vip" '+(!my||my.request_type==='vip'?'checked':'')+'><span>✦ VIP <small>Особое приглашение</small></span></label><label><input type="radio" name="kind" value="coachman" '+(my?.request_type==='coachman'?'checked':'')+'><span>♞ Кучер <small>Управляет караваном</small></span></label></div><button class="btn lex-gold-btn" type="submit">'+(my?'Обновить очередь':'Встать в очередь')+'</button>'+(my&&my.status==='pending'?'<button type="button" id="lexCaravanLeave" class="btn ghost">Отменить запись</button>':'')+'<p id="lexCaravanFormError" role="status"></p></form></div>';
+ document.body.append(overlay);document.body.classList.add('lex-caravan-modal-open');
+ const close=()=>{overlay.remove();document.body.classList.remove('lex-caravan-modal-open');document.removeEventListener('keydown',key)};
+ const key=e=>{if(e.key==='Escape')close()};document.addEventListener('keydown',key);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
+ $('.lex-caravan-close',overlay).onclick=close;
+ $('#lexCaravanForm',overlay).onsubmit=async e=>{
+  e.preventDefault();const button=$('button[type=submit]',overlay);button.disabled=true;
+  const kind=$('input[name=kind]:checked',overlay).value;
+  if(my?.status==='selected'){ $('#lexCaravanFormError',overlay).textContent='Ты уже выбран. Изменения может внести офицер.';button.disabled=false;return}
+  const sb=window.LEX_SB;
+  const result=my?
+   await sb.from('clan_caravan_queue').update({request_type:kind,created_at:new Date().toISOString()}).eq('user_id',me.user_id):
+   await sb.from('clan_caravan_queue').insert({user_id:me.user_id,request_type:kind});
+  if(result.error){$('#lexCaravanFormError',overlay).textContent=result.error.message;button.disabled=false;return}
+  close();await load(node);
+ };
+ const leave=$('#lexCaravanLeave',overlay);if(leave)leave.onclick=async()=>{
+  leave.disabled=true;const r=await window.LEX_SB.from('clan_caravan_queue').delete().eq('user_id',me.user_id);
+  if(r.error){$('#lexCaravanFormError',overlay).textContent=r.error.message;leave.disabled=false}
+  else{close();await load(node)}
+ };
+}
+window.LEX_CARAVAN={render:()=>{const node=document.getElementById('lexCaravan');if(node)load(node)}};
+})();
