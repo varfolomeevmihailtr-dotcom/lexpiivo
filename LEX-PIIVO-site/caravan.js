@@ -4,6 +4,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const officer=r=>['r4','r5','admin'].includes(r);
 const label={vip:'VIP',coachman:'Кучер'};
 const fmt=s=>new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(s));
+const localDateTime=s=>{const d=new Date(s);return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,16)};
 let loading=false;
 async function load(node){
  if(loading)return;loading=true;
@@ -12,13 +13,15 @@ async function load(node){
   const {data:{user},error:authError}=await sb.auth.getUser();
   if(authError)throw authError;
   if(!user){node.innerHTML='<div class="lex-ops-card"><h2>Вход в штаб</h2><p>Для записи на караван войди в аккаунт LEX.</p><a href="./login.html" class="btn">Войти / Регистрация</a></div>';return}
-  const [account,queue,people,history]=await Promise.all([
+  const [account,queue,people,history,telegram,departure]=await Promise.all([
    sb.from('clan_accounts').select('user_id,nickname,role').eq('user_id',user.id).single(),
    sb.from('clan_caravan_queue').select('*').order('created_at',{ascending:true}),
    sb.from('clan_accounts').select('user_id,nickname'),
-   sb.from('clan_caravan_history').select('*').order('selected_at',{ascending:false}).limit(2000)
+   sb.from('clan_caravan_history').select('*').order('selected_at',{ascending:false}).limit(2000),
+   sb.rpc('telegram_link_status'),
+   sb.from('clan_caravan_departure').select('departure_at').eq('id',1).maybeSingle()
   ]);
-  for(const r of [account,queue,people,history])if(r.error)throw r.error;
+  for(const r of [account,queue,people,history,telegram,departure])if(r.error)throw r.error;
   const me=account.data,rows=queue.data||[],my=rows.find(r=>r.user_id===me.user_id);
   const names=new Map((people.data||[]).map(r=>[r.user_id,r.nickname]));
   const past=history.data||[],totals=new Map();
@@ -37,8 +40,40 @@ async function load(node){
   (my?'<p class="lex-caravan-own">Твоя запись: <strong>'+label[my.request_type]+'</strong> · '+(my.status==='selected'?'выбран офицером':'ожидаешь в очереди')+'.</p>':'')+
   '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>История караванов</h3><span>'+past.length+' назначений</span></div>'+
   (past.length?'<div class="lex-caravan-history-list">'+past.map(h=>'<article class="lex-caravan-history-entry"><div><strong>'+esc(names.get(h.user_id)||'Игрок')+'</strong><small>'+esc(label[h.request_type]||h.request_type)+' · '+fmt(h.selected_at)+'</small></div><p>'+(h.note?esc(h.note):'Без примечания')+'</p>'+(officer(me.role)?'<button class="lex-caravan-mark" type="button" data-history-note="'+h.id+'">✎ Примечание</button>':'')+'</article>').join('')+'</div>':'<p class="lex-caravan-empty">История пока пустая. Первое подтверждение офицера появится здесь.</p>')+'</section>'+
+  '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>🔔 Личные уведомления Telegram</h3></div><p>Бот <a href="https://t.me/LEXCaravan347Bot" target="_blank" rel="noopener noreferrer">@LEXCaravan347Bot</a> напишет, когда R4 подтвердит назначение, и напомнит за час до отправления.</p><p id="lexTelegramLinkedStatus">'+(telegram.data?'✅ Telegram привязан к аккаунту':'Telegram пока не привязан')+'</p><div class="button-row">'+(telegram.data?'<button type="button" class="btn ghost" id="lexTelegramUnlink">Отключить Telegram</button>':'<button type="button" class="btn lex-gold-btn" id="lexTelegramLink">Привязать Telegram</button> <button type="button" class="btn ghost" id="lexTelegramRefresh">Проверить привязку</button>')+'</div></section>'+
+  '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>⏰ Время отправления</h3></div><p id="lexCaravanDepartureText">'+(departure.data?.departure_at?'Ближайшее отправление: '+fmt(departure.data.departure_at):'Время отправления пока не назначено')+'</p>'+(officer(me.role)?'<form id="lexCaravanDepartureForm" class="lex-form"><label class="lex-caravan-note-label">Дата и время (на твоём устройстве)<input type="datetime-local" name="departure" value="'+(departure.data?.departure_at?localDateTime(departure.data.departure_at):'')+'"></label><button type="submit" class="btn">Сохранить время</button><button type="button" id="lexCaravanClearDeparture" class="btn ghost">Сбросить</button></form>':'')+'</section>'+
   '<p id="lexCaravanMessage" role="status" aria-live="polite"></p>';
   $('#lexOpenCaravan',node).onclick=()=>popup(node,me,my);
+  const linkButton=$('#lexTelegramLink',node);
+  if(linkButton)linkButton.onclick=async()=>{
+   linkButton.disabled=true;
+   try{
+    const r=await sb.rpc('telegram_link_start');
+    if(r.error)throw r.error;
+    const href='https://t.me/LEXCaravan347Bot?start='+encodeURIComponent(r.data);
+    const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener noreferrer';document.body.append(a);a.click();a.remove();
+    const status=$('#lexTelegramLinkedStatus',node);if(status)status.textContent='В Telegram нажми Start, затем вернись и нажми «Проверить привязку». Ссылка действует 15 минут.';
+   }catch(e){$('#lexCaravanMessage',node).textContent=e.message}
+   finally{linkButton.disabled=false}
+  };
+  const refresh=$('#lexTelegramRefresh',node);if(refresh)refresh.onclick=()=>load(node);
+  const unlink=$('#lexTelegramUnlink',node);if(unlink)unlink.onclick=async()=>{
+   if(!confirm('Отключить личные Telegram-уведомления?'))return;
+   const r=await sb.rpc('telegram_unlink');if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
+  };
+  const departureForm=$('#lexCaravanDepartureForm',node);
+  if(departureForm)departureForm.onsubmit=async e=>{
+   e.preventDefault();const raw=departureForm.elements.departure.value;
+   if(!raw){$('#lexCaravanMessage',node).textContent='Укажи время отправления';return}
+   const dt=new Date(raw);if(Number.isNaN(dt.getTime()))return;
+   const r=await sb.rpc('set_caravan_departure',{p_departure:dt.toISOString()});
+   if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
+  };
+  const clear=$('#lexCaravanClearDeparture',node);if(clear)clear.onclick=async()=>{
+   if(!confirm('Сбросить время отправления?'))return;
+   const r=await sb.rpc('set_caravan_departure',{p_departure:null});if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
+  };
+
   $$('[data-caravan-mark]',node).forEach(b=>b.onclick=()=>{
     const chosen=b.dataset.next==='selected',uid=b.dataset.caravanMark;
     if(chosen)officerPopup(node,uid,names.get(uid)||'Игрок');
