@@ -64,8 +64,13 @@ async function load(node){
     const r=await sb.rpc('telegram_link_start');
     if(r.error)throw r.error;
     const href='https://t.me/LEXCaravan347Bot?start='+encodeURIComponent(r.data);
-    const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener noreferrer';document.body.append(a);a.click();a.remove();
-    const status=$('#lexTelegramLinkedStatus',node);if(status)status.textContent='В Telegram нажми Start, затем вернись и нажми «Проверить привязку». Ссылка действует 15 минут.';
+    const status=$('#lexTelegramLinkedStatus',node);
+    if(status){
+      status.textContent='Ссылка готова. Нажми кнопку ниже, затем Start в Telegram. Ссылка действует 15 минут.';
+      let link=$('#lexTelegramGeneratedLink',node);
+      if(!link){link=document.createElement('a');link.id='lexTelegramGeneratedLink';link.className='btn lex-gold-btn';link.style.display='inline-flex';link.style.margin='10px 0';status.after(link)}
+      link.href=href;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Открыть бота для привязки ↗';
+    }
    }catch(e){$('#lexCaravanMessage',node).textContent=e.message}
    finally{linkButton.disabled=false}
   };
