@@ -35,3 +35,21 @@
 .lex-caravan-choice input{accent-color:#d8b46b}.lex-caravan-choice small{display:block;color:#b7c5af;font-size:11px;margin-top:4px}
 .lex-caravan-dialog .btn{margin:6px 9px 0 0}#lexCaravanFormError,#lexCaravanMessage{color:#f0c99a;font-size:13px}
 @media(max-width:790px){.lex-caravan-grid{grid-template-columns:1fr}.lex-caravan-hero{padding:24px}.lex-caravan-dialog{padding:23px}.lex-caravan-choice{grid-template-columns:1fr}.lex-caravan-hero:after{font-size:100px;opacity:.4}}
+
+.lex-caravan-person-name small+small{color:#ddc78d;font-weight:650}
+.lex-caravan-history{margin-top:24px;border:1px solid #5f674e;border-radius:14px;padding:22px;background:linear-gradient(145deg,#263529dc,#101c19ee)}
+.lex-caravan-history-title{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #6070527a;padding-bottom:12px}
+.lex-caravan-history-title h3{font:700 26px Georgia,serif;color:#e4d1a0;margin:0}
+.lex-caravan-history-title span{font-size:12px;color:#bbc6b0}
+.lex-caravan-history-list{display:grid;gap:10px;max-height:560px;overflow:auto;margin-top:15px}
+.lex-caravan-history-entry{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:#ffffff08;border:1px solid #59684d77;border-radius:9px;padding:13px}
+.lex-caravan-history-entry>div{min-width:130px;flex:1 1 150px}
+.lex-caravan-history-entry strong,.lex-caravan-history-entry small{display:block}
+.lex-caravan-history-entry strong{color:#f1ead1}
+.lex-caravan-history-entry small{color:#c6b482;font-size:11px;margin-top:5px}
+.lex-caravan-history-entry p{flex:3 1 180px;overflow-wrap:anywhere;margin:0;color:#c6d0bd;font-size:13px}
+.lex-caravan-note-label{display:block;color:#e7d9b1;font-weight:700;margin-top:20px}
+.lex-caravan-note-label textarea{box-sizing:border-box;display:block;width:100%;margin:10px 0 18px;min-height:96px;resize:vertical;border-radius:9px;background:#142119cc;border:1px solid #73805e;color:#edf2e4;padding:12px;font:inherit}
+.lex-caravan-note-label textarea:focus{outline:2px solid #c7ab67}
+.lex-caravan-form-feedback{color:#f2bf9c}
+@media(max-width:600px){.lex-caravan-history{padding:15px}.lex-caravan-history-title h3{font-size:22px}}
