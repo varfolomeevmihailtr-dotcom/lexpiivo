@@ -13,15 +13,24 @@ async function load(node){
   const {data:{user},error:authError}=await sb.auth.getUser();
   if(authError)throw authError;
   if(!user){node.innerHTML='<div class="lex-ops-card"><h2>Вход в штаб</h2><p>Для записи на караван войди в аккаунт LEX.</p><a href="./login.html" class="btn">Войти / Регистрация</a></div>';return}
-  const [account,queue,people,history,telegram,departure]=await Promise.all([
+  const timed=(promise,ms,description)=>Promise.race([
+   Promise.resolve(promise),
+   new Promise((_,reject)=>setTimeout(()=>reject(Error('Превышено время ожидания: '+description+'. Нажми «Повторить».')),ms))
+  ]);
+  const [account,queue,people,history]=await timed(Promise.all([
    sb.from('clan_accounts').select('user_id,nickname,role').eq('user_id',user.id).single(),
    sb.from('clan_caravan_queue').select('*').order('created_at',{ascending:true}),
    sb.from('clan_accounts').select('user_id,nickname'),
-   sb.from('clan_caravan_history').select('*').order('selected_at',{ascending:false}).limit(2000),
-   sb.rpc('telegram_link_status'),
-   sb.from('clan_caravan_departure').select('departure_at').eq('id',1).maybeSingle()
+   sb.from('clan_caravan_history').select('*').order('selected_at',{ascending:false}).limit(2000)
+  ]),10000,'данные каравана');
+  for(const r of [account,queue,people,history])if(r.error)throw r.error;
+  // Optional Telegram services must never prevent the queue from loading.
+  const [telegram,departure]=await Promise.all([
+   timed(sb.rpc('telegram_link_status'),3500,'Telegram').catch(error=>({data:false,error})),
+   timed(sb.from('clan_caravan_departure').select('departure_at').eq('id',1).maybeSingle(),3500,'время отправления').catch(error=>({data:null,error}))
   ]);
-  for(const r of [account,queue,people,history,telegram,departure])if(r.error)throw r.error;
+  if(telegram.error)console.warn('Telegram status unavailable:',telegram.error.message);
+  if(departure.error)console.warn('Departure unavailable:',departure.error.message);
   const me=account.data,rows=queue.data||[],my=rows.find(r=>r.user_id===me.user_id);
   const names=new Map((people.data||[]).map(r=>[r.user_id,r.nickname]));
   const past=history.data||[],totals=new Map();
