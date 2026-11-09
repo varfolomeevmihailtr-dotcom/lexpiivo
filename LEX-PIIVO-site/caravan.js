@@ -12,14 +12,17 @@ async function load(node){
   const {data:{user},error:authError}=await sb.auth.getUser();
   if(authError)throw authError;
   if(!user){node.innerHTML='<div class="lex-ops-card"><h2>Вход в штаб</h2><p>Для записи на караван войди в аккаунт LEX.</p><a href="./login.html" class="btn">Войти / Регистрация</a></div>';return}
-  const [account,queue,people]=await Promise.all([
+  const [account,queue,people,history]=await Promise.all([
    sb.from('clan_accounts').select('user_id,nickname,role').eq('user_id',user.id).single(),
    sb.from('clan_caravan_queue').select('*').order('created_at',{ascending:true}),
-   sb.from('clan_accounts').select('user_id,nickname')
+   sb.from('clan_accounts').select('user_id,nickname'),
+   sb.from('clan_caravan_history').select('*').order('selected_at',{ascending:false}).limit(2000)
   ]);
-  for(const r of [account,queue,people])if(r.error)throw r.error;
+  for(const r of [account,queue,people,history])if(r.error)throw r.error;
   const me=account.data,rows=queue.data||[],my=rows.find(r=>r.user_id===me.user_id);
   const names=new Map((people.data||[]).map(r=>[r.user_id,r.nickname]));
+  const past=history.data||[],totals=new Map();
+  for(const entry of past){const t=totals.get(entry.user_id)||{vip:0,coachman:0};t[entry.request_type]++;totals.set(entry.user_id,t)}
   const tabs=['coachman','vip'];
   node.innerHTML='<section class="lex-caravan-hero"><span class="lex-caravan-eyebrow">АЛЬЯНС LEX · СЕРВЕР 347</span><h2>Караван ждёт своих героев</h2><p>Запишись в очередь на VIP-место или роль кучера. R4/R5 назначают участников в игре и отмечают выбранных здесь.</p><button type="button" class="btn lex-gold-btn" id="lexOpenCaravan">'+(my?'Изменить мою запись':'Записаться на караван')+'</button><span class="lex-caravan-note">Запись на сайте не назначает роль автоматически в игре.</span></section>'+
   '<div class="lex-caravan-grid">'+tabs.map(type=>{
@@ -28,21 +31,64 @@ async function load(node){
     (rr.length?'<div class="lex-caravan-list">'+rr.map((r)=>{
       const rank=pending.findIndex(t=>t.user_id===r.user_id)+1;
       const chosen=r.status==='selected';
-      return '<div class="lex-caravan-person '+(chosen?'is-selected':'')+'"><span class="lex-caravan-rank">'+(chosen?'✓':'#'+rank)+'</span><div class="lex-caravan-person-name"><strong>'+esc(names.get(r.user_id)||'Игрок')+'</strong><small>'+(chosen?'Выбран · '+fmt(r.selected_at):'В очереди с '+fmt(r.created_at))+'</small></div><span class="lex-caravan-status '+(chosen?'chosen':'')+'">'+(chosen?'Взяли':'Ожидает')+'</span>'+(officer(me.role)?'<button type="button" class="lex-caravan-mark" data-caravan-mark="'+esc(r.user_id)+'" data-next="'+(chosen?'pending':'selected')+'">'+(chosen?'Вернуть':'Взяли ✓')+'</button>':'')+'</div>'
+      return '<div class="lex-caravan-person '+(chosen?'is-selected':'')+'"><span class="lex-caravan-rank">'+(chosen?'✓':'#'+rank)+'</span><div class="lex-caravan-person-name"><strong>'+esc(names.get(r.user_id)||'Игрок')+'</strong><small>'+(chosen?'Выбран · '+fmt(r.selected_at):'В очереди с '+fmt(r.created_at))+'</small><small>За всё время: VIP '+(totals.get(r.user_id)?.vip||0)+' · Кучер '+(totals.get(r.user_id)?.coachman||0)+'</small></div><span class="lex-caravan-status '+(chosen?'chosen':'')+'">'+(chosen?'Взяли':'Ожидает')+'</span>'+(officer(me.role)?'<button type="button" class="lex-caravan-mark" data-caravan-mark="'+esc(r.user_id)+'" data-next="'+(chosen?'pending':'selected')+'">'+(chosen?'Вернуть':'Взяли ✓')+'</button>':'')+'</div>'
     }).join('')+'</div>':'<p class="lex-caravan-empty">Пока нет заявок. Можно стать первым!</p>')+'</section>'
   }).join('')+'</div>'+
   (my?'<p class="lex-caravan-own">Твоя запись: <strong>'+label[my.request_type]+'</strong> · '+(my.status==='selected'?'выбран офицером':'ожидаешь в очереди')+'.</p>':'')+
+  '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>История караванов</h3><span>'+past.length+' назначений</span></div>'+
+  (past.length?'<div class="lex-caravan-history-list">'+past.map(h=>'<article class="lex-caravan-history-entry"><div><strong>'+esc(names.get(h.user_id)||'Игрок')+'</strong><small>'+esc(label[h.request_type]||h.request_type)+' · '+fmt(h.selected_at)+'</small></div><p>'+(h.note?esc(h.note):'Без примечания')+'</p>'+(officer(me.role)?'<button class="lex-caravan-mark" type="button" data-history-note="'+h.id+'">✎ Примечание</button>':'')+'</article>').join('')+'</div>':'<p class="lex-caravan-empty">История пока пустая. Первое подтверждение офицера появится здесь.</p>')+'</section>'+
   '<p id="lexCaravanMessage" role="status" aria-live="polite"></p>';
   $('#lexOpenCaravan',node).onclick=()=>popup(node,me,my);
-  $$('[data-caravan-mark]',node).forEach(b=>b.onclick=async()=>{
-    b.disabled=true;
-    const selected=b.dataset.next==='selected',now=new Date().toISOString();
-    const result=await sb.from('clan_caravan_queue').update({status:b.dataset.next,selected_by:selected?me.user_id:null,selected_at:selected?now:null}).eq('user_id',b.dataset.caravanMark);
-    if(result.error){$('#lexCaravanMessage',node).textContent=result.error.message;b.disabled=false}
-    else {loading=false;await load(node)}
+  $$('[data-caravan-mark]',node).forEach(b=>b.onclick=()=>{
+    const chosen=b.dataset.next==='selected',uid=b.dataset.caravanMark;
+    if(chosen)officerPopup(node,uid,names.get(uid)||'Игрок');
+    else if(confirm('Вернуть игрока в очередь? Его прошлые назначения останутся в истории.'))changeSelection(node,uid,false,'');
+  });
+  $$('[data-history-note]',node).forEach(b=>b.onclick=()=>{
+    const entry=past.find(h=>String(h.id)===b.dataset.historyNote);
+    if(entry)notePopup(node,entry,names.get(entry.user_id)||'Игрок');
   });
  }catch(e){node.innerHTML='<section class="lex-ops-card"><h2>Не удалось открыть очередь</h2><p>'+esc(e.message)+'</p><button class="btn" id="lexCaravanRetry">Повторить</button></section>';$('#lexCaravanRetry',node).onclick=()=>load(node)}
  finally{loading=false}
+}
+async function changeSelection(node,uid,selected,note){
+ const feedback=$('#lexCaravanMessage',node);
+ try{
+  const r=await window.LEX_SB.rpc('set_caravan_selection',{p_user_id:uid,p_selected:selected,p_note:note});
+  if(r.error)throw r.error;
+  await load(node);
+  return true;
+ }catch(e){if(feedback)feedback.textContent=e.message;return false}
+}
+function modalFrame(title,description,body){
+ const overlay=document.createElement('div');overlay.className='lex-caravan-backdrop';
+ overlay.innerHTML='<div class="lex-caravan-dialog" role="dialog" aria-modal="true" aria-labelledby="lexExtraModalTitle"><button class="lex-caravan-close" aria-label="Закрыть" type="button">×</button><span class="lex-caravan-eyebrow">ЖУРНАЛ КАРАВАНА</span><h2 id="lexExtraModalTitle">'+esc(title)+'</h2><p>'+esc(description)+'</p>'+body+'</div>';
+ document.body.append(overlay);document.body.classList.add('lex-caravan-modal-open');
+ const key=e=>{if(e.key==='Escape')close()};
+ const close=()=>{overlay.remove();document.body.classList.remove('lex-caravan-modal-open');document.removeEventListener('keydown',key)};
+ document.addEventListener('keydown',key);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
+ $('.lex-caravan-close',overlay).onclick=close;
+ return {overlay,close};
+}
+function officerPopup(node,uid,nickname){
+ const {overlay,close}=modalFrame('Подтвердить назначение','Игрок: '+nickname+'. Добавь причину или комментарий для истории.', '<form id="lexOfficerForm"><label class="lex-caravan-note-label">За что выбрали / примечание<textarea name="note" maxlength="500" rows="4" placeholder="Например: давно не был, помог альянсу, очередь по графику…"></textarea></label><button class="btn lex-gold-btn" type="submit">✓ Отметить «Взяли»</button><p class="lex-caravan-form-feedback" role="status"></p></form>');
+ $('#lexOfficerForm',overlay).onsubmit=async e=>{
+  e.preventDefault();const btn=$('button[type=submit]',overlay);btn.disabled=true;
+  const note=$('textarea[name=note]',overlay).value;
+  const result=await window.LEX_SB.rpc('set_caravan_selection',{p_user_id:uid,p_selected:true,p_note:note});
+  if(result.error){$('.lex-caravan-form-feedback',overlay).textContent=result.error.message;btn.disabled=false;return}
+  close();await load(node);
+ };
+}
+function notePopup(node,entry,nickname){
+ const {overlay,close}=modalFrame('Примечание к назначению',nickname+' · '+(label[entry.request_type]||entry.request_type)+' · '+fmt(entry.selected_at),'<form id="lexEditNoteForm"><label class="lex-caravan-note-label">За что выбрали / комментарий<textarea name="note" maxlength="500" rows="4">'+esc(entry.note)+'</textarea></label><button class="btn lex-gold-btn" type="submit">Сохранить примечание</button><p class="lex-caravan-form-feedback" role="status"></p></form>');
+ $('#lexEditNoteForm',overlay).onsubmit=async e=>{
+  e.preventDefault();const btn=$('button[type=submit]',overlay);btn.disabled=true;
+  const r=await window.LEX_SB.rpc('update_caravan_history_note',{p_history_id:entry.id,p_note:$('textarea[name=note]',overlay).value});
+  if(r.error){$('.lex-caravan-form-feedback',overlay).textContent=r.error.message;btn.disabled=false;return}
+  close();await load(node);
+ };
 }
 function popup(node,me,my){
  const overlay=document.createElement('div');overlay.className='lex-caravan-backdrop';
