@@ -19,12 +19,12 @@ return '<form class="lex-form" data-event-form="'+esc(id)+'"><div class="lex-fie
 async function events(node){
  const me=await auth();if(!me){node.innerHTML=loginHtml;return}window.LEX_CURRENT_ROLE=me.role;
  const sb=client(),r=await sb.from('clan_events').select('*').order('starts_at',{ascending:true,nullsFirst:false});if(r.error)throw r.error;
- const eventList=r.data||[],ids=eventList.map(e=>e.id),[signups,people]=await Promise.all([
+ const eventList=(r.data||[]).filter(e=>!node.dataset.eventType||e.event_type===node.dataset.eventType),ids=eventList.map(e=>e.id),[signups,people]=await Promise.all([
  ids.length?sb.from('clan_event_signups').select('event_id,user_id,response,comment').in('event_id',ids):Promise.resolve({data:[]}),
  sb.from('clan_accounts').select('user_id,nickname')
  ]);if(signups.error)throw signups.error;if(people.error)throw people.error;
  const names=new Map(people.data.map(a=>[a.user_id,a.nickname]));const admin=roleOk(me.role);
- node.innerHTML='<div class="lex-intro"><h2>Запись на клановые ивенты</h2><p>Доступна всем зарегистрированным игрокам. Участники, резерв и отказы видны команде. Даты публикуют R4/R5.</p></div>'+
+ node.innerHTML='<div class="lex-intro"><h2>'+(node.dataset.eventType==='elixir'?'Гонка за эликсиром — запись':'Запись на клановые ивенты')+'</h2><p>Доступна всем зарегистрированным игрокам. Участники, резерв и отказы видны команде. Даты публикуют R4/R5.</p></div>'+
  (admin?'<details class="lex-ops-card"><summary>＋ Создать ивент</summary>'+eventForm(null)+'</details>':'')+
  (eventList.length?eventList.map(e=>{
  const ss=(signups.data||[]).filter(s=>s.event_id===e.id),counts={going:0,maybe:0,cant:0};ss.forEach(s=>counts[s.response]++);
