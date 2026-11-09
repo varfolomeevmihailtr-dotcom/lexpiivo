@@ -64,3 +64,8 @@
 .lex-caravan-invite-actions .btn{margin:0;min-height:44px}
 .lex-caravan-invite>small{display:block;color:#adb9a7;font-size:11px;line-height:1.6}
 @media(max-width:500px){.lex-caravan-invite{padding:32px 20px}.lex-caravan-invite-actions{flex-direction:column}.lex-caravan-invite-actions .btn{width:100%}}
+
+.lex-caravan-history a{color:#e5c478}
+.lex-caravan-history input[type="datetime-local"]{display:block;box-sizing:border-box;width:100%;max-width:350px;background:#132119;color:#eef0df;border:1px solid #708260;border-radius:9px;padding:11px;margin:9px 0 13px;font:inherit;color-scheme:dark}
+.lex-caravan-history .button-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+.lex-caravan-history .btn{margin:0 8px 8px 0}
