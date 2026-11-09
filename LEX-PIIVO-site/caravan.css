@@ -1,0 +1,37 @@
+/* LEX caravan — translucent game UI */
+.lex-caravan-hero{position:relative;overflow:hidden;padding:34px;border:1px solid #8b7649;border-radius:18px;background:radial-gradient(ellipse at 90% 10%,#977e3f55,transparent 58%),linear-gradient(130deg,#263625dd,#111c18f5);box-shadow:inset 0 1px #dfcd9766,0 20px 50px #02060244;margin-bottom:22px}
+.lex-caravan-hero:after{content:'♞';position:absolute;right:5%;top:0;color:#d4bb7350;font-size:170px;line-height:1;pointer-events:none}
+.lex-caravan-hero>*{position:relative;z-index:1}
+.lex-caravan-hero h2{font:700 clamp(26px,4vw,44px)/1.15 Georgia,serif;color:#f8e8b8;margin:12px 0}
+.lex-caravan-hero p{max-width:650px;color:#d1d6c7;line-height:1.6}
+.lex-caravan-eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;color:#d5b975}
+.lex-gold-btn{background:linear-gradient(120deg,#b18a48,#e4c782)!important;color:#1d2016!important;border:1px solid #f4d999!important;font-weight:800!important}
+.lex-caravan-note{display:block;margin-top:12px;color:#aebbad;font-size:12px}
+.lex-caravan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.lex-caravan-panel{background:linear-gradient(155deg,#23342cdd,#101c18f2);border:1px solid #586a50;border-radius:14px;padding:20px;min-width:0}
+.lex-caravan-header{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #52604777;padding-bottom:16px}
+.lex-caravan-header h3{font:700 28px Georgia,serif;color:#e9d8a3;margin:7px 0 0}
+.lex-caravan-header>strong{font-size:12px;color:#c4d1b8;text-align:right}
+.lex-caravan-list{display:grid;gap:9px;padding-top:16px}
+.lex-caravan-person{display:flex;align-items:center;gap:10px;padding:12px 9px;border:1px solid #4f624e99;border-radius:9px;background:#ffffff07;flex-wrap:wrap}
+.lex-caravan-person.is-selected{border-color:#b79b60;background:#8e7a3822}
+.lex-caravan-rank{width:32px;flex-shrink:0;color:#d8c38c;font-weight:800}
+.lex-caravan-person-name{flex:1;min-width:95px}.lex-caravan-person-name strong{display:block;color:#f2f1e8;overflow-wrap:anywhere}.lex-caravan-person-name small{display:block;color:#a5b2a3;margin-top:4px;font-size:11px}
+.lex-caravan-status{color:#c0cdb7;font-size:11px}.lex-caravan-status.chosen{color:#f1cf78}
+.lex-caravan-mark{background:#3c4c37;color:#e9eddf;border:1px solid #657956;border-radius:7px;padding:8px;cursor:pointer;font-weight:700}
+.lex-caravan-mark:hover{background:#526344}.lex-caravan-mark:disabled{opacity:.45}
+.lex-caravan-empty{color:#aeb8a9;padding:20px 0}.lex-caravan-own{color:#d4dcbd;margin-top:22px}
+.lex-caravan-backdrop{position:fixed;inset:0;z-index:10000;background:#050b09bf;backdrop-filter:blur(9px);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto}
+.lex-caravan-modal-open{overflow:hidden}
+.lex-caravan-dialog{position:relative;width:min(100%,510px);max-height:92vh;overflow:auto;border:1px solid #c8a867;border-radius:19px;padding:32px;color:#e9efdf;box-sizing:border-box;background:radial-gradient(ellipse at 85% 0%,#806b4355,transparent 65%),linear-gradient(150deg,#26382be9,#0e1715f2);backdrop-filter:blur(18px);box-shadow:0 30px 90px #000b,inset 0 1px #f9db9b66}
+.lex-caravan-dialog h2{font:700 31px/1.2 Georgia,serif;color:#f4e5b7;margin:11px 36px 10px 0}
+.lex-caravan-dialog p{color:#bdcbb8;line-height:1.5}
+.lex-caravan-close{position:absolute;top:14px;right:16px;border:0;background:none;color:#e4d4ac;font-size:31px;cursor:pointer}
+.lex-caravan-dialog form>label{display:block;margin-top:18px;font-size:13px;color:#cad4c5}
+.lex-caravan-dialog input:disabled{display:block;width:100%;box-sizing:border-box;background:#142119b0;border:1px solid #667458;border-radius:8px;padding:12px;margin-top:7px;color:#ededdc;opacity:1}
+.lex-caravan-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.lex-caravan-choice label{display:flex;align-items:center;gap:10px;border:1px solid #64715b;border-radius:10px;padding:17px 12px;cursor:pointer;background:#ffffff07;color:#f1e6c7}
+.lex-caravan-choice label:has(input:checked){border-color:#e9c77d;background:#d3b25b26}
+.lex-caravan-choice input{accent-color:#d8b46b}.lex-caravan-choice small{display:block;color:#b7c5af;font-size:11px;margin-top:4px}
+.lex-caravan-dialog .btn{margin:6px 9px 0 0}#lexCaravanFormError,#lexCaravanMessage{color:#f0c99a;font-size:13px}
+@media(max-width:790px){.lex-caravan-grid{grid-template-columns:1fr}.lex-caravan-hero{padding:24px}.lex-caravan-dialog{padding:23px}.lex-caravan-choice{grid-template-columns:1fr}.lex-caravan-hero:after{font-size:100px;opacity:.4}}
