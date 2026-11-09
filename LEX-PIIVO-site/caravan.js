@@ -103,9 +103,7 @@ function popup(node,me,my){
   const kind=$('input[name=kind]:checked',overlay).value;
   if(my?.status==='selected'){ $('#lexCaravanFormError',overlay).textContent='Ты уже выбран. Изменения может внести офицер.';button.disabled=false;return}
   const sb=window.LEX_SB;
-  const result=my?
-   await sb.from('clan_caravan_queue').update({request_type:kind,created_at:new Date().toISOString()}).eq('user_id',me.user_id):
-   await sb.from('clan_caravan_queue').insert({user_id:me.user_id,request_type:kind});
+  const result=await sb.rpc('set_caravan_request',{p_request_type:kind});
   if(result.error){$('#lexCaravanFormError',overlay).textContent=result.error.message;button.disabled=false;return}
   close();await load(node);
  };
