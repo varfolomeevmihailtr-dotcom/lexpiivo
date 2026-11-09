@@ -5,9 +5,12 @@ const officer=r=>['r4','r5','admin'].includes(r);
 const label={vip:'VIP',coachman:'Кучер'};
 const fmt=s=>new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(s));
 const localDateTime=s=>{const d=new Date(s);return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,16)};
-let loading=false;
+const requests=new WeakMap();
 async function load(node){
- if(loading)return;loading=true;
+ if(!node||!node.isConnected)return;
+ const requestId=(requests.get(node)||0)+1;
+ requests.set(node,requestId);
+ const current=()=>node.isConnected&&requests.get(node)===requestId;
  try{
   const sb=window.LEX_SB;if(!sb)throw Error('Не удалось подключиться к базе.');
   const {data:{user},error:authError}=await Promise.race([sb.auth.getUser(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Не удалось получить сессию. Обнови страницу и повтори.')),9000))]);
@@ -31,6 +34,7 @@ async function load(node){
   ]);
   if(telegram.error)console.warn('Telegram status unavailable:',telegram.error.message);
   if(departure.error)console.warn('Departure unavailable:',departure.error.message);
+  if(!current())return;
   const me=account.data,rows=queue.data||[],my=rows.find(r=>r.user_id===me.user_id);
   const names=new Map((people.data||[]).map(r=>[r.user_id,r.nickname]));
   const past=history.data||[],totals=new Map();
@@ -92,8 +96,7 @@ async function load(node){
     const entry=past.find(h=>String(h.id)===b.dataset.historyNote);
     if(entry)notePopup(node,entry,names.get(entry.user_id)||'Игрок');
   });
- }catch(e){node.innerHTML='<section class="lex-ops-card"><h2>Не удалось открыть очередь</h2><p>'+esc(e.message)+'</p><button class="btn" id="lexCaravanRetry">Повторить</button></section>';$('#lexCaravanRetry',node).onclick=()=>load(node)}
- finally{loading=false}
+ }catch(e){if(!current())return;node.innerHTML='<section class="lex-ops-card"><h2>Не удалось открыть очередь</h2><p>'+esc(e.message)+'</p><button class="btn" id="lexCaravanRetry">Повторить</button></section>';$('#lexCaravanRetry',node).onclick=()=>load(node)}
 }
 async function changeSelection(node,uid,selected,note){
  const feedback=$('#lexCaravanMessage',node);
