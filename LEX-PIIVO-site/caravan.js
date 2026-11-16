@@ -11,6 +11,12 @@ const localDateTime=s=>{
  const at=x=>parts.find(p=>p.type===x)?.value||'00';
  return at('year')+'-'+at('month')+'-'+at('day')+'T'+at('hour')+':'+at('minute');
 };
+const standardDeparture=()=>{
+ const now=new Date();
+ const today=new Date(localDateTime(now).slice(0,10)+'T17:00:00+03:00');
+ if(today<=now)today.setUTCDate(today.getUTCDate()+1);
+ return today.toISOString();
+};
 const departureIso=value=>{
  if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value))throw Error('Некорректная дата');
  const d=new Date(value+':00+03:00');
@@ -87,7 +93,7 @@ function caravanLottery(node,sb,rows,names){
   return;
  }
  panel.insertAdjacentHTML('beforeend',`<form class="lex-form">
-  <label>Событие дня<input name="event" required maxlength="120" placeholder="Например, дуэль альянсов"></label>
+  <label class="lex-lottery-event">Событие дня<input name="event" required maxlength="120" placeholder="Например, дуэль альянсов"></label>
   <fieldset><legend>Отметь игроков из топа события</legend>
   ${candidates.map(row=>'<label class="lex-lottery-option"><input type="checkbox" name="candidate" value="'+esc(row.user_id)+'">'+esc(names.get(row.user_id)||'Игрок')+'</label>').join('')}
   </fieldset>
@@ -168,6 +174,8 @@ async function load(node){
   const past=history.data||[],totals=new Map();
   for(const entry of past){const t=totals.get(entry.user_id)||{vip:0,coachman:0};t[entry.request_type]++;totals.set(entry.user_id,t)}
   const tabs=['coachman','vip'];
+  const override=departure.data?.departure_at;
+  const nextDeparture=override&&new Date(override)>new Date()?override:standardDeparture();
   node.innerHTML='<section class="lex-caravan-hero"><span class="lex-caravan-eyebrow">АЛЬЯНС LEX · СЕРВЕР 347</span><h2>Караван ждёт своих героев</h2><p>Запишись в очередь на VIP-место или роль кучера. R4/R5 назначают участников в игре и отмечают выбранных здесь.</p><button type="button" class="btn lex-gold-btn" id="lexOpenCaravan">'+(my?'Изменить мою запись':'Записаться на караван')+'</button><span class="lex-caravan-note">Запись на сайте не назначает роль автоматически в игре.</span></section>'+
   '<div class="lex-caravan-grid">'+tabs.map(type=>{
     const rr=rows.filter(r=>r.request_type===type),pending=rr.filter(r=>r.status==='pending');
@@ -183,7 +191,7 @@ async function load(node){
   '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>История караванов</h3><span>'+past.length+' назначений</span></div>'+
   (past.length?'<div class="lex-caravan-history-list">'+past.map(h=>'<article class="lex-caravan-history-entry"><div><strong>'+esc(names.get(h.user_id)||'Игрок')+'</strong><small>'+esc(label[h.request_type]||h.request_type)+' · '+fmt(h.selected_at)+'</small></div><p>'+(h.note?esc(h.note):'Без примечания')+'</p>'+(officer(me.role)?'<button class="lex-caravan-mark" type="button" data-history-note="'+h.id+'">✎ Примечание</button>':'')+'</article>').join('')+'</div>':'<p class="lex-caravan-empty">История пока пустая. Первое подтверждение офицера появится здесь.</p>')+'</section>'+
   '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>🔔 Личные уведомления Telegram</h3></div><p>Бот <a href="https://t.me/LEXCaravan347Bot" target="_blank" rel="noopener noreferrer">@LEXCaravan347Bot</a> напишет, когда R4 подтвердит назначение, и напомнит за час до отправления.</p><p id="lexTelegramLinkedStatus">'+(telegram.data?'✅ Telegram привязан к аккаунту':'Telegram пока не привязан')+'</p><div class="button-row">'+(telegram.data?'<button type="button" class="btn ghost" id="lexTelegramUnlink">Отключить Telegram</button>':'<button type="button" class="btn lex-gold-btn" id="lexTelegramLink">Привязать Telegram</button> <button type="button" class="btn ghost" id="lexTelegramRefresh">Проверить привязку</button>')+'</div></section>'+
-  '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>⏰ Время отправления</h3></div><p id="lexCaravanDepartureText">'+(departure.data?.departure_at?'Ближайшее отправление: '+departDisplay(departure.data.departure_at):'Время отправления пока не назначено')+'</p>'+(officer(me.role)?'<form id="lexCaravanDepartureForm" class="lex-form"><label class="lex-caravan-note-label">Дата и время отправления<input type="datetime-local" name="departure" value="'+(departure.data?.departure_at?localDateTime(departure.data.departure_at):'')+'"></label><button type="submit" class="btn">Сохранить время</button><button type="button" id="lexCaravanClearDeparture" class="btn ghost">Сбросить</button></form>':'')+'</section>'+
+  '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>⏰ Время отправления</h3></div><p id="lexCaravanDepartureText">'+('Следующий караван отправится '+departDisplay(nextDeparture)+' МСК')+'</p>'+(officer(me.role)?'<button type="button" id="lexCaravanChangeDeparture" class="btn ghost" aria-expanded="false" aria-controls="lexCaravanDepartureForm">Сменить время</button><form id="lexCaravanDepartureForm" class="lex-form" hidden><label class="lex-caravan-note-label">Дата и время отправления<input type="datetime-local" name="departure" value="'+localDateTime(nextDeparture)+'"></label><button type="submit" class="btn">Сохранить время</button><button type="button" id="lexCaravanClearDeparture" class="btn ghost">Вернуть 17:00 МСК</button></form>':'')+'</section>'+
   '<p id="lexCaravanMessage" role="status" aria-live="polite"></p>';
   $('#lexOpenCaravan',node).onclick=()=>popup(node,me,my);
   if(officer(me.role))caravanLottery(node,sb,rows,names);
@@ -210,6 +218,12 @@ async function load(node){
    const r=await sb.rpc('telegram_unlink');if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
   };
   const departureForm=$('#lexCaravanDepartureForm',node);
+  const changeDeparture=$('#lexCaravanChangeDeparture',node);
+  if(changeDeparture)changeDeparture.onclick=()=>{
+   departureForm.hidden=!departureForm.hidden;
+   changeDeparture.setAttribute('aria-expanded',String(!departureForm.hidden));
+   if(!departureForm.hidden)departureForm.elements.departure.focus();
+  };
   if(departureForm)departureForm.onsubmit=async e=>{
    e.preventDefault();const raw=departureForm.elements.departure.value;
    if(!raw){$('#lexCaravanMessage',node).textContent='Укажи время отправления';return}
@@ -218,7 +232,7 @@ async function load(node){
    if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
   };
   const clear=$('#lexCaravanClearDeparture',node);if(clear)clear.onclick=async()=>{
-   if(!confirm('Сбросить время отправления?'))return;
+   if(!confirm('Вернуть стандартное время отправления — 17:00 МСК?'))return;
    const r=await sb.rpc('set_caravan_departure',{p_departure:null});if(r.error)$('#lexCaravanMessage',node).textContent=r.error.message;else load(node);
   };
 
