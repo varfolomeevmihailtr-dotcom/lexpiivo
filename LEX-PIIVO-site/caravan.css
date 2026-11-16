@@ -69,3 +69,16 @@
 .lex-caravan-history input[type="datetime-local"]{display:block;box-sizing:border-box;width:100%;max-width:350px;background:#132119;color:#eef0df;border:1px solid #708260;border-radius:9px;padding:11px;margin:9px 0 13px;font:inherit;color-scheme:dark}
 .lex-caravan-history .button-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
 .lex-caravan-history .btn{margin:0 8px 8px 0}
+
+.lex-lottery fieldset{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.5rem;border:1px solid #86613c;padding:.8rem;margin:.5rem 0}
+.lex-lottery .lex-lottery-option{display:flex;align-items:center;gap:.55rem;overflow-wrap:anywhere}
+.lex-lottery .lex-lottery-option input{width:auto;flex:none;accent-color:#ddae62}
+.lex-lottery-stage{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,2fr);align-items:center;gap:1rem;margin:1rem 0;padding:1rem;background:radial-gradient(ellipse at 65% 50%,#473023,#151919 72%);border:1px solid #86613c;border-radius:12px}
+.lex-lottery [hidden]{display:none}
+.lex-lottery-host img{display:block;width:min(100%,180px);aspect-ratio:1;object-fit:contain;margin:auto}
+.lex-lottery-host p{padding:.7rem;background:#252019;border:1px solid #86613c;border-radius:12px;color:#fff3d9}
+.lex-lottery-wheel{position:relative;width:min(100%,400px);margin:auto}
+.lex-lottery-wheel span{position:absolute;z-index:1;left:50%;top:0;transform:translate(-50%,-38%);font-size:2.5rem;line-height:1}
+.lex-lottery-wheel canvas{display:block;width:100%;height:auto}
+.lex-lottery-result{font-weight:700;color:#f1cb88}
+@media(max-width:560px){.lex-lottery-stage{grid-template-columns:1fr}.lex-lottery-host img{width:95px}}
