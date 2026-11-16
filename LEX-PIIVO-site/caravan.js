@@ -18,6 +18,122 @@ const departureIso=value=>{
  return d.toISOString();
 };
 const requests=new WeakMap();
+
+const caravanHosts=[
+ {name:'Артур',image:'arthur',line:'Держите поводья… Сейчас узнаем, кто поведёт караван!'},
+ {name:'Марлена',image:'marlena',line:'Посмотрим, кто сегодня возглавит колонну.'},
+ {name:'Зоя',image:'zoya',line:'Тише. Колесо уже выбирает, кому вести караван.'},
+ {name:'Даскал',image:'daskal',line:'Проверьте упряжь. Победитель скоро будет известен!'}
+];
+let previousHost=-1;
+function nextCaravanHost(){
+ const choices=caravanHosts.map((_,index)=>index).filter(index=>index!==previousHost);
+ previousHost=choices[Math.floor(Math.random()*choices.length)];
+ return caravanHosts[previousHost];
+}
+function drawWheel(canvas,players,angle){
+ const ctx=canvas.getContext('2d'),center=canvas.width/2,radius=center-9;
+ const slice=2*Math.PI/players.length;
+ const colors=['#69421f','#1c4338','#50304b','#35526a'];
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ for(const [index,player] of players.entries()){
+  const start=angle+index*slice-Math.PI/2;
+  ctx.beginPath();
+  ctx.moveTo(center,center);
+  ctx.arc(center,center,radius,start,start+slice);
+  ctx.closePath();
+  ctx.fillStyle=colors[index%colors.length];
+  ctx.fill();
+  ctx.strokeStyle='#ddae62';
+  ctx.stroke();
+  ctx.save();
+  ctx.translate(center,center);
+  ctx.rotate(start+slice/2);
+  ctx.fillStyle='#fff3d9';
+  ctx.font='bold 20px system-ui';
+  ctx.textAlign='right';
+  ctx.fillText(player.name,radius-15,7,radius*.68);
+  ctx.restore();
+ }
+ ctx.beginPath();
+ ctx.arc(center,center,20,0,2*Math.PI);
+ ctx.fillStyle='#ddae62';
+ ctx.fill();
+}
+function animateWheel(canvas,players,winner){
+ const index=players.findIndex(player=>player.id===winner);
+ const end=12*Math.PI-2*Math.PI*(index+.5)/players.length;
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  drawWheel(canvas,players,end);
+  return Promise.resolve();
+ }
+ return new Promise(resolve=>{
+  const start=performance.now();
+  const frame=now=>{
+   const t=Math.min(1,(now-start)/4200);
+   drawWheel(canvas,players,end*(1-(1-t)**4));
+   if(t<1)requestAnimationFrame(frame);
+   else resolve();
+  };
+  requestAnimationFrame(frame);
+ });
+}
+function caravanLottery(node,sb,rows,names){
+ const candidates=rows.filter(row=>row.request_type==='coachman'&&row.status==='pending');
+ const active=rows.some(row=>row.request_type==='coachman'&&row.status==='selected');
+ const panel=$('#lexCaravanLottery',node);
+ if(active||!candidates.length){
+  panel.insertAdjacentHTML('beforeend','<p>'+(active?'Кучер уже назначен. Верни его в очередь перед новым розыгрышем.':'Для розыгрыша нужна хотя бы одна заявка на роль кучера.')+'</p>');
+  return;
+ }
+ panel.insertAdjacentHTML('beforeend',`<form class="lex-form">
+  <label>Событие дня<input name="event" required maxlength="120" placeholder="Например, дуэль альянсов"></label>
+  <fieldset><legend>Отметь игроков из топа события</legend>
+  ${candidates.map(row=>'<label class="lex-lottery-option"><input type="checkbox" name="candidate" value="'+esc(row.user_id)+'">'+esc(names.get(row.user_id)||'Игрок')+'</label>').join('')}
+  </fieldset>
+  <button class="btn lex-gold-btn" type="submit">Крутить и назначить кучера</button>
+ </form>
+ <div class="lex-lottery-stage" hidden>
+  <div class="lex-lottery-host"><img alt=""><p></p></div>
+  <div class="lex-lottery-wheel"><span aria-hidden="true">👇</span><canvas width="560" height="560" aria-hidden="true"></canvas></div>
+ </div>
+ <p class="lex-lottery-result" role="status"></p>
+ <button class="btn ghost lex-lottery-refresh" hidden>Обновить очередь</button>`);
+ const form=$('form',panel), button=$('[type=submit]',form), result=$('[role=status]',panel);
+ const refresh=$('.lex-lottery-refresh',panel);
+ refresh.onclick=()=>load(node);
+ form.onsubmit=async event=>{
+  event.preventDefault();
+  const data=new FormData(form);
+  const ids=data.getAll('candidate');
+  const eventName=String(data.get('event')).trim();
+  if(!eventName||!ids.length){result.textContent='Укажи событие и отметь участников.';return}
+  if(!confirm('Запустить розыгрыш и сразу назначить победителя кучером?'))return;
+  button.disabled=true;
+  result.textContent='Проверяем участников…';
+  try{
+   const {data:draw,error}=await sb.rpc('draw_caravan_coachman',{p_candidates:ids,p_event:eventName});
+   if(error)throw error;
+   const players=draw.eligible.map(id=>({id,name:names.get(id)||'Игрок'}));
+   const host=nextCaravanHost();
+   const stage=$('.lex-lottery-stage',panel);
+   stage.hidden=false;
+   $('img',stage).src='./assets/heroes/'+host.image+'.webp';
+   $('img',stage).alt=host.name;
+   $('.lex-lottery-host p',stage).textContent=host.name+': «'+host.line+'»';
+   result.textContent='В розыгрыше: '+players.map(player=>player.name).join(', ');
+   await animateWheel($('canvas',stage),players,draw.winner);
+   result.textContent='Кучер: '+(names.get(draw.winner)||'Игрок')+'. Назначение записано в историю.';
+   form.hidden=true;
+   refresh.hidden=false;
+  }catch(error){
+   result.textContent=error.message;
+   button.disabled=false;
+   refresh.hidden=false;
+  }
+ };
+}
+
 async function load(node){
  if(!node||!node.isConnected)return;
  const requestId=(requests.get(node)||0)+1;
@@ -62,6 +178,7 @@ async function load(node){
       return '<div class="lex-caravan-person '+(chosen?'is-selected':'')+'"><span class="lex-caravan-rank">'+(chosen?'✓':'#'+rank)+'</span><div class="lex-caravan-person-name"><strong>'+esc(names.get(r.user_id)||'Игрок')+'</strong><small>'+(chosen?'Выбран · '+fmt(r.selected_at):'В очереди с '+fmt(r.created_at))+'</small><small>За всё время: VIP '+(totals.get(r.user_id)?.vip||0)+' · Кучер '+(totals.get(r.user_id)?.coachman||0)+'</small></div><span class="lex-caravan-status '+(chosen?'chosen':'')+'">'+(chosen?'Взяли':'Ожидает')+'</span>'+(officer(me.role)?'<button type="button" class="lex-caravan-mark" data-caravan-mark="'+esc(r.user_id)+'" data-next="'+(chosen?'pending':'selected')+'">'+(chosen?'Вернуть':'Взяли ✓')+'</button>':'')+'</div>'
     }).join('')+'</div>':'<p class="lex-caravan-empty">Пока нет заявок. Можно стать первым!</p>')+'</section>'
   }).join('')+'</div>'+
+  (officer(me.role)?'<section class="lex-caravan-history lex-lottery" id="lexCaravanLottery"><h3>Розыгрыш каравана</h3><p>Из выбранного топа в колесо попадут игроки с наименьшим числом назначений кучером.</p></section>':'')+
   (my?'<p class="lex-caravan-own">Твоя запись: <strong>'+label[my.request_type]+'</strong> · '+(my.status==='selected'?'выбран офицером':'ожидаешь в очереди')+'.</p>':'')+
   '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>История караванов</h3><span>'+past.length+' назначений</span></div>'+
   (past.length?'<div class="lex-caravan-history-list">'+past.map(h=>'<article class="lex-caravan-history-entry"><div><strong>'+esc(names.get(h.user_id)||'Игрок')+'</strong><small>'+esc(label[h.request_type]||h.request_type)+' · '+fmt(h.selected_at)+'</small></div><p>'+(h.note?esc(h.note):'Без примечания')+'</p>'+(officer(me.role)?'<button class="lex-caravan-mark" type="button" data-history-note="'+h.id+'">✎ Примечание</button>':'')+'</article>').join('')+'</div>':'<p class="lex-caravan-empty">История пока пустая. Первое подтверждение офицера появится здесь.</p>')+'</section>'+
@@ -69,6 +186,7 @@ async function load(node){
   '<section class="lex-caravan-history"><div class="lex-caravan-history-title"><h3>⏰ Время отправления</h3></div><p id="lexCaravanDepartureText">'+(departure.data?.departure_at?'Ближайшее отправление: '+departDisplay(departure.data.departure_at):'Время отправления пока не назначено')+'</p>'+(officer(me.role)?'<form id="lexCaravanDepartureForm" class="lex-form"><label class="lex-caravan-note-label">Дата и время отправления<input type="datetime-local" name="departure" value="'+(departure.data?.departure_at?localDateTime(departure.data.departure_at):'')+'"></label><button type="submit" class="btn">Сохранить время</button><button type="button" id="lexCaravanClearDeparture" class="btn ghost">Сбросить</button></form>':'')+'</section>'+
   '<p id="lexCaravanMessage" role="status" aria-live="polite"></p>';
   $('#lexOpenCaravan',node).onclick=()=>popup(node,me,my);
+  if(officer(me.role))caravanLottery(node,sb,rows,names);
   const linkButton=$('#lexTelegramLink',node);
   if(linkButton)linkButton.onclick=async()=>{
    linkButton.disabled=true;
