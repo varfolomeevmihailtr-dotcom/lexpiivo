@@ -26,10 +26,10 @@ const departureIso=value=>{
 const requests=new WeakMap();
 
 const caravanHosts=[
- {name:'Артур',image:'arthur',line:'Держите поводья… Сейчас узнаем, кто поведёт караван!'},
- {name:'Марлена',image:'marlena',line:'Посмотрим, кто сегодня возглавит колонну.'},
- {name:'Зоя',image:'zoya',line:'Тише. Колесо уже выбирает, кому вести караван.'},
- {name:'Даскал',image:'daskal',line:'Проверьте упряжь. Победитель скоро будет известен!'}
+ {name:'Артур',image:'arthur',tip:[97,53],line:'Держите поводья… Сейчас узнаем, кто поведёт караван!'},
+ {name:'Марлена',image:'marlena',tip:[99.9,50.4],line:'Посмотрим, кто сегодня возглавит колонну.'},
+ {name:'Зоя',image:'zoya',tip:[99.6,50.7],line:'Тише. Колесо уже выбирает, кому вести караван.'},
+ {name:'Даскал',image:'daskal',tip:[99.5,53.5],line:'Проверьте упряжь. Победитель скоро будет известен!'}
 ];
 let previousHost=-1;
 function nextCaravanHost(){
@@ -43,9 +43,9 @@ function drawWheel(canvas,players,angle){
  const colors=['#69421f','#1c4338','#50304b','#35526a'];
  ctx.clearRect(0,0,canvas.width,canvas.height);
  for(const [index,player] of players.entries()){
-  const start=angle+index*slice-Math.PI/2;
+  const start=angle+index*slice-Math.PI;
   ctx.beginPath();
-  ctx.moveTo(center,center);
+  if(players.length>1)ctx.moveTo(center,center);
   ctx.arc(center,center,radius,start,start+slice);
   ctx.closePath();
   ctx.fillStyle=colors[index%colors.length];
@@ -100,8 +100,9 @@ function caravanLottery(node,sb,rows,names){
   <button class="btn lex-gold-btn" type="submit">Крутить и назначить кучера</button>
  </form>
  <div class="lex-lottery-stage" hidden>
-  <div class="lex-lottery-host"><img alt=""><p></p></div>
-  <div class="lex-lottery-wheel"><span aria-hidden="true">👇</span><canvas width="560" height="560" aria-hidden="true"></canvas></div>
+  <div class="lex-lottery-host"><img alt=""></div>
+  <div class="lex-lottery-wheel"><canvas width="560" height="560" aria-hidden="true"></canvas></div>
+  <p class="lex-lottery-line"></p>
  </div>
  <p class="lex-lottery-result" role="status"></p>
  <button class="btn ghost lex-lottery-refresh" hidden>Обновить очередь</button>`);
@@ -124,10 +125,14 @@ function caravanLottery(node,sb,rows,names){
    const host=nextCaravanHost();
    const stage=$('.lex-lottery-stage',panel);
    stage.hidden=false;
-   $('img',stage).src='./assets/heroes/'+host.image+'.webp';
-   $('img',stage).alt=host.name;
-   $('.lex-lottery-host p',stage).textContent=host.name+': «'+host.line+'»';
+   const portrait=$('img',stage);
+   portrait.style.setProperty('--tip-x',host.tip[0]+'%');
+   portrait.style.setProperty('--tip-y',host.tip[1]+'%');
+   portrait.src='./assets/heroes/'+host.image+'-wheel.webp';
+   portrait.alt=host.name;
+   $('.lex-lottery-line',stage).textContent=host.name+': «'+host.line+'»';
    result.textContent='В розыгрыше: '+players.map(player=>player.name).join(', ');
+   await portrait.decode().catch(()=>{});
    await animateWheel($('canvas',stage),players,draw.winner);
    result.textContent='Кучер: '+(names.get(draw.winner)||'Игрок')+'. Назначение записано в историю.';
    form.hidden=true;
