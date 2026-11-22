@@ -97,3 +97,27 @@
 .lex-lottery-import textarea{box-sizing:border-box;width:100%;min-width:0;resize:vertical;padding:.8rem;background:#14231a;color:#fff3d9;border:1px solid #82936c;border-radius:8px;font:inherit}
 .lex-lottery-import-count{overflow-wrap:anywhere;font-size:.9rem}
 .lex-caravan-delete{color:#f4b9a9}
+
+.lex-lottery.is-spinning .lex-lottery-wheel{filter:drop-shadow(0 0 14px #e8b55788)}
+.lex-lottery.is-winner .lex-lottery-wheel{filter:drop-shadow(0 0 24px #e8b55788);animation:lex-wheel-crown .8s ease-out}
+.lex-lottery.is-winner .lex-lottery-result{position:relative;isolation:isolate;overflow:hidden;display:grid;justify-items:center;gap:.45rem;text-align:center;padding:2rem 1rem;margin:1.5rem 0 1rem;border:1px solid #eac272;border-radius:14px;background:radial-gradient(ellipse at 50% 0,#b87c294d,transparent 75%),linear-gradient(135deg,#302916,#14221b);box-shadow:inset 0 0 35px #ecb94a16,0 10px 35px #0005;animation:lex-winner-arrive .65s cubic-bezier(.16,1,.3,1)}
+.lex-winner-caption{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:#efce88}
+.lex-lottery .lex-winner-name{font-family:Georgia,serif;font-weight:700;font-size:clamp(2rem,6vw,4rem);line-height:1.15;max-width:100%;overflow-wrap:anywhere;color:#ffe3a0;text-shadow:0 2px 0 #664919,0 0 25px #e5ad4566}
+.lex-winner-detail{font-size:.9rem;color:#d9d2b9}
+.lex-winner-sparks{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.lex-winner-sparks i{position:absolute;left:50%;top:50%;width:5px;height:10px;background:#ffdb7b;border-radius:1px;opacity:0;animation:lex-gold-spark 1.5s ease-out var(--spark-delay) both}
+.lex-lottery .lex-lottery-refresh{position:relative;display:block;width:min(100%,420px);min-height:58px;margin:1rem auto!important;padding:1rem 1.5rem;border:1px solid #ffe8a9!important;border-radius:10px;background:linear-gradient(115deg,#b58230,#ffe6a2 52%,#d4a44d)!important;color:#251a0b!important;font-size:1.05rem;font-weight:800;box-shadow:0 5px 0 #78531f,0 10px 28px #eebc4f36;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.lex-lottery .lex-lottery-refresh:hover{transform:translateY(-2px);box-shadow:0 7px 0 #78531f,0 12px 32px #eebc4f55}
+.lex-lottery .lex-lottery-refresh:active{transform:translateY(3px);box-shadow:0 2px 0 #78531f}
+.lex-lottery .lex-lottery-refresh:focus-visible{outline:3px solid #fff0b8;outline-offset:5px}
+@keyframes lex-winner-arrive{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes lex-gold-spark{0%{opacity:0;transform:translate(0,0) scale(.3)}15%{opacity:1}100%{opacity:0;transform:translate(var(--spark-x),var(--spark-y)) rotate(150deg) scale(.2)}}
+@keyframes lex-wheel-crown{0%{filter:drop-shadow(0 0 0 #e8b55700)}40%{filter:drop-shadow(0 0 40px #ffe3a0bb)}100%{filter:drop-shadow(0 0 24px #e8b55788)}}
+@media(prefers-reduced-motion:reduce){.lex-lottery.is-winner .lex-lottery-wheel,.lex-lottery.is-winner .lex-lottery-result,.lex-winner-sparks i{animation:none}.lex-lottery .lex-lottery-refresh{transition:none}}
+
+.lex-lottery-seating{position:absolute;inset:0;z-index:2;pointer-events:none}
+.lex-lottery-seating span{position:absolute;box-sizing:border-box;max-width:42%;padding:.3rem .5rem;color:#fff3ce;background:#46331ef2;border:1px solid #e8be68;border-radius:5px;font-size:clamp(.55rem,1.2vw,.85rem);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 0 12px #d8ab5566;opacity:0;animation:lex-seat-player .8s cubic-bezier(.16,1,.3,1) both}
+.lex-lottery.is-spinning .lex-lottery-host img{animation:lex-hero-push .65s ease-out both}
+@keyframes lex-seat-player{0%{opacity:0;translate:-180px -30px;scale:.6}25%{opacity:1}80%{opacity:1;translate:-50% -50%;scale:1.05}100%{opacity:0;translate:-50% -50%;scale:1}}
+@keyframes lex-hero-push{0%{translate:0 0;rotate:0deg}35%{translate:10px 0;rotate:2deg}100%{translate:0 0;rotate:0deg}}
+@media(prefers-reduced-motion:reduce){.lex-lottery.is-spinning .lex-lottery-host img,.lex-lottery-seating span{animation:none}}

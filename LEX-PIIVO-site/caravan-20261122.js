@@ -37,7 +37,7 @@ function nextCaravanHost(){
  previousHost=choices[Math.floor(Math.random()*choices.length)];
  return caravanHosts[previousHost];
 }
-function drawWheel(canvas,players,angle){
+function drawWheel(canvas,players,angle,winner){
  const ctx=canvas.getContext('2d'),center=canvas.width/2,radius=center-9;
  const slice=2*Math.PI/players.length;
  const colors=['#69421f','#1c4338','#50304b','#35526a'];
@@ -48,7 +48,7 @@ function drawWheel(canvas,players,angle){
   if(players.length>1)ctx.moveTo(center,center);
   ctx.arc(center,center,radius,start,start+slice);
   ctx.closePath();
-  ctx.fillStyle=colors[index%colors.length];
+  ctx.fillStyle=player.id===winner?'#c68a29':colors[index%colors.length];
   ctx.fill();
   ctx.strokeStyle='#ddae62';
   ctx.stroke();
@@ -70,19 +70,47 @@ function animateWheel(canvas,players,winner){
  const index=players.findIndex(player=>player.id===winner);
  const end=12*Math.PI-2*Math.PI*(index+.5)/players.length;
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  drawWheel(canvas,players,end);
+  drawWheel(canvas,players,end,winner);
   return Promise.resolve();
  }
  return new Promise(resolve=>{
   const start=performance.now();
   const frame=now=>{
    const t=Math.min(1,(now-start)/4200);
-   drawWheel(canvas,players,end*(1-(1-t)**4));
+   drawWheel(canvas,players,end*(1-(1-t)**4),t===1?winner:undefined);
    if(t<1)requestAnimationFrame(frame);
    else resolve();
   };
   requestAnimationFrame(frame);
  });
+}
+
+
+async function seatCaravanPlayers(stage,players){
+ const canvas=$('canvas',stage);
+ drawWheel(canvas,players,0);
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const wheel=$('.lex-lottery-wheel',stage);
+ const layer=document.createElement('div');
+ layer.className='lex-lottery-seating';
+ layer.setAttribute('aria-hidden','true');
+ const finished=[];
+ for(const [index,player] of players.entries()){
+  const angle=2*Math.PI*(index+.5)/players.length-Math.PI;
+  const chip=document.createElement('span');
+  chip.textContent=player.name;
+  chip.style.left=(50+Math.cos(angle)*34)+'%';
+  chip.style.top=(50+Math.sin(angle)*34)+'%';
+  chip.style.animationDelay=Math.min(index*35,500)+'ms';
+  layer.append(chip);
+  finished.push(new Promise(resolve=>{
+   chip.addEventListener('animationend',resolve,{once:true});
+   setTimeout(resolve,1800);
+  }));
+ }
+ wheel.append(layer);
+ await Promise.all(finished);
+ layer.remove();
 }
 
 function parseCaravanNames(value){
@@ -116,8 +144,8 @@ function caravanLottery(node,sb,rows,names){
   <div class="lex-lottery-wheel"><canvas width="560" height="560" aria-hidden="true"></canvas></div>
   <p class="lex-lottery-line"></p>
  </div>
- <p class="lex-lottery-result" role="status"></p>
- <button class="btn ghost lex-lottery-refresh" hidden>Обновить очередь</button>`);
+ <div class="lex-lottery-result" role="status" aria-live="polite"></div>
+ <button class="btn lex-gold-btn lex-lottery-refresh" hidden>Обновить караван →</button>`);
  const form=$('form',panel), button=$('[type=submit]',form), result=$('[role=status]',panel);
  form.addEventListener('input',()=>{drawRequest=null});
  const pasted=$('textarea[name=names]',form);
@@ -139,6 +167,7 @@ function caravanLottery(node,sb,rows,names){
   if(ids.length+imported.length>100||imported.some(name=>name.length>100)){result.textContent='До 100 участников, каждый ник до 100 символов.';return}
   if(!confirm('Запустить розыгрыш и сразу назначить победителя кучером?'))return;
   button.disabled=true;
+  panel.classList.remove('is-winner');
   result.textContent='Проверяем участников…';
   try{
    const {data:draw,error}=await sb.rpc('draw_caravan_list',{p_candidates:ids,p_names:imported,p_event:eventName,p_request:drawRequest||(drawRequest=crypto.randomUUID())});
@@ -155,8 +184,26 @@ function caravanLottery(node,sb,rows,names){
    $('.lex-lottery-line',stage).textContent=host.name+': «'+host.line+'»';
    result.textContent='В розыгрыше: '+players.map(player=>player.name).join(', ');
    await portrait.decode().catch(()=>{});
+   form.hidden=true;
+   await seatCaravanPlayers(stage,players);
+   panel.classList.add('is-spinning');
    await animateWheel($('canvas',stage),players,draw.winner);
-   result.textContent='Кучер: '+(players.find(player=>player.id===draw.winner)?.name||'Игрок')+'. Назначение записано в историю.';
+   panel.classList.remove('is-spinning');
+   panel.classList.add('is-winner');
+   const winnerName=players.find(player=>player.id===draw.winner)?.name||'Игрок';
+   result.innerHTML='<span class="lex-winner-caption">Победитель каравана</span><strong class="lex-winner-name">'+esc(winnerName)+'</strong><span class="lex-winner-detail">Кучер · Назначение записано в историю</span>';
+   const sparks=document.createElement('div');
+   sparks.className='lex-winner-sparks';
+   sparks.setAttribute('aria-hidden','true');
+   for(let i=0;i<24;i++){
+    const spark=document.createElement('i');
+    const angle=i*Math.PI/12;
+    spark.style.setProperty('--spark-x',Math.cos(angle)*(100+i%4*35)+'px');
+    spark.style.setProperty('--spark-y',Math.sin(angle)*(70+i%5*24)+'px');
+    spark.style.setProperty('--spark-delay',i%6*45+'ms');
+    sparks.append(spark);
+   }
+   result.append(sparks);
    form.hidden=true;
    refresh.hidden=false;
   }catch(error){
