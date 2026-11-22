@@ -268,7 +268,7 @@ async function load(node){
     if(chosen)officerPopup(node,uid,names.get(uid)||'Игрок');
     else if(confirm('Вернуть игрока в очередь? Его прошлые назначения останутся в истории.'))changeSelection(node,uid,false,'');
   });
-  $('[data-history-delete]',node).forEach(button=>button.onclick=async()=>{
+  $$('[data-history-delete]',node).forEach(button=>button.onclick=async()=>{
    const entry=past.find(row=>String(row.id)===button.dataset.historyDelete);
    if(!entry||!confirm('Удалить назначение '+(entry.guest_nickname||names.get(entry.user_id)||'Игрок')+' от '+fmt(entry.selected_at)+'? Поездка перестанет учитываться в розыгрыше. Если это текущее назначение, игрок вернётся в очередь.'))return;
    button.disabled=true;
@@ -278,7 +278,7 @@ async function load(node){
     await load(node);
    }catch(error){$('#lexCaravanMessage',node).textContent=error.message;button.disabled=false}
   });
-  $('[data-history-note]',node).forEach(b=>b.onclick=()=>{
+  $$('[data-history-note]',node).forEach(b=>b.onclick=()=>{
     const entry=past.find(h=>String(h.id)===b.dataset.historyNote);
     if(entry)notePopup(node,entry,names.get(entry.user_id)||'Игрок');
   });
