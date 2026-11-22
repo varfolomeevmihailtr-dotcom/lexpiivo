@@ -33,6 +33,7 @@ const caravanHosts=[
 ];
 let previousHost=-1;
 function nextCaravanHost(){
+ if(previousHost===-1){previousHost=1;return caravanHosts[1]}
  const choices=caravanHosts.map((_,index)=>index).filter(index=>index!==previousHost);
  previousHost=choices[Math.floor(Math.random()*choices.length)];
  return caravanHosts[previousHost];
@@ -66,9 +67,9 @@ function drawWheel(canvas,players,angle,winner){
  ctx.fillStyle='#ddae62';
  ctx.fill();
 }
-function animateWheel(canvas,players,winner){
+function animateWheel(canvas,players,winner,offset=0,duration=4200){
  const index=players.findIndex(player=>player.id===winner);
- const end=12*Math.PI-2*Math.PI*(index+.5)/players.length;
+ const end=12*Math.PI-2*Math.PI*(index+.5)/players.length+offset;
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   drawWheel(canvas,players,end,winner);
   return Promise.resolve();
@@ -76,7 +77,7 @@ function animateWheel(canvas,players,winner){
  return new Promise(resolve=>{
   const start=performance.now();
   const frame=now=>{
-   const t=Math.min(1,(now-start)/4200);
+   const t=Math.min(1,(now-start)/duration);
    drawWheel(canvas,players,end*(1-(1-t)**4),t===1?winner:undefined);
    if(t<1)requestAnimationFrame(frame);
    else resolve();
@@ -86,9 +87,9 @@ function animateWheel(canvas,players,winner){
 }
 
 
-async function seatCaravanPlayers(stage,players){
+async function seatCaravanPlayers(stage,players,offset=0){
  const canvas=$('canvas',stage);
- drawWheel(canvas,players,0);
+ drawWheel(canvas,players,offset);
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  const wheel=$('.lex-lottery-wheel',stage);
  const layer=document.createElement('div');
@@ -96,7 +97,7 @@ async function seatCaravanPlayers(stage,players){
  layer.setAttribute('aria-hidden','true');
  const finished=[];
  for(const [index,player] of players.entries()){
-  const angle=2*Math.PI*(index+.5)/players.length-Math.PI;
+  const angle=2*Math.PI*(index+.5)/players.length-Math.PI+offset;
   const chip=document.createElement('span');
   chip.textContent=player.name;
   chip.style.left=(50+Math.cos(angle)*34)+'%';
@@ -111,6 +112,73 @@ async function seatCaravanPlayers(stage,players){
  wheel.append(layer);
  await Promise.all(finished);
  layer.remove();
+}
+
+
+async function prepareMarlenaVideo(stage){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return null;
+ const video=document.createElement('video');
+ video.muted=true;
+ video.playsInline=true;
+ video.preload='auto';
+ video.setAttribute('aria-hidden','true');
+ video.hidden=true;
+ const canvas=document.createElement('canvas');
+ canvas.width=768;
+ canvas.height=432;
+ canvas.className='lex-lottery-video';
+ canvas.setAttribute('aria-hidden','true');
+ const ctx=canvas.getContext('2d',{willReadFrequently:true});
+ const clean=()=>{video.pause();video.removeAttribute('src');video.load();video.remove();canvas.remove();stage.classList.remove('has-marlena-video')};
+ try{
+  const ready=new Promise((resolve,reject)=>{
+   const timeout=setTimeout(()=>reject(Error('Video load timeout')),8000);
+   video.addEventListener('loadeddata',()=>{clearTimeout(timeout);resolve()},{once:true});
+   video.addEventListener('error',()=>{clearTimeout(timeout);reject(Error('Video unavailable'))},{once:true});
+  });
+  video.src='./assets/heroes/marlena-wheel-motion.mp4';
+  stage.append(video);
+  video.load();
+  await ready;
+  const render=()=>{
+   ctx.drawImage(video,0,0,768,432);
+   const frame=ctx.getImageData(0,0,768,432);
+   const pixels=frame.data;
+   for(let i=0;i<pixels.length;i+=4){
+    const spill=pixels[i+1]-Math.max(pixels[i],pixels[i+2]);
+    if(spill>25){
+     pixels[i+3]=Math.round(255*(1-Math.min(1,(spill-25)/65)));
+     pixels[i+1]=Math.min(pixels[i+1],Math.max(pixels[i],pixels[i+2])+18);
+    }
+   }
+   ctx.putImageData(frame,0,0);
+  };
+  render();
+  stage.append(canvas);
+  stage.classList.add('has-marlena-video');
+  return {
+   async play(){
+    try{
+     await video.play();
+     const tick=()=>{
+      if(!stage.isConnected){clean();return}
+      render();
+      if(!video.ended&&!video.paused)requestAnimationFrame(tick);
+     };
+     tick();
+     return true;
+    }catch(error){clean();return false}
+   },
+   async finish(){
+    if(video.ended)return;
+    await new Promise(resolve=>{
+     const timeout=setTimeout(resolve,7000);
+     video.addEventListener('ended',()=>{clearTimeout(timeout);resolve()},{once:true});
+    });
+    video.pause();
+   }
+  };
+ }catch(error){clean();return null}
 }
 
 function parseCaravanNames(value){
@@ -185,9 +253,14 @@ function caravanLottery(node,sb,rows,names){
    result.textContent='В розыгрыше: '+players.map(player=>player.name).join(', ');
    await portrait.decode().catch(()=>{});
    form.hidden=true;
-   await seatCaravanPlayers(stage,players);
+   const motion=host.image==='marlena'?await prepareMarlenaVideo(stage):null;
+   const offset=motion?Math.PI:0;
+   await seatCaravanPlayers(stage,players,offset);
+   const playing=motion?await motion.play():false;
    panel.classList.add('is-spinning');
-   await animateWheel($('canvas',stage),players,draw.winner);
+   if(playing)await new Promise(resolve=>setTimeout(resolve,1200));
+   await animateWheel($('.lex-lottery-wheel canvas',stage),players,draw.winner,playing?Math.PI:0,playing?3600:4200);
+   if(playing)await motion.finish();
    panel.classList.remove('is-spinning');
    panel.classList.add('is-winner');
    const winnerName=players.find(player=>player.id===draw.winner)?.name||'Игрок';
