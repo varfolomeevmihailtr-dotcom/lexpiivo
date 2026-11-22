@@ -92,3 +92,8 @@
 .lex-lottery-wheel{width:100%;max-width:none}
 .lex-lottery-line{grid-column:1/-1;margin:.65rem 0 0;padding:.65rem;background:#252019;border:1px solid #86613c;border-radius:10px;color:#fff3d9}
 @media(max-width:560px){.lex-lottery-stage{padding:.65rem}.lex-lottery-line{font-size:.9rem}}
+
+.lex-lottery-import{display:grid;gap:.65rem;margin:1rem 0}
+.lex-lottery-import textarea{box-sizing:border-box;width:100%;min-width:0;resize:vertical;padding:.8rem;background:#14231a;color:#fff3d9;border:1px solid #82936c;border-radius:8px;font:inherit}
+.lex-lottery-import-count{overflow-wrap:anywhere;font-size:.9rem}
+.lex-caravan-delete{color:#f4b9a9}
