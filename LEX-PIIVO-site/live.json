@@ -1,6 +1,6 @@
 {
   "codes": {
-    "checked_at": "2026-11-24T17:55:12Z",
+    "checked_at": "2026-11-25T02:34:47Z",
     "source": "https://lastasylum.gg/en/codes",
     "active": [
       "GSTAR777",
@@ -56,144 +56,150 @@
     ]
   },
   "alliance": {
-    "checked_at": "2026-11-24T17:55:14Z",
+    "checked_at": "2026-11-25T02:34:49Z",
     "source": "https://lastasylum.gg/en/leaderboard/alliance/67132942",
     "server": 347,
     "name": "[ LEX ] PIIVO",
     "member_count": 99,
-    "roster_power_sum": "3603044214",
+    "roster_power_sum": "3644580671",
     "members": [
       {
-        "nickname": "AvaTarkа",
-        "power": 66850936,
-        "rank": "R3",
-        "game_player_id": "366254883163"
-      },
-      {
         "nickname": "BezumeC",
-        "power": 66586587,
+        "power": 67214993,
         "rank": "R3",
         "game_player_id": "371980222811"
       },
       {
+        "nickname": "AvaTarkа",
+        "power": 67028900,
+        "rank": "R3",
+        "game_player_id": "366254883163"
+      },
+      {
         "nickname": "Добряк89",
-        "power": 63489152,
+        "power": 65307363,
         "rank": "R4",
         "game_player_id": "366784512347"
       },
       {
         "nickname": "Valenciaga",
-        "power": 63269285,
+        "power": 63283827,
         "rank": "R4",
         "game_player_id": "372027261275"
       },
       {
         "nickname": "Rzhev",
-        "power": 62719249,
+        "power": 62754136,
         "rank": "R3",
         "game_player_id": "369809727835"
       },
       {
         "nickname": "Buhayagryaz",
-        "power": 60525582,
+        "power": 60591433,
         "rank": "R3",
         "game_player_id": "371436527963"
       },
       {
         "nickname": "6ixx",
-        "power": 57216560,
+        "power": 57739028,
         "rank": "R4",
         "game_player_id": "372134789467"
       },
       {
-        "nickname": "Кэприсия",
-        "power": 56325519,
-        "rank": "R3",
-        "game_player_id": "368480674139"
-      },
-      {
-        "nickname": "DJU",
-        "power": 56321449,
-        "rank": "R4",
-        "game_player_id": "371337838939"
-      },
-      {
         "nickname": "Mimivirus",
-        "power": 56312916,
+        "power": 57672514,
         "rank": "R3",
         "game_player_id": "371553206619"
       },
       {
         "nickname": "Kitiketik",
-        "power": 55601024,
+        "power": 56966581,
         "rank": "R3",
         "game_player_id": "369483039067"
       },
       {
+        "nickname": "DJU",
+        "power": 56402577,
+        "rank": "R4",
+        "game_player_id": "371337838939"
+      },
+      {
+        "nickname": "Кэприсия",
+        "power": 56330147,
+        "rank": "R3",
+        "game_player_id": "368480674139"
+      },
+      {
         "nickname": "Владленович",
-        "power": 54547445,
+        "power": 54632630,
         "rank": "R3",
         "game_player_id": "366664802651"
       },
       {
         "nickname": "Insektecyd",
-        "power": 52226359,
+        "power": 53348205,
         "rank": "R3",
         "game_player_id": "370177270107"
       },
       {
         "nickname": "Lalilap””",
-        "power": 52099329,
+        "power": 53023855,
         "rank": "R3",
         "game_player_id": "372026589531"
       },
       {
         "nickname": "CORONZON",
-        "power": 51217393,
+        "power": 52285156,
         "rank": "R4",
         "game_player_id": "379919016283"
       },
       {
         "nickname": "darriko",
-        "power": 51148593,
+        "power": 51219243,
         "rank": "R4",
         "game_player_id": "391635812699"
       },
       {
         "nickname": "Stex988",
-        "power": 49221076,
+        "power": 49644714,
         "rank": "R3",
         "game_player_id": "372189962587"
       },
       {
-        "nickname": "VeronikaKlubnika",
-        "power": 48102179,
+        "nickname": "Rinаа",
+        "power": 49392942,
         "rank": "R3",
-        "game_player_id": "375332872539"
+        "game_player_id": "366512382299"
       },
       {
         "nickname": "누나~",
-        "power": 47969714,
+        "power": 49204725,
         "rank": "R3",
         "game_player_id": "365995680091"
       },
       {
+        "nickname": "VeronikaKlubnika",
+        "power": 48570512,
+        "rank": "R3",
+        "game_player_id": "375332872539"
+      },
+      {
         "nickname": "OLeoSantos",
-        "power": 47958437,
+        "power": 48240454,
         "rank": "R2",
         "game_player_id": "374231195995"
       },
       {
         "nickname": "yu’lsv",
-        "power": 47587156,
+        "power": 47626613,
         "rank": "R3",
         "game_player_id": "373984723291"
       },
       {
-        "nickname": "Rinаа",
-        "power": 47528796,
+        "nickname": "алимпум",
+        "power": 47463392,
         "rank": "R3",
-        "game_player_id": "366512382299"
+        "game_player_id": "373526487387"
       },
       {
         "nickname": "Lelikkaramelkina",
@@ -202,52 +208,52 @@
         "game_player_id": "366198841691"
       },
       {
-        "nickname": "алимпум",
-        "power": 47397582,
-        "rank": "R3",
-        "game_player_id": "373526487387"
-      },
-      {
         "nickname": "•BOUNTY•",
-        "power": 46872062,
+        "power": 47136876,
         "rank": "R3",
         "game_player_id": "370216075611"
       },
       {
         "nickname": "АnAsTaSiA",
-        "power": 45039370,
+        "power": 45454196,
         "rank": "R3",
         "game_player_id": "373202370907"
       },
       {
         "nickname": "Gesha0",
-        "power": 43950974,
+        "power": 43963487,
         "rank": "R3",
         "game_player_id": "368218423643"
       },
       {
-        "nickname": "₽Афродита₽",
-        "power": 43687223,
-        "rank": "R3",
-        "game_player_id": "373711216987"
-      },
-      {
         "nickname": "Sergius76",
-        "power": 43345904,
+        "power": 43850555,
         "rank": "R3",
         "game_player_id": "367699099995"
       },
       {
+        "nickname": "₽Афродита₽",
+        "power": 43689915,
+        "rank": "R3",
+        "game_player_id": "373711216987"
+      },
+      {
+        "nickname": "золотаялилия",
+        "power": 42530167,
+        "rank": "R3",
+        "game_player_id": "373901828443"
+      },
+      {
         "nickname": "6eJIo4ka",
-        "power": 41263031,
+        "power": 41349383,
         "rank": "R2",
         "game_player_id": "369855627611"
       },
       {
-        "nickname": "золотаялилия",
-        "power": 41030722,
+        "nickname": "Yarrikk",
+        "power": 39935822,
         "rank": "R3",
-        "game_player_id": "373901828443"
+        "game_player_id": "369111458139"
       },
       {
         "nickname": "Dr110411",
@@ -256,40 +262,46 @@
         "game_player_id": "374319341915"
       },
       {
-        "nickname": "Eclaira",
-        "power": 39507721,
+        "nickname": "erosphyche",
+        "power": 39722691,
         "rank": "R3",
-        "game_player_id": "369742397787"
-      },
-      {
-        "nickname": "Yarrikk",
-        "power": 39331824,
-        "rank": "R3",
-        "game_player_id": "369111458139"
-      },
-      {
-        "nickname": "Danya722",
-        "power": 39084601,
-        "rank": "R3",
-        "game_player_id": "372113465691"
+        "game_player_id": "372098793819"
       },
       {
         "nickname": "7bob7",
-        "power": 38719079,
+        "power": 39589156,
         "rank": "R3",
         "game_player_id": "374589186395"
       },
       {
-        "nickname": "Парампіту",
-        "power": 38071134,
+        "nickname": "Eclaira",
+        "power": 39532533,
         "rank": "R3",
-        "game_player_id": "374460383579"
+        "game_player_id": "369742397787"
       },
       {
-        "nickname": "erosphyche",
-        "power": 38014514,
+        "nickname": "Danya722",
+        "power": 39119507,
         "rank": "R3",
-        "game_player_id": "372098793819"
+        "game_player_id": "372113465691"
+      },
+      {
+        "nickname": "Акkeрман",
+        "power": 38229936,
+        "rank": "R4",
+        "game_player_id": "370951553371"
+      },
+      {
+        "nickname": "VOLk",
+        "power": 38114559,
+        "rank": "R3",
+        "game_player_id": "374855352667"
+      },
+      {
+        "nickname": "Парампіту",
+        "power": 38085526,
+        "rank": "R3",
+        "game_player_id": "374460383579"
       },
       {
         "nickname": "Ташунька",
@@ -298,28 +310,34 @@
         "game_player_id": "372902527323"
       },
       {
+        "nickname": "senp",
+        "power": 36656917,
+        "rank": "R3",
+        "game_player_id": "374512206171"
+      },
+      {
         "nickname": "LutaM",
-        "power": 37245095,
+        "power": 36294920,
         "rank": "R3",
         "game_player_id": "372259684699"
       },
       {
-        "nickname": "VOLk",
-        "power": 37167548,
-        "rank": "R3",
-        "game_player_id": "374855352667"
+        "nickname": "Zlobniy69",
+        "power": 36134638,
+        "rank": "R2",
+        "game_player_id": "369116389723"
       },
       {
-        "nickname": "Акkeрман",
-        "power": 36543787,
-        "rank": "R4",
-        "game_player_id": "370951553371"
+        "nickname": "TyrbinaWR",
+        "power": 35940127,
+        "rank": "R3",
+        "game_player_id": "373567758683"
       },
       {
-        "nickname": "senp",
-        "power": 36145990,
+        "nickname": "Devilskill",
+        "power": 35771282,
         "rank": "R3",
-        "game_player_id": "374512206171"
+        "game_player_id": "370400092507"
       },
       {
         "nickname": "YoganYoYo",
@@ -328,28 +346,22 @@
         "game_player_id": "371715211611"
       },
       {
-        "nickname": "Devilskill",
-        "power": 35149472,
+        "nickname": "TexxиШекк",
+        "power": 35083917,
         "rank": "R3",
-        "game_player_id": "370400092507"
+        "game_player_id": "371916087643"
       },
       {
-        "nickname": "TyrbinaWR",
-        "power": 34987967,
-        "rank": "R3",
-        "game_player_id": "373567758683"
+        "nickname": "태희",
+        "power": 34956369,
+        "rank": "R5",
+        "game_player_id": "371013476699"
       },
       {
         "nickname": "вотвам",
         "power": 34933065,
         "rank": "R2",
         "game_player_id": "367943090523"
-      },
-      {
-        "nickname": "태희",
-        "power": 34906631,
-        "rank": "R5",
-        "game_player_id": "371013476699"
       },
       {
         "nickname": "Александра1605",
@@ -359,51 +371,51 @@
       },
       {
         "nickname": "Kawat0",
-        "power": 34490916,
+        "power": 34355068,
         "rank": "R2",
         "game_player_id": "371242393947"
       },
       {
-        "nickname": "Zlobniy69",
-        "power": 33825715,
-        "rank": "R2",
-        "game_player_id": "369116389723"
-      },
-      {
-        "nickname": "babayka322",
-        "power": 33579463,
-        "rank": "R3",
-        "game_player_id": "370932064603"
-      },
-      {
         "nickname": "Dashiks",
-        "power": 33530820,
+        "power": 33887401,
         "rank": "R3",
         "game_player_id": "374813024603"
       },
       {
-        "nickname": "TexxиШекк",
-        "power": 33465637,
+        "nickname": "babayka322",
+        "power": 33747155,
         "rank": "R3",
-        "game_player_id": "371916087643"
+        "game_player_id": "370932064603"
+      },
+      {
+        "nickname": "Adelanta96",
+        "power": 33516806,
+        "rank": "R3",
+        "game_player_id": "374704619867"
+      },
+      {
+        "nickname": "Kilkameow",
+        "power": 33407180,
+        "rank": "R3",
+        "game_player_id": "373977948507"
       },
       {
         "nickname": "DocNAM",
-        "power": 33385068,
+        "power": 33392888,
         "rank": "R3",
         "game_player_id": "367796035931"
       },
       {
         "nickname": "UniT",
-        "power": 33093033,
+        "power": 33125068,
         "rank": "R3",
         "game_player_id": "372037902683"
       },
       {
-        "nickname": "Kilkameow",
-        "power": 32891591,
+        "nickname": "Chuvaaaak",
+        "power": 32647627,
         "rank": "R3",
-        "game_player_id": "373977948507"
+        "game_player_id": "368415220059"
       },
       {
         "nickname": "Легіон",
@@ -412,46 +424,58 @@
         "game_player_id": "366763229531"
       },
       {
-        "nickname": "Adelanta96",
-        "power": 32459479,
-        "rank": "R3",
-        "game_player_id": "374704619867"
-      },
-      {
-        "nickname": "Chuvaaaak",
-        "power": 32319476,
-        "rank": "R3",
-        "game_player_id": "368415220059"
-      },
-      {
         "nickname": "Алла2026",
-        "power": 32316988,
+        "power": 32332873,
         "rank": "R3",
         "game_player_id": "369889124699"
       },
       {
         "nickname": "Нюшес",
-        "power": 31564858,
+        "power": 32153606,
         "rank": "R3",
         "game_player_id": "372079714651"
       },
       {
+        "nickname": "Invaders",
+        "power": 31205663,
+        "rank": "R2",
+        "game_player_id": "375274004827"
+      },
+      {
         "nickname": "НикSon",
-        "power": 30725387,
+        "power": 31073289,
         "rank": "R2",
         "game_player_id": "372440818011"
       },
       {
         "nickname": "Оmеn",
-        "power": 30114100,
+        "power": 30135700,
         "rank": "R3",
         "game_player_id": "372230250843"
       },
       {
         "nickname": "Тоха125",
-        "power": 29926947,
+        "power": 29879641,
         "rank": "R3",
         "game_player_id": "370989646171"
+      },
+      {
+        "nickname": "беZликий",
+        "power": 29775169,
+        "rank": "R2",
+        "game_player_id": "375584604507"
+      },
+      {
+        "nickname": "xDoctorPinky",
+        "power": 29732352,
+        "rank": "R3",
+        "game_player_id": "416402948443"
+      },
+      {
+        "nickname": "Оля»",
+        "power": 29664504,
+        "rank": "R3",
+        "game_player_id": "367106113883"
       },
       {
         "nickname": "Dariiaai",
@@ -460,28 +484,22 @@
         "game_player_id": "368334135643"
       },
       {
-        "nickname": "беZликий",
-        "power": 29305824,
-        "rank": "R2",
-        "game_player_id": "375584604507"
-      },
-      {
-        "nickname": "Invaders",
-        "power": 29229691,
-        "rank": "R2",
-        "game_player_id": "375274004827"
-      },
-      {
-        "nickname": "Оля»",
-        "power": 28989072,
-        "rank": "R3",
-        "game_player_id": "367106113883"
-      },
-      {
         "nickname": "AlexLisBLR",
-        "power": 28906574,
+        "power": 28910464,
         "rank": "R3",
         "game_player_id": "480659202395"
+      },
+      {
+        "nickname": "nik0sil",
+        "power": 28857795,
+        "rank": "R3",
+        "game_player_id": "370501394779"
+      },
+      {
+        "nickname": "миррарябова",
+        "power": 28629304,
+        "rank": "R3",
+        "game_player_id": "366139867483"
       },
       {
         "nickname": "Pinky20",
@@ -490,8 +508,14 @@
         "game_player_id": "366318141787"
       },
       {
+        "nickname": "A-CENTURION",
+        "power": 28510494,
+        "rank": "R3",
+        "game_player_id": "369781195099"
+      },
+      {
         "nickname": "Marik1205",
-        "power": 28324162,
+        "power": 28331917,
         "rank": "R3",
         "game_player_id": "372050575707"
       },
@@ -502,38 +526,20 @@
         "game_player_id": "374761357659"
       },
       {
-        "nickname": "xDoctorPinky",
-        "power": 28296147,
-        "rank": "R3",
-        "game_player_id": "416402948443"
-      },
-      {
-        "nickname": "A-CENTURION",
-        "power": 28264434,
-        "rank": "R3",
-        "game_player_id": "369781195099"
-      },
-      {
-        "nickname": "миррарябова",
-        "power": 28058177,
-        "rank": "R3",
-        "game_player_id": "366139867483"
-      },
-      {
         "nickname": "molochnie",
         "power": 28051091,
         "rank": "R1",
         "game_player_id": "373422260571"
       },
       {
-        "nickname": "nik0sil",
-        "power": 27531692,
-        "rank": "R3",
-        "game_player_id": "370501394779"
+        "nickname": "Новунохудонсор",
+        "power": 27071120,
+        "rank": "R2",
+        "game_player_id": "366083957083"
       },
       {
         "nickname": "Brat1525",
-        "power": 26974000,
+        "power": 26978219,
         "rank": "R3",
         "game_player_id": "370072977755"
       },
@@ -544,50 +550,44 @@
         "game_player_id": "367160680795"
       },
       {
-        "nickname": "Новунохудонсор",
-        "power": 26616551,
-        "rank": "R2",
-        "game_player_id": "366083957083"
-      },
-      {
         "nickname": "nisheta",
-        "power": 26020424,
+        "power": 26038917,
         "rank": "R2",
         "game_player_id": "371311411547"
       },
       {
         "nickname": "fokir",
-        "power": 25592381,
+        "power": 25666591,
         "rank": "R2",
         "game_player_id": "370412314971"
       },
       {
         "nickname": "LeBanano",
-        "power": 24870121,
+        "power": 25249779,
         "rank": "R3",
         "game_player_id": "367947948379"
       },
       {
         "nickname": "WickedBanshee",
-        "power": 24131963,
+        "power": 24529732,
         "rank": "R3",
         "game_player_id": "374849708379"
       },
       {
         "nickname": "DoktorKvin",
-        "power": 23680062,
+        "power": 24292527,
         "rank": "R1",
         "game_player_id": "371075817819"
       },
       {
         "nickname": "Amor-fati",
-        "power": 22773746,
+        "power": 23677817,
         "rank": "R3",
         "game_player_id": "375192379739"
       },
       {
         "nickname": "Pynka",
-        "power": 21723510,
+        "power": 22123266,
         "rank": "R3",
         "game_player_id": "370168521051"
       },
@@ -604,20 +604,20 @@
         "game_player_id": "387648987483"
       },
       {
+        "nickname": "Ася007",
+        "power": 19825437,
+        "rank": "R2",
+        "game_player_id": "371382395227"
+      },
+      {
         "nickname": "Fratel",
         "power": 19505636,
         "rank": "R2",
         "game_player_id": "372983595355"
       },
       {
-        "nickname": "Ася007",
-        "power": 19440028,
-        "rank": "R2",
-        "game_player_id": "371382395227"
-      },
-      {
         "nickname": "Vitality91",
-        "power": 18080940,
+        "power": 18106475,
         "rank": "R2",
         "game_player_id": "370461835611"
       },
@@ -647,13 +647,13 @@
       },
       {
         "nickname": "VellToriya",
-        "power": 12657250,
+        "power": 12684080,
         "rank": "R2",
         "game_player_id": "474609729883"
       },
       {
         "nickname": "Пациент228",
-        "power": 8465194,
+        "power": 8842502,
         "rank": "R1",
         "game_player_id": "507940880731"
       }
@@ -662,67 +662,67 @@
     "top_server_alliances": [
       {
         "rank": 1,
-        "name": "[ YGA ] BOOGEYMANWARRIORS",
-        "power": "4290432780",
-        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130089"
+        "name": "[ WIN ] Winds of change",
+        "power": "4348049323",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130018"
       },
       {
         "rank": 2,
-        "name": "[ WIN ] Winds of change",
-        "power": "4268147107",
-        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130018"
+        "name": "[ YGA ] BOOGEYMANWARRIORS",
+        "power": "4343499013",
+        "url": "https://lastasylum.gg/en/leaderboard/alliance/67130089"
       },
       {
         "rank": 3,
         "name": "[ LOS ] Древние",
-        "power": "4050008866",
+        "power": "4071071499",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130033"
       },
       {
         "rank": 4,
         "name": "[ GOAT ] GOATDE",
-        "power": "3909130718",
+        "power": "3943115115",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67131492"
       },
       {
         "rank": 5,
         "name": "[ LEX ] PIIVO",
-        "power": "3609578230",
+        "power": "3638486716",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67132942"
       },
       {
         "rank": 6,
         "name": "[ LAW ] TheLaw",
-        "power": "3335708762",
+        "power": "3320539349",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130078"
       },
       {
         "rank": 7,
         "name": "[ Piti ] Pitipiypiy_wiy_wiy",
-        "power": "3161333142",
+        "power": "3188402823",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130725"
       },
       {
         "rank": 8,
         "name": "[ KgB ] Алкаши",
-        "power": "3008485189",
+        "power": "3039214495",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130743"
       },
       {
         "rank": 9,
         "name": "[ BSYV ] ДобрыеЛюди",
-        "power": "2748575766",
+        "power": "2769733835",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67132832"
       },
       {
         "rank": 10,
         "name": "[ URAL ] РЕГИОНЫ",
-        "power": "2608700223",
+        "power": "2627048578",
         "url": "https://lastasylum.gg/en/leaderboard/alliance/67130122"
       }
     ],
     "server_rank": 5,
-    "official_power": "3609578230"
+    "official_power": "3638486716"
   },
   "history": [
     {
@@ -1270,1568 +1270,738 @@
       "roster_power_sum": "3603044214",
       "members": 99,
       "server_rank": 5
+    },
+    {
+      "at": "2026-11-25T02:34:49Z",
+      "official_power": "3638486716",
+      "roster_power_sum": "3644580671",
+      "members": 99,
+      "server_rank": 5
     }
   ],
   "last_changes": [
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366254883163",
-      "nickname": "AvaTarkа",
-      "old_power": 63931624,
-      "new_power": 66850936,
-      "delta": 2919312
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371980222811",
       "nickname": "BezumeC",
-      "old_power": 63102360,
-      "new_power": 66586587,
-      "delta": 3484227
+      "old_power": 66586587,
+      "new_power": 67214993,
+      "delta": 628406
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366254883163",
+      "nickname": "AvaTarkа",
+      "old_power": 66850936,
+      "new_power": 67028900,
+      "delta": 177964
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:366784512347",
       "nickname": "Добряк89",
-      "old_power": 61312261,
-      "new_power": 63489152,
-      "delta": 2176891
+      "old_power": 63489152,
+      "new_power": 65307363,
+      "delta": 1818211
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372027261275",
       "nickname": "Valenciaga",
-      "old_power": 61039415,
-      "new_power": 63269285,
-      "delta": 2229870
+      "old_power": 63269285,
+      "new_power": 63283827,
+      "delta": 14542
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:369809727835",
       "nickname": "Rzhev",
-      "old_power": 61104382,
-      "new_power": 62719249,
-      "delta": 1614867
+      "old_power": 62719249,
+      "new_power": 62754136,
+      "delta": 34887
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371436527963",
       "nickname": "Buhayagryaz",
-      "old_power": 55900215,
-      "new_power": 60525582,
-      "delta": 4625367
+      "old_power": 60525582,
+      "new_power": 60591433,
+      "delta": 65851
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372134789467",
       "nickname": "6ixx",
-      "old_power": 54244301,
-      "new_power": 57216560,
-      "delta": 2972259
+      "old_power": 57216560,
+      "new_power": 57739028,
+      "delta": 522468
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:368480674139",
-      "nickname": "Кэприсия",
-      "old_power": 53453898,
-      "new_power": 56325519,
-      "delta": 2871621
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:371337838939",
-      "nickname": "DJU",
-      "old_power": 52724815,
-      "new_power": 56321449,
-      "delta": 3596634
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371553206619",
       "nickname": "Mimivirus",
-      "old_power": 56104221,
-      "new_power": 56312916,
-      "delta": 208695
+      "old_power": 56312916,
+      "new_power": 57672514,
+      "delta": 1359598
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:369483039067",
       "nickname": "Kitiketik",
-      "old_power": 53153070,
-      "new_power": 55601024,
-      "delta": 2447954
+      "old_power": 55601024,
+      "new_power": 56966581,
+      "delta": 1365557
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371337838939",
+      "nickname": "DJU",
+      "old_power": 56321449,
+      "new_power": 56402577,
+      "delta": 81128
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:368480674139",
+      "nickname": "Кэприсия",
+      "old_power": 56325519,
+      "new_power": 56330147,
+      "delta": 4628
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:366664802651",
       "nickname": "Владленович",
-      "old_power": 50953130,
-      "new_power": 54547445,
-      "delta": 3594315
+      "old_power": 54547445,
+      "new_power": 54632630,
+      "delta": 85185
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370177270107",
       "nickname": "Insektecyd",
-      "old_power": 50501084,
-      "new_power": 52226359,
-      "delta": 1725275
+      "old_power": 52226359,
+      "new_power": 53348205,
+      "delta": 1121846
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372026589531",
       "nickname": "Lalilap””",
-      "old_power": 50754952,
-      "new_power": 52099329,
-      "delta": 1344377
+      "old_power": 52099329,
+      "new_power": 53023855,
+      "delta": 924526
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:379919016283",
       "nickname": "CORONZON",
-      "old_power": 47659281,
-      "new_power": 51217393,
-      "delta": 3558112
+      "old_power": 51217393,
+      "new_power": 52285156,
+      "delta": 1067763
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:391635812699",
       "nickname": "darriko",
-      "old_power": 50203997,
-      "new_power": 51148593,
-      "delta": 944596
+      "old_power": 51148593,
+      "new_power": 51219243,
+      "delta": 70650
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372189962587",
       "nickname": "Stex988",
-      "old_power": 49403632,
-      "new_power": 49221076,
-      "delta": -182556
+      "old_power": 49221076,
+      "new_power": 49644714,
+      "delta": 423638
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:375332872539",
-      "nickname": "VeronikaKlubnika",
-      "old_power": 45489178,
-      "new_power": 48102179,
-      "delta": 2613001
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:365995680091",
-      "nickname": "누나~",
-      "old_power": 46163251,
-      "new_power": 47969714,
-      "delta": 1806463
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:374231195995",
-      "nickname": "OLeoSantos",
-      "old_power": 47205651,
-      "new_power": 47958437,
-      "delta": 752786
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:373984723291",
-      "nickname": "yu’lsv",
-      "old_power": 45350780,
-      "new_power": 47587156,
-      "delta": 2236376
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:366512382299",
       "nickname": "Rinаа",
-      "old_power": 45141166,
-      "new_power": 47528796,
-      "delta": 2387630
+      "old_power": 47528796,
+      "new_power": 49392942,
+      "delta": 1864146
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366198841691",
-      "nickname": "Lelikkaramelkina",
-      "old_power": 47783371,
-      "new_power": 47434051,
-      "delta": -349320
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:365995680091",
+      "nickname": "누나~",
+      "old_power": 47969714,
+      "new_power": 49204725,
+      "delta": 1235011
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375332872539",
+      "nickname": "VeronikaKlubnika",
+      "old_power": 48102179,
+      "new_power": 48570512,
+      "delta": 468333
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374231195995",
+      "nickname": "OLeoSantos",
+      "old_power": 47958437,
+      "new_power": 48240454,
+      "delta": 282017
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373984723291",
+      "nickname": "yu’lsv",
+      "old_power": 47587156,
+      "new_power": 47626613,
+      "delta": 39457
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:373526487387",
       "nickname": "алимпум",
-      "old_power": 46727627,
-      "new_power": 47397582,
-      "delta": 669955
+      "old_power": 47397582,
+      "new_power": 47463392,
+      "delta": 65810
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370216075611",
       "nickname": "•BOUNTY•",
-      "old_power": 46949244,
-      "new_power": 46872062,
-      "delta": -77182
+      "old_power": 46872062,
+      "new_power": 47136876,
+      "delta": 264814
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:373202370907",
       "nickname": "АnAsTaSiA",
-      "old_power": 38854275,
-      "new_power": 45039370,
-      "delta": 6185095
+      "old_power": 45039370,
+      "new_power": 45454196,
+      "delta": 414826
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:368218423643",
       "nickname": "Gesha0",
-      "old_power": 41892121,
-      "new_power": 43950974,
-      "delta": 2058853
+      "old_power": 43950974,
+      "new_power": 43963487,
+      "delta": 12513
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:373711216987",
-      "nickname": "₽Афродита₽",
-      "old_power": 43376992,
-      "new_power": 43687223,
-      "delta": 310231
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:367699099995",
       "nickname": "Sergius76",
-      "old_power": 43413823,
-      "new_power": 43345904,
-      "delta": -67919
+      "old_power": 43345904,
+      "new_power": 43850555,
+      "delta": 504651
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:369855627611",
-      "nickname": "6eJIo4ka",
-      "old_power": 40449614,
-      "new_power": 41263031,
-      "delta": 813417
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373711216987",
+      "nickname": "₽Афродита₽",
+      "old_power": 43687223,
+      "new_power": 43689915,
+      "delta": 2692
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:373901828443",
       "nickname": "золотаялилия",
-      "old_power": 40401656,
-      "new_power": 41030722,
-      "delta": 629066
+      "old_power": 41030722,
+      "new_power": 42530167,
+      "delta": 1499445
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:369742397787",
-      "nickname": "Eclaira",
-      "old_power": 38182873,
-      "new_power": 39507721,
-      "delta": 1324848
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369855627611",
+      "nickname": "6eJIo4ka",
+      "old_power": 41263031,
+      "new_power": 41349383,
+      "delta": 86352
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:369111458139",
       "nickname": "Yarrikk",
-      "old_power": 37436529,
-      "new_power": 39331824,
-      "delta": 1895295
+      "old_power": 39331824,
+      "new_power": 39935822,
+      "delta": 603998
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372113465691",
-      "nickname": "Danya722",
-      "old_power": 41080693,
-      "new_power": 39084601,
-      "delta": -1996092
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:374589186395",
-      "nickname": "7bob7",
-      "old_power": 36986201,
-      "new_power": 38719079,
-      "delta": 1732878
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:374460383579",
-      "nickname": "Парампіту",
-      "old_power": 37258356,
-      "new_power": 38071134,
-      "delta": 812778
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372098793819",
       "nickname": "erosphyche",
-      "old_power": 37338028,
-      "new_power": 38014514,
-      "delta": 676486
+      "old_power": 38014514,
+      "new_power": 39722691,
+      "delta": 1708177
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372902527323",
-      "nickname": "Ташунька",
-      "old_power": 37209295,
-      "new_power": 37478077,
-      "delta": 268782
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374589186395",
+      "nickname": "7bob7",
+      "old_power": 38719079,
+      "new_power": 39589156,
+      "delta": 870077
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372259684699",
-      "nickname": "LutaM",
-      "old_power": 35800758,
-      "new_power": 37245095,
-      "delta": 1444337
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369742397787",
+      "nickname": "Eclaira",
+      "old_power": 39507721,
+      "new_power": 39532533,
+      "delta": 24812
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:374855352667",
-      "nickname": "VOLk",
-      "old_power": 36541274,
-      "new_power": 37167548,
-      "delta": 626274
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372113465691",
+      "nickname": "Danya722",
+      "old_power": 39084601,
+      "new_power": 39119507,
+      "delta": 34906
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370951553371",
       "nickname": "Акkeрман",
-      "old_power": 34017760,
-      "new_power": 36543787,
-      "delta": 2526027
+      "old_power": 36543787,
+      "new_power": 38229936,
+      "delta": 1686149
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374855352667",
+      "nickname": "VOLk",
+      "old_power": 37167548,
+      "new_power": 38114559,
+      "delta": 947011
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374460383579",
+      "nickname": "Парампіту",
+      "old_power": 38071134,
+      "new_power": 38085526,
+      "delta": 14392
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:374512206171",
       "nickname": "senp",
-      "old_power": 34612356,
-      "new_power": 36145990,
-      "delta": 1533634
+      "old_power": 36145990,
+      "new_power": 36656917,
+      "delta": 510927
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:371715211611",
-      "nickname": "YoganYoYo",
-      "old_power": 28411672,
-      "new_power": 35641369,
-      "delta": 7229697
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372259684699",
+      "nickname": "LutaM",
+      "old_power": 37245095,
+      "new_power": 36294920,
+      "delta": -950175
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:370400092507",
-      "nickname": "Devilskill",
-      "old_power": 33496943,
-      "new_power": 35149472,
-      "delta": 1652529
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:373567758683",
-      "nickname": "TyrbinaWR",
-      "old_power": 32687851,
-      "new_power": 34987967,
-      "delta": 2300116
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:367943090523",
-      "nickname": "вотвам",
-      "old_power": 33200643,
-      "new_power": 34933065,
-      "delta": 1732422
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:371013476699",
-      "nickname": "태희",
-      "old_power": 32608795,
-      "new_power": 34906631,
-      "delta": 2297836
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:371014426971",
-      "nickname": "Александра1605",
-      "old_power": 34563935,
-      "new_power": 34735996,
-      "delta": 172061
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:371242393947",
-      "nickname": "Kawat0",
-      "old_power": 34347042,
-      "new_power": 34490916,
-      "delta": 143874
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:369116389723",
       "nickname": "Zlobniy69",
-      "old_power": 33014962,
-      "new_power": 33825715,
-      "delta": 810753
+      "old_power": 33825715,
+      "new_power": 36134638,
+      "delta": 2308923
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:370932064603",
-      "nickname": "babayka322",
-      "old_power": 32921322,
-      "new_power": 33579463,
-      "delta": 658141
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373567758683",
+      "nickname": "TyrbinaWR",
+      "old_power": 34987967,
+      "new_power": 35940127,
+      "delta": 952160
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:374813024603",
-      "nickname": "Dashiks",
-      "old_power": 33717070,
-      "new_power": 33530820,
-      "delta": -186250
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370400092507",
+      "nickname": "Devilskill",
+      "old_power": 35149472,
+      "new_power": 35771282,
+      "delta": 621810
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371916087643",
       "nickname": "TexxиШекк",
-      "old_power": 31669963,
-      "new_power": 33465637,
-      "delta": 1795674
+      "old_power": 33465637,
+      "new_power": 35083917,
+      "delta": 1618280
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:367796035931",
-      "nickname": "DocNAM",
-      "old_power": 31610473,
-      "new_power": 33385068,
-      "delta": 1774595
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371013476699",
+      "nickname": "태희",
+      "old_power": 34906631,
+      "new_power": 34956369,
+      "delta": 49738
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372037902683",
-      "nickname": "UniT",
-      "old_power": 31245639,
-      "new_power": 33093033,
-      "delta": 1847394
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371242393947",
+      "nickname": "Kawat0",
+      "old_power": 34490916,
+      "new_power": 34355068,
+      "delta": -135848
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:373977948507",
-      "nickname": "Kilkameow",
-      "old_power": 31382414,
-      "new_power": 32891591,
-      "delta": 1509177
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374813024603",
+      "nickname": "Dashiks",
+      "old_power": 33530820,
+      "new_power": 33887401,
+      "delta": 356581
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366763229531",
-      "nickname": "Легіон",
-      "old_power": 30770944,
-      "new_power": 32466078,
-      "delta": 1695134
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370932064603",
+      "nickname": "babayka322",
+      "old_power": 33579463,
+      "new_power": 33747155,
+      "delta": 167692
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:374704619867",
       "nickname": "Adelanta96",
-      "old_power": 32042253,
-      "new_power": 32459479,
-      "delta": 417226
+      "old_power": 32459479,
+      "new_power": 33516806,
+      "delta": 1057327
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373977948507",
+      "nickname": "Kilkameow",
+      "old_power": 32891591,
+      "new_power": 33407180,
+      "delta": 515589
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367796035931",
+      "nickname": "DocNAM",
+      "old_power": 33385068,
+      "new_power": 33392888,
+      "delta": 7820
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372037902683",
+      "nickname": "UniT",
+      "old_power": 33093033,
+      "new_power": 33125068,
+      "delta": 32035
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:368415220059",
       "nickname": "Chuvaaaak",
-      "old_power": 30037237,
-      "new_power": 32319476,
-      "delta": 2282239
+      "old_power": 32319476,
+      "new_power": 32647627,
+      "delta": 328151
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:369889124699",
       "nickname": "Алла2026",
-      "old_power": 29719925,
-      "new_power": 32316988,
-      "delta": 2597063
+      "old_power": 32316988,
+      "new_power": 32332873,
+      "delta": 15885
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:372079714651",
       "nickname": "Нюшес",
-      "old_power": 31665616,
-      "new_power": 31564858,
-      "delta": -100758
+      "old_power": 31564858,
+      "new_power": 32153606,
+      "delta": 588748
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372440818011",
-      "nickname": "НикSon",
-      "old_power": 30902047,
-      "new_power": 30725387,
-      "delta": -176660
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372230250843",
-      "nickname": "Оmеn",
-      "old_power": 29775765,
-      "new_power": 30114100,
-      "delta": 338335
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:370989646171",
-      "nickname": "Тоха125",
-      "old_power": 28113073,
-      "new_power": 29926947,
-      "delta": 1813874
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:375584604507",
-      "nickname": "беZликий",
-      "old_power": 27025390,
-      "new_power": 29305824,
-      "delta": 2280434
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:375274004827",
       "nickname": "Invaders",
-      "old_power": 28071470,
-      "new_power": 29229691,
-      "delta": 1158221
+      "old_power": 29229691,
+      "new_power": 31205663,
+      "delta": 1975972
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:367106113883",
-      "nickname": "Оля»",
-      "old_power": 27456040,
-      "new_power": 28989072,
-      "delta": 1533032
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372440818011",
+      "nickname": "НикSon",
+      "old_power": 30725387,
+      "new_power": 31073289,
+      "delta": 347902
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:480659202395",
-      "nickname": "AlexLisBLR",
-      "old_power": 27725059,
-      "new_power": 28906574,
-      "delta": 1181515
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372230250843",
+      "nickname": "Оmеn",
+      "old_power": 30114100,
+      "new_power": 30135700,
+      "delta": 21600
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366318141787",
-      "nickname": "Pinky20",
-      "old_power": 27237917,
-      "new_power": 28617480,
-      "delta": 1379563
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370989646171",
+      "nickname": "Тоха125",
+      "old_power": 29926947,
+      "new_power": 29879641,
+      "delta": -47306
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372050575707",
-      "nickname": "Marik1205",
-      "old_power": 26970372,
-      "new_power": 28324162,
-      "delta": 1353790
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375584604507",
+      "nickname": "беZликий",
+      "old_power": 29305824,
+      "new_power": 29775169,
+      "delta": 469345
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:416402948443",
       "nickname": "xDoctorPinky",
-      "old_power": 26797789,
-      "new_power": 28296147,
-      "delta": 1498358
+      "old_power": 28296147,
+      "new_power": 29732352,
+      "delta": 1436205
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:369781195099",
-      "nickname": "A-CENTURION",
-      "old_power": 28453235,
-      "new_power": 28264434,
-      "delta": -188801
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367106113883",
+      "nickname": "Оля»",
+      "old_power": 28989072,
+      "new_power": 29664504,
+      "delta": 675432
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366139867483",
-      "nickname": "миррарябова",
-      "old_power": 27620175,
-      "new_power": 28058177,
-      "delta": 438002
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:480659202395",
+      "nickname": "AlexLisBLR",
+      "old_power": 28906574,
+      "new_power": 28910464,
+      "delta": 3890
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370501394779",
       "nickname": "nik0sil",
-      "old_power": 27742506,
-      "new_power": 27531692,
-      "delta": -210814
+      "old_power": 27531692,
+      "new_power": 28857795,
+      "delta": 1326103
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:370072977755",
-      "nickname": "Brat1525",
-      "old_power": 25478331,
-      "new_power": 26974000,
-      "delta": 1495669
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366139867483",
+      "nickname": "миррарябова",
+      "old_power": 28058177,
+      "new_power": 28629304,
+      "delta": 571127
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369781195099",
+      "nickname": "A-CENTURION",
+      "old_power": 28264434,
+      "new_power": 28510494,
+      "delta": 246060
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372050575707",
+      "nickname": "Marik1205",
+      "old_power": 28324162,
+      "new_power": 28331917,
+      "delta": 7755
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:366083957083",
       "nickname": "Новунохудонсор",
-      "old_power": 25164841,
-      "new_power": 26616551,
-      "delta": 1451710
+      "old_power": 26616551,
+      "new_power": 27071120,
+      "delta": 454569
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370072977755",
+      "nickname": "Brat1525",
+      "old_power": 26974000,
+      "new_power": 26978219,
+      "delta": 4219
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371311411547",
       "nickname": "nisheta",
-      "old_power": 25012572,
-      "new_power": 26020424,
-      "delta": 1007852
+      "old_power": 26020424,
+      "new_power": 26038917,
+      "delta": 18493
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370412314971",
       "nickname": "fokir",
-      "old_power": 22807971,
-      "new_power": 25592381,
-      "delta": 2784410
+      "old_power": 25592381,
+      "new_power": 25666591,
+      "delta": 74210
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:367947948379",
       "nickname": "LeBanano",
-      "old_power": 24387402,
-      "new_power": 24870121,
-      "delta": 482719
+      "old_power": 24870121,
+      "new_power": 25249779,
+      "delta": 379658
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:374849708379",
       "nickname": "WickedBanshee",
-      "old_power": 24505591,
-      "new_power": 24131963,
-      "delta": -373628
+      "old_power": 24131963,
+      "new_power": 24529732,
+      "delta": 397769
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371075817819",
+      "nickname": "DoktorKvin",
+      "old_power": 23680062,
+      "new_power": 24292527,
+      "delta": 612465
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:375192379739",
       "nickname": "Amor-fati",
-      "old_power": 21427001,
-      "new_power": 22773746,
-      "delta": 1346745
+      "old_power": 22773746,
+      "new_power": 23677817,
+      "delta": 904071
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370168521051",
       "nickname": "Pynka",
-      "old_power": 21737402,
-      "new_power": 21723510,
-      "delta": -13892
+      "old_power": 21723510,
+      "new_power": 22123266,
+      "delta": 399756
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:368194421083",
-      "nickname": "Евгений2609",
-      "old_power": 18170826,
-      "new_power": 20176054,
-      "delta": 2005228
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:387648987483",
-      "nickname": "MeriEnt97",
-      "old_power": 20196604,
-      "new_power": 19968552,
-      "delta": -228052
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:372983595355",
-      "nickname": "Fratel",
-      "old_power": 19736078,
-      "new_power": 19505636,
-      "delta": -230442
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:371382395227",
       "nickname": "Ася007",
-      "old_power": 16843795,
-      "new_power": 19440028,
-      "delta": 2596233
+      "old_power": 19440028,
+      "new_power": 19825437,
+      "delta": 385409
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:370461835611",
       "nickname": "Vitality91",
-      "old_power": 16859091,
-      "new_power": 18080940,
-      "delta": 1221849
+      "old_power": 18080940,
+      "new_power": 18106475,
+      "delta": 25535
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:375447142747",
-      "nickname": "Karneichik",
-      "old_power": 17091678,
-      "new_power": 17135601,
-      "delta": 43923
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:432340197723",
-      "nickname": "LЕЕCHI",
-      "old_power": 13211352,
-      "new_power": 14932493,
-      "delta": 1721141
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:375507886427",
-      "nickname": "Ssmit",
-      "old_power": 14999801,
-      "new_power": 14893721,
-      "delta": -106080
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
-      "key": "id:366772527451",
-      "nickname": "malik1004",
-      "old_power": 14285525,
-      "new_power": 14566656,
-      "delta": 281131
-    },
-    {
-      "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:474609729883",
       "nickname": "VellToriya",
-      "old_power": 11940080,
-      "new_power": 12657250,
-      "delta": 717170
+      "old_power": 12657250,
+      "new_power": 12684080,
+      "delta": 26830
     },
     {
       "type": "power",
-      "at": "2026-11-24T17:55:14Z",
+      "at": "2026-11-25T02:34:49Z",
       "key": "id:507940880731",
       "nickname": "Пациент228",
-      "old_power": 7116951,
-      "new_power": 8465194,
-      "delta": 1348243
+      "old_power": 8465194,
+      "new_power": 8842502,
+      "delta": 377308
     }
   ],
   "member_events": [
-    {
-      "type": "power",
-      "at": "2026-11-11T19:20:47Z",
-      "key": "id:370461835611",
-      "nickname": "Vitality91",
-      "old_power": 15197280,
-      "new_power": 15077701,
-      "delta": -119579
-    },
-    {
-      "type": "power",
-      "at": "2026-11-11T19:20:47Z",
-      "key": "id:428589203803",
-      "nickname": "TuSha",
-      "old_power": 13993567,
-      "new_power": 13798433,
-      "delta": -195134
-    },
-    {
-      "type": "power",
-      "at": "2026-11-11T19:20:47Z",
-      "key": "id:375507886427",
-      "nickname": "Ssmit",
-      "old_power": 12397245,
-      "new_power": 12432849,
-      "delta": 35604
-    },
-    {
-      "type": "power",
-      "at": "2026-11-11T19:20:47Z",
-      "key": "id:375447142747",
-      "nickname": "Karneichik",
-      "old_power": 12548149,
-      "new_power": 11761477,
-      "delta": -786672
-    },
-    {
-      "type": "power",
-      "at": "2026-11-11T19:20:47Z",
-      "key": "id:366772527451",
-      "nickname": "malik1004",
-      "old_power": 7741017,
-      "new_power": 8141805,
-      "delta": 400788
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366784512347",
-      "nickname": "Добряк89",
-      "old_power": 58641525,
-      "new_power": 60183082,
-      "delta": 1541557
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371436527963",
-      "nickname": "Buhayagryaz",
-      "old_power": 57329019,
-      "new_power": 59314686,
-      "delta": 1985667
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373984723291",
-      "nickname": "yu’lsv",
-      "old_power": 55024950,
-      "new_power": 56918427,
-      "delta": 1893477
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371980222811",
-      "nickname": "BezumeC",
-      "old_power": 51907252,
-      "new_power": 54615175,
-      "delta": 2707923
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:365995680091",
-      "nickname": "누나~",
-      "old_power": 51495688,
-      "new_power": 53818836,
-      "delta": 2323148
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366254883163",
-      "nickname": "AvaTarkа",
-      "old_power": 49791944,
-      "new_power": 51300840,
-      "delta": 1508896
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372134789467",
-      "nickname": "6ixx",
-      "old_power": 50605285,
-      "new_power": 51100190,
-      "delta": 494905
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369483039067",
-      "nickname": "Kitiketik",
-      "old_power": 51911232,
-      "new_power": 50503500,
-      "delta": -1407732
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372027261275",
-      "nickname": "Valenciaga",
-      "old_power": 50088795,
-      "new_power": 50129156,
-      "delta": 40361
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366664802651",
-      "nickname": "Владленович",
-      "old_power": 47061100,
-      "new_power": 47178676,
-      "delta": 117576
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369809727835",
-      "nickname": "Rzhev",
-      "old_power": 46495916,
-      "new_power": 46885612,
-      "delta": 389696
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:391635812699",
-      "nickname": "darriko",
-      "old_power": 45051450,
-      "new_power": 45780594,
-      "delta": 729144
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369742397787",
-      "nickname": "Eclaira",
-      "old_power": 44501950,
-      "new_power": 44444150,
-      "delta": -57800
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370216075611",
-      "nickname": "-Borat-",
-      "old_power": 41043118,
-      "new_power": 42965171,
-      "delta": 1922053
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374231195995",
-      "nickname": "OLeoSantos",
-      "old_power": 41326206,
-      "new_power": 41554357,
-      "delta": 228151
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:379919016283",
-      "nickname": "CORONZON",
-      "old_power": 43762351,
-      "new_power": 41421955,
-      "delta": -2340396
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366763229531",
-      "nickname": "Легіон",
-      "old_power": 40242220,
-      "new_power": 40236895,
-      "delta": -5325
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372026589531",
-      "nickname": "Lalilap””",
-      "old_power": 40655453,
-      "new_power": 40234857,
-      "delta": -420596
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371715211611",
-      "nickname": "YoganYoYo",
-      "old_power": 38760212,
-      "new_power": 39268609,
-      "delta": 508397
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366198841691",
-      "nickname": "Lelikkaramelkina",
-      "old_power": 38834279,
-      "new_power": 39165512,
-      "delta": 331233
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373148393819",
-      "nickname": "Ruri686",
-      "old_power": 38970648,
-      "new_power": 38988558,
-      "delta": 17910
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370177270107",
-      "nickname": "Insektecyd",
-      "old_power": 36934428,
-      "new_power": 38414289,
-      "delta": 1479861
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371337838939",
-      "nickname": "DJU",
-      "old_power": 37133054,
-      "new_power": 38276653,
-      "delta": 1143599
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373901828443",
-      "nickname": "золотаялилия",
-      "old_power": 37729084,
-      "new_power": 38273246,
-      "delta": 544162
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:368218423643",
-      "nickname": "Gesha0",
-      "old_power": 37205677,
-      "new_power": 37345138,
-      "delta": 139461
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369111458139",
-      "nickname": "Yarrikk",
-      "old_power": 36191915,
-      "new_power": 37064573,
-      "delta": 872658
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366512382299",
-      "nickname": "Rinаа",
-      "old_power": 36050326,
-      "new_power": 36973863,
-      "delta": 923537
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371553206619",
-      "nickname": "Mimivirus",
-      "old_power": 35359271,
-      "new_power": 36695858,
-      "delta": 1336587
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371013476699",
-      "nickname": "태희",
-      "old_power": 35344300,
-      "new_power": 36545999,
-      "delta": 1201699
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370951553371",
-      "nickname": "Акkeрман",
-      "old_power": 34688421,
-      "new_power": 36312313,
-      "delta": 1623892
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373567758683",
-      "nickname": "TyrbinaWR",
-      "old_power": 34410049,
-      "new_power": 36058854,
-      "delta": 1648805
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371916087643",
-      "nickname": "TexxиШекк",
-      "old_power": 35715718,
-      "new_power": 36028122,
-      "delta": 312404
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372189962587",
-      "nickname": "Stex988",
-      "old_power": 35792426,
-      "new_power": 36027338,
-      "delta": 234912
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373711216987",
-      "nickname": "₽Афродита₽",
-      "old_power": 35274294,
-      "new_power": 35934954,
-      "delta": 660660
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369855627611",
-      "nickname": "6eJIo4ka",
-      "old_power": 35758009,
-      "new_power": 35702806,
-      "delta": -55203
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373526487387",
-      "nickname": "алимпум",
-      "old_power": 34426651,
-      "new_power": 35193341,
-      "delta": 766690
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371735503195",
-      "nickname": "Тц…",
-      "old_power": 32257695,
-      "new_power": 34456073,
-      "delta": 2198378
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374319341915",
-      "nickname": "Dr110411",
-      "old_power": 32870070,
-      "new_power": 34405596,
-      "delta": 1535526
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372113465691",
-      "nickname": "Danya722",
-      "old_power": 33675746,
-      "new_power": 33948855,
-      "delta": 273109
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369116389723",
-      "nickname": "Zlobniy69",
-      "old_power": 32655769,
-      "new_power": 33342903,
-      "delta": 687134
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374460383579",
-      "nickname": "Парампіту",
-      "old_power": 32502950,
-      "new_power": 32984067,
-      "delta": 481117
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:367796035931",
-      "nickname": "DocNAM",
-      "old_power": 30977101,
-      "new_power": 32953617,
-      "delta": 1976516
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366318141787",
-      "nickname": "Pinky20",
-      "old_power": 32242625,
-      "new_power": 32610613,
-      "delta": 367988
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372902527323",
-      "nickname": "Ташунька",
-      "old_power": 32328472,
-      "new_power": 32559879,
-      "delta": 231407
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:375996907867",
-      "nickname": "LEECHI",
-      "old_power": 30807779,
-      "new_power": 32514693,
-      "delta": 1706914
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374512206171",
-      "nickname": "senp",
-      "old_power": 31359118,
-      "new_power": 32481647,
-      "delta": 1122529
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374813024603",
-      "nickname": "Dashiks",
-      "old_power": 31984095,
-      "new_power": 31980190,
-      "delta": -3905
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374589186395",
-      "nickname": "7bob7",
-      "old_power": 31305717,
-      "new_power": 31187065,
-      "delta": -118652
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:367699099995",
-      "nickname": "Sergius76",
-      "old_power": 24667952,
-      "new_power": 30729906,
-      "delta": 6061954
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:373202370907",
-      "nickname": "АnAsTaSiA",
-      "old_power": 28768873,
-      "new_power": 30719355,
-      "delta": 1950482
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371242393947",
-      "nickname": "Kawat0",
-      "old_power": 31536029,
-      "new_power": 30523208,
-      "delta": -1012821
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370400092507",
-      "nickname": "Devilskill",
-      "old_power": 29443058,
-      "new_power": 30129804,
-      "delta": 686746
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:416402948443",
-      "nickname": "xDoctorPinky",
-      "old_power": 28962387,
-      "new_power": 30080653,
-      "delta": 1118266
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:368415220059",
-      "nickname": "Chuvaaaak",
-      "old_power": 29108965,
-      "new_power": 29589786,
-      "delta": 480821
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374704619867",
-      "nickname": "Adelanta96",
-      "old_power": 29312692,
-      "new_power": 29569495,
-      "delta": 256803
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370932064603",
-      "nickname": "babayka322",
-      "old_power": 28881620,
-      "new_power": 29513835,
-      "delta": 632215
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372037902683",
-      "nickname": "UniT",
-      "old_power": 29865547,
-      "new_power": 29460720,
-      "delta": -404827
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374855352667",
-      "nickname": "VOLk",
-      "old_power": 29201202,
-      "new_power": 29237556,
-      "delta": 36354
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:368334135643",
-      "nickname": "Dariiaai",
-      "old_power": 28596268,
-      "new_power": 28588458,
-      "delta": -7810
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369889124699",
-      "nickname": "Алла2026",
-      "old_power": 28095943,
-      "new_power": 28516037,
-      "delta": 420094
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372079714651",
-      "nickname": "Нюшес",
-      "old_power": 28181621,
-      "new_power": 27713743,
-      "delta": -467878
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:375274004827",
-      "nickname": "Invaders",
-      "old_power": 27696588,
-      "new_power": 27699140,
-      "delta": 2552
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374761357659",
-      "nickname": "Andrei86",
-      "old_power": 26273838,
-      "new_power": 26705163,
-      "delta": 431325
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370989646171",
-      "nickname": "Тоха125",
-      "old_power": 26567647,
-      "new_power": 26589242,
-      "delta": 21595
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:369781195099",
-      "nickname": "A-CENTURION",
-      "old_power": 26838618,
-      "new_power": 26419829,
-      "delta": -418789
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372050575707",
-      "nickname": "Marik1205",
-      "old_power": 26254211,
-      "new_power": 26367018,
-      "delta": 112807
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:371311411547",
-      "nickname": "cruxzol",
-      "old_power": 25950867,
-      "new_power": 26329111,
-      "delta": 378244
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366083957083",
-      "nickname": "Новунохудонсор",
-      "old_power": 25203400,
-      "new_power": 25220387,
-      "delta": 16987
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:367160680795",
-      "nickname": "фунога",
-      "old_power": 24878083,
-      "new_power": 24874178,
-      "delta": -3905
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:367106113883",
-      "nickname": "Оля»",
-      "old_power": 24214652,
-      "new_power": 24743228,
-      "delta": 528576
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:366139867483",
-      "nickname": "миррарябова",
-      "old_power": 22678357,
-      "new_power": 24481686,
-      "delta": 1803329
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:370412314971",
-      "nickname": "fokir",
-      "old_power": 24190606,
-      "new_power": 24196706,
-      "delta": 6100
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:372440818011",
-      "nickname": "НикSon",
-      "old_power": 23600133,
-      "new_power": 23622440,
-      "delta": 22307
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:441192767835",
-      "nickname": "Rok7",
-      "old_power": 23932803,
-      "new_power": 23561521,
-      "delta": -371282
-    },
-    {
-      "type": "power",
-      "at": "2026-11-12T07:40:59Z",
-      "key": "id:374849708379",
-      "nickname": "WickedBanshee",
-      "old_power": 23518703,
-      "new_power": 23514798,
-      "delta": -3905
-    },
     {
       "type": "power",
       "at": "2026-11-12T07:40:59Z",
@@ -20071,9 +19241,729 @@
       "old_power": 7116951,
       "new_power": 8465194,
       "delta": 1348243
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371980222811",
+      "nickname": "BezumeC",
+      "old_power": 66586587,
+      "new_power": 67214993,
+      "delta": 628406
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366254883163",
+      "nickname": "AvaTarkа",
+      "old_power": 66850936,
+      "new_power": 67028900,
+      "delta": 177964
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366784512347",
+      "nickname": "Добряк89",
+      "old_power": 63489152,
+      "new_power": 65307363,
+      "delta": 1818211
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372027261275",
+      "nickname": "Valenciaga",
+      "old_power": 63269285,
+      "new_power": 63283827,
+      "delta": 14542
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369809727835",
+      "nickname": "Rzhev",
+      "old_power": 62719249,
+      "new_power": 62754136,
+      "delta": 34887
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371436527963",
+      "nickname": "Buhayagryaz",
+      "old_power": 60525582,
+      "new_power": 60591433,
+      "delta": 65851
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372134789467",
+      "nickname": "6ixx",
+      "old_power": 57216560,
+      "new_power": 57739028,
+      "delta": 522468
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371553206619",
+      "nickname": "Mimivirus",
+      "old_power": 56312916,
+      "new_power": 57672514,
+      "delta": 1359598
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369483039067",
+      "nickname": "Kitiketik",
+      "old_power": 55601024,
+      "new_power": 56966581,
+      "delta": 1365557
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371337838939",
+      "nickname": "DJU",
+      "old_power": 56321449,
+      "new_power": 56402577,
+      "delta": 81128
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:368480674139",
+      "nickname": "Кэприсия",
+      "old_power": 56325519,
+      "new_power": 56330147,
+      "delta": 4628
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366664802651",
+      "nickname": "Владленович",
+      "old_power": 54547445,
+      "new_power": 54632630,
+      "delta": 85185
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370177270107",
+      "nickname": "Insektecyd",
+      "old_power": 52226359,
+      "new_power": 53348205,
+      "delta": 1121846
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372026589531",
+      "nickname": "Lalilap””",
+      "old_power": 52099329,
+      "new_power": 53023855,
+      "delta": 924526
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:379919016283",
+      "nickname": "CORONZON",
+      "old_power": 51217393,
+      "new_power": 52285156,
+      "delta": 1067763
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:391635812699",
+      "nickname": "darriko",
+      "old_power": 51148593,
+      "new_power": 51219243,
+      "delta": 70650
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372189962587",
+      "nickname": "Stex988",
+      "old_power": 49221076,
+      "new_power": 49644714,
+      "delta": 423638
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366512382299",
+      "nickname": "Rinаа",
+      "old_power": 47528796,
+      "new_power": 49392942,
+      "delta": 1864146
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:365995680091",
+      "nickname": "누나~",
+      "old_power": 47969714,
+      "new_power": 49204725,
+      "delta": 1235011
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375332872539",
+      "nickname": "VeronikaKlubnika",
+      "old_power": 48102179,
+      "new_power": 48570512,
+      "delta": 468333
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374231195995",
+      "nickname": "OLeoSantos",
+      "old_power": 47958437,
+      "new_power": 48240454,
+      "delta": 282017
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373984723291",
+      "nickname": "yu’lsv",
+      "old_power": 47587156,
+      "new_power": 47626613,
+      "delta": 39457
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373526487387",
+      "nickname": "алимпум",
+      "old_power": 47397582,
+      "new_power": 47463392,
+      "delta": 65810
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370216075611",
+      "nickname": "•BOUNTY•",
+      "old_power": 46872062,
+      "new_power": 47136876,
+      "delta": 264814
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373202370907",
+      "nickname": "АnAsTaSiA",
+      "old_power": 45039370,
+      "new_power": 45454196,
+      "delta": 414826
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:368218423643",
+      "nickname": "Gesha0",
+      "old_power": 43950974,
+      "new_power": 43963487,
+      "delta": 12513
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367699099995",
+      "nickname": "Sergius76",
+      "old_power": 43345904,
+      "new_power": 43850555,
+      "delta": 504651
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373711216987",
+      "nickname": "₽Афродита₽",
+      "old_power": 43687223,
+      "new_power": 43689915,
+      "delta": 2692
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373901828443",
+      "nickname": "золотаялилия",
+      "old_power": 41030722,
+      "new_power": 42530167,
+      "delta": 1499445
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369855627611",
+      "nickname": "6eJIo4ka",
+      "old_power": 41263031,
+      "new_power": 41349383,
+      "delta": 86352
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369111458139",
+      "nickname": "Yarrikk",
+      "old_power": 39331824,
+      "new_power": 39935822,
+      "delta": 603998
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372098793819",
+      "nickname": "erosphyche",
+      "old_power": 38014514,
+      "new_power": 39722691,
+      "delta": 1708177
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374589186395",
+      "nickname": "7bob7",
+      "old_power": 38719079,
+      "new_power": 39589156,
+      "delta": 870077
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369742397787",
+      "nickname": "Eclaira",
+      "old_power": 39507721,
+      "new_power": 39532533,
+      "delta": 24812
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372113465691",
+      "nickname": "Danya722",
+      "old_power": 39084601,
+      "new_power": 39119507,
+      "delta": 34906
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370951553371",
+      "nickname": "Акkeрман",
+      "old_power": 36543787,
+      "new_power": 38229936,
+      "delta": 1686149
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374855352667",
+      "nickname": "VOLk",
+      "old_power": 37167548,
+      "new_power": 38114559,
+      "delta": 947011
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374460383579",
+      "nickname": "Парампіту",
+      "old_power": 38071134,
+      "new_power": 38085526,
+      "delta": 14392
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374512206171",
+      "nickname": "senp",
+      "old_power": 36145990,
+      "new_power": 36656917,
+      "delta": 510927
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372259684699",
+      "nickname": "LutaM",
+      "old_power": 37245095,
+      "new_power": 36294920,
+      "delta": -950175
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369116389723",
+      "nickname": "Zlobniy69",
+      "old_power": 33825715,
+      "new_power": 36134638,
+      "delta": 2308923
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373567758683",
+      "nickname": "TyrbinaWR",
+      "old_power": 34987967,
+      "new_power": 35940127,
+      "delta": 952160
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370400092507",
+      "nickname": "Devilskill",
+      "old_power": 35149472,
+      "new_power": 35771282,
+      "delta": 621810
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371916087643",
+      "nickname": "TexxиШекк",
+      "old_power": 33465637,
+      "new_power": 35083917,
+      "delta": 1618280
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371013476699",
+      "nickname": "태희",
+      "old_power": 34906631,
+      "new_power": 34956369,
+      "delta": 49738
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371242393947",
+      "nickname": "Kawat0",
+      "old_power": 34490916,
+      "new_power": 34355068,
+      "delta": -135848
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374813024603",
+      "nickname": "Dashiks",
+      "old_power": 33530820,
+      "new_power": 33887401,
+      "delta": 356581
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370932064603",
+      "nickname": "babayka322",
+      "old_power": 33579463,
+      "new_power": 33747155,
+      "delta": 167692
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374704619867",
+      "nickname": "Adelanta96",
+      "old_power": 32459479,
+      "new_power": 33516806,
+      "delta": 1057327
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:373977948507",
+      "nickname": "Kilkameow",
+      "old_power": 32891591,
+      "new_power": 33407180,
+      "delta": 515589
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367796035931",
+      "nickname": "DocNAM",
+      "old_power": 33385068,
+      "new_power": 33392888,
+      "delta": 7820
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372037902683",
+      "nickname": "UniT",
+      "old_power": 33093033,
+      "new_power": 33125068,
+      "delta": 32035
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:368415220059",
+      "nickname": "Chuvaaaak",
+      "old_power": 32319476,
+      "new_power": 32647627,
+      "delta": 328151
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369889124699",
+      "nickname": "Алла2026",
+      "old_power": 32316988,
+      "new_power": 32332873,
+      "delta": 15885
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372079714651",
+      "nickname": "Нюшес",
+      "old_power": 31564858,
+      "new_power": 32153606,
+      "delta": 588748
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375274004827",
+      "nickname": "Invaders",
+      "old_power": 29229691,
+      "new_power": 31205663,
+      "delta": 1975972
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372440818011",
+      "nickname": "НикSon",
+      "old_power": 30725387,
+      "new_power": 31073289,
+      "delta": 347902
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372230250843",
+      "nickname": "Оmеn",
+      "old_power": 30114100,
+      "new_power": 30135700,
+      "delta": 21600
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370989646171",
+      "nickname": "Тоха125",
+      "old_power": 29926947,
+      "new_power": 29879641,
+      "delta": -47306
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375584604507",
+      "nickname": "беZликий",
+      "old_power": 29305824,
+      "new_power": 29775169,
+      "delta": 469345
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:416402948443",
+      "nickname": "xDoctorPinky",
+      "old_power": 28296147,
+      "new_power": 29732352,
+      "delta": 1436205
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367106113883",
+      "nickname": "Оля»",
+      "old_power": 28989072,
+      "new_power": 29664504,
+      "delta": 675432
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:480659202395",
+      "nickname": "AlexLisBLR",
+      "old_power": 28906574,
+      "new_power": 28910464,
+      "delta": 3890
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370501394779",
+      "nickname": "nik0sil",
+      "old_power": 27531692,
+      "new_power": 28857795,
+      "delta": 1326103
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366139867483",
+      "nickname": "миррарябова",
+      "old_power": 28058177,
+      "new_power": 28629304,
+      "delta": 571127
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:369781195099",
+      "nickname": "A-CENTURION",
+      "old_power": 28264434,
+      "new_power": 28510494,
+      "delta": 246060
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:372050575707",
+      "nickname": "Marik1205",
+      "old_power": 28324162,
+      "new_power": 28331917,
+      "delta": 7755
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:366083957083",
+      "nickname": "Новунохудонсор",
+      "old_power": 26616551,
+      "new_power": 27071120,
+      "delta": 454569
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370072977755",
+      "nickname": "Brat1525",
+      "old_power": 26974000,
+      "new_power": 26978219,
+      "delta": 4219
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371311411547",
+      "nickname": "nisheta",
+      "old_power": 26020424,
+      "new_power": 26038917,
+      "delta": 18493
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370412314971",
+      "nickname": "fokir",
+      "old_power": 25592381,
+      "new_power": 25666591,
+      "delta": 74210
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:367947948379",
+      "nickname": "LeBanano",
+      "old_power": 24870121,
+      "new_power": 25249779,
+      "delta": 379658
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:374849708379",
+      "nickname": "WickedBanshee",
+      "old_power": 24131963,
+      "new_power": 24529732,
+      "delta": 397769
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371075817819",
+      "nickname": "DoktorKvin",
+      "old_power": 23680062,
+      "new_power": 24292527,
+      "delta": 612465
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:375192379739",
+      "nickname": "Amor-fati",
+      "old_power": 22773746,
+      "new_power": 23677817,
+      "delta": 904071
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370168521051",
+      "nickname": "Pynka",
+      "old_power": 21723510,
+      "new_power": 22123266,
+      "delta": 399756
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:371382395227",
+      "nickname": "Ася007",
+      "old_power": 19440028,
+      "new_power": 19825437,
+      "delta": 385409
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:370461835611",
+      "nickname": "Vitality91",
+      "old_power": 18080940,
+      "new_power": 18106475,
+      "delta": 25535
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:474609729883",
+      "nickname": "VellToriya",
+      "old_power": 12657250,
+      "new_power": 12684080,
+      "delta": 26830
+    },
+    {
+      "type": "power",
+      "at": "2026-11-25T02:34:49Z",
+      "key": "id:507940880731",
+      "nickname": "Пациент228",
+      "old_power": 8465194,
+      "new_power": 8842502,
+      "delta": 377308
     }
   ],
-  "attempted_at": "2026-11-24T17:55:11Z",
+  "attempted_at": "2026-11-25T02:34:47Z",
   "sources": {
     "codes": "https://lastasylum.gg/en/codes",
     "server": "https://lastasylum.gg/en/leaderboard/servers/347/alliance-power"
